@@ -1,0 +1,100 @@
+# Zensical configuration file
+
+[project]
+site_name = "Eurekaimer's Stathelper"
+site_description = "Rust NB!"
+site_author = "Eurekaimer"
+site_url = "https://www.eurekaimer.xyz/Stathelper"
+repo_url = "https://github.com/Eurekaimer/Stathelper"
+copyright = """
+Copyright &copy; 2026 Eurekaimer
+"""
+
+nav = [
+   { "Stathelper" = "index.md" },
+   { "HDP" = [
+        "HDP/index.md",
+        { "Chapter 1" = "HDP/Chapter-1.md" },
+        ]},
+    { "STAT260" = [
+        "STAT260/index.md",
+        { "Chapter 1" = "STAT260/Chapter-1.md" },
+        ]},
+]
+
+
+extra_css = [
+    "stylesheets/extra.css",
+    "https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css",  # 霞鹜文楷
+]
+
+#extra_javascript = ["javascripts/extra.js"]
+
+[project.theme]
+variant = "modern"
+# custom_dir = "overrides"
+favicon = "images/xiaoju.jpg"
+language = "zh"
+
+features = [
+    "announce.dismiss",
+    "content.action.edit",
+    "content.action.view",
+    "content.code.annotate",
+    "content.code.copy",
+    "content.code.select",
+    "content.footnote.tooltips",
+    "content.tabs.link",
+    "content.tooltips",
+    "header.autohide",
+    "navigation.expand",
+    "navigation.footer",
+    "navigation.indexes",
+    "navigation.instant",
+    "navigation.instant.prefetch",
+    "navigation.instant.progress",
+    "navigation.path",
+    "navigation.prune",
+    "navigation.sections",
+    "navigation.tabs",
+    "navigation.tabs.sticky",
+    "navigation.top",
+    "navigation.tracking",
+    "search.highlight",
+    "toc.follow",
+    "toc.integrate",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+# Palette toggle for light mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+# Palette toggle for dark mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[project.theme.font]
+text = "LXGW WenKai"  
+code = "Roboto Mono" 
+
+[project.theme.icon]
+logo = "lucide/pi"
+repo = "fontawesome/brands/github"
+
+# ----------------------------------------------------------------------------
+# The "extra" section contains miscellaneous settings.
+# ----------------------------------------------------------------------------
+#[[project.extra.social]]
+#icon = "fontawesome/brands/github"
+#link = "https://github.com/user/repo"
