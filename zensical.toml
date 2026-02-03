@@ -1,13 +1,13 @@
 # Zensical configuration file
 
 [project]
-site_name = "Eurekaimer's Stathelper"
+site_name = "Eurekaimer's Digital Garden"
 site_description = "Rust NB!"
 site_author = "Eurekaimer"
 site_url = "https://www.eurekaimer.xyz/Stathelper"
 repo_url = "https://github.com/Eurekaimer/Stathelper"
 copyright = """
-Copyright &copy; 2026 Eurekaimer
+Copyright &copy; 2024-2026 Eurekaimer
 """
 
 nav = [
@@ -20,15 +20,66 @@ nav = [
         "STAT260/index.md",
         { "Chapter 1" = "STAT260/Chapter-1.md" },
         ]},
+    { "CS61A" = [
+        "CS61A/index.md",
+        { "Week 1" = "CS61A/Week 1.md" },
+        { "Week 2" = "CS61A/Week 2.md" },
+        { "Week 3" = "CS61A/Week 3.md" },
+        ]},
+    { "Analysis" = [
+        "Analysis/index.md",
+        { "Mathematical Analysis" = [
+            { "南开大学数学分析课本答案" = [
+                "Analysis/南开大学数学分析答案/index.md",
+                { "多元函数的极限与连续" = "Analysis/南开大学数学分析答案/多元函数的极限与连续.md"},
+            ]},
+            { "Lecture Notes" = [
+                "Analysis/数学分析(Lecture Notes)/index.md",
+                { "多元函数的极限与连续" = "Analysis/数学分析(Lecture Notes)/预备知识(数学分析).md"},
+            ]},
+        ]},
+    ]},
+    { "ACG" = [
+        "ACG/Yuri.md",
+        "ACG/Anime.md",
+        ]},
+    { "Web Source" = [
+        "WebSource/index.md",
+        { "Notes Source" = [
+            { "Computer Science" = "WebSource/计算机科学资料站.md"},
+            { "Math and Statistics" = "WebSource/数学与统计资料站.md"},
+        ]},
+        { "克林索尔的最后夏天" = "WebSource/克林索尔的最后夏天.md" },
+        ]},
+    { "Friends Link" = "friends-link.md" },
 ]
 
 
 extra_css = [
     "stylesheets/extra.css",
+    "stylesheets/anime-grid.css",
     "https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css",  # 霞鹜文楷
 ]
 
-#extra_javascript = ["javascripts/extra.js"]
+extra_javascript = [
+    "javascripts/mathjax.js",
+    "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
+]
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+
+# Admonitions and details
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.superfences]
+
+# Grids
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.md_in_html]
+
+# Task Lists
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
 
 [project.theme]
 variant = "modern"
@@ -62,7 +113,7 @@ features = [
     "navigation.tracking",
     "search.highlight",
     "toc.follow",
-    "toc.integrate",
+    # "toc.integrate", # 子目录进入右侧
 ]
 
 [[project.theme.palette]]
