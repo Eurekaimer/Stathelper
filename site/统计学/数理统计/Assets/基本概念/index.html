@@ -267,10 +267,10 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../CS61A/" class="md-tabs__link">
+        <a href="../../../../CS/" class="md-tabs__link">
           
   
-  CS61A
+  CS
 
         </a>
       </li>
@@ -566,10 +566,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -590,14 +586,14 @@
   
   
   
-    <a href="../../../../CS61A/" class="md-nav__link">
+    <a href="../../../../CS/" class="md-nav__link">
       
   
   
   <span class="md-ellipsis">
     
   
-    CS61A
+    Index
   
 
     
@@ -1186,7 +1182,7 @@
   
 
 
-<h1 id="_1">基本概念</h1>
+<h1 id="_1">基本概念<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
 <blockquote>
 <p>[!tldr] 重点
 1. 三大分布 ⭐⭐⭐⭐⭐
@@ -1194,17 +1190,17 @@
 3. 充分统计量 ⭐⭐⭐⭐
 4. 因子分解定理 ⭐⭐⭐⭐</p>
 </blockquote>
-<h2 id="_2">总体与样本</h2>
-<h3 id="_3">总体与个体</h3>
+<h2 id="_2">总体与样本<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<h3 id="_3">总体与个体<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h3>
 <p>抛开实际背景，用一个概率分布去描述和归纳总体也是合理的，那么可以说总体就是一个分布，以后从总体中抽样与从某分布中抽样是一个意思．</p>
-<h3 id="_4">样本</h3>
+<h3 id="_4">样本<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h3>
 <p>样本的所谓二重性：
 + 样本是随机变量，在抽样前不可知
 + 观测后就是确定的值，可以用数列表示</p>
 <p>为方便起见，样本无论是样本本身还是所谓观测值都是用<span class="arithmatex">\(x_{1},x_{2},\dots,x_{n}\)</span>表示</p>
 <p>简单随机抽样方法可以得到简单随机样本，这种方法需要满足一定的基本假设：也就是随机性和独立性，还需要排除人为的干扰.显然的，在样本量很大的条件下应当认为不放回的抽样方式也满足独立性.</p>
-<h2 id="_5">样本数据的整理与显示</h2>
-<h3 id="_6">经验分布函数</h3>
+<h2 id="_5">样本数据的整理与显示<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
+<h3 id="_6">经验分布函数<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h3>
 <p>关于经验分布函数的重要性，一般可以通过它对于分布函数有良好的逼近性质阐述，而且这种逼近性质中的点点收敛可以通过SLLN证明，另一个一致收敛性则是另一个定理的内容：</p>
 <p>下面就是这个很重要的定理，但是大多数数理统计书没有给出严格的证明，可是它的重要性在Wikipedia中的一段话可见一斑(甚至有时叫做统计学基本定理)：</p>
 <blockquote>
@@ -1222,26 +1218,26 @@ F_{n}(x)-F(x)&amp;\geq F_{n}(x_{j-1})-F(x_{j})=F_{n}(x_{j})-F(x_{j})-\frac{1}{n}
 \end{align}
 \]</div>
 <p>那么我们将得到<span class="arithmatex">\(\forall x,\lVert F_{n}(x)-F(x) \rVert=\sup\limits_{{x\in R}}\lvert F_{n}(x)-F(x) \rvert\leq \max\limits_{j=\left\{ 1,2,\dots,n \right\}}\lvert F_{n}(x_{j})-F(x_{j}) \rvert+\frac{1}{n}\implies Q.E.D\)</span></p>
-<h3 id="_7">频数频率分布表</h3>
-<h3 id="_8">样本数据的图形显示</h3>
+<h3 id="_7">频数频率分布表<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h3>
+<h3 id="_8">样本数据的图形显示<a class="headerlink" href="#_8" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li>直方图</li>
 <li>茎叶图</li>
 </ul>
 <p>我们在小学二年级学过这些内容了</p>
-<h2 id="_9">统计量及其分布</h2>
-<h3 id="_10">统计量与抽样分布</h3>
+<h2 id="_9">统计量及其分布<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h2>
+<h3 id="_10">统计量与抽样分布<a class="headerlink" href="#_10" title="Permanent link">⚓︎</a></h3>
 <p>主要是两个基本概念</p>
 <p>若是样本函数<span class="arithmatex">\(T\)</span>中不含有任何未知参数，称为统计量，统计量的分布称为抽样分布.</p>
 <p>Remark：统计量和抽样分布的概念在后面的内容中都有涉及</p>
 <p>以下就是几个重要统计量和它们的延申概念的介绍</p>
-<h3 id="_11">样本均值及其抽样分布</h3>
+<h3 id="_11">样本均值及其抽样分布<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h3>
 <p>很容易给出样本均值的定义(算术平均值)：<span class="arithmatex">\(\overline{x}= \frac{\sum\limits_{i=1}^{n}x_{i}}{n}\)</span>就是样本均值</p>
 <p>并且它还具有以下性质(Proof is trivial)
 1. <span class="arithmatex">\(\sum\limits_{i=1}^{n}(x_{i}-\overline{x})=0\)</span>
 2. <span class="arithmatex">\(\forall c, \sum\limits(x_{i}-c)^{2}\geq \sum\limits(x_{i}-\overline{x})^{2}\)</span>
 3. <span class="arithmatex">\(\overline{x}\sim N\left( \mu, \frac{\sigma^{2}}{n} \right)\)</span></p>
-<h3 id="_12">样本方差与样本标准差</h3>
+<h3 id="_12">样本方差与样本标准差<a class="headerlink" href="#_12" title="Permanent link">⚓︎</a></h3>
 <p>样本方差(<strong>无偏方差</strong>):<span class="arithmatex">\(s^{2}=\frac{1}{n-1}\sum\limits_{i=1}^{n}(x_{i}-\overline{x})^{2}\)</span></p>
 <p>而且我们还可以说明它为什么是无偏的也就是<span class="arithmatex">\(E(s^{2})=\sigma^{2}\)</span></p>
 <p><code>Proof.</code></p>
@@ -1249,7 +1245,7 @@ F_{n}(x)-F(x)&amp;\geq F_{n}(x_{j-1})-F(x_{j})=F_{n}(x_{j})-F(x_{j})-\frac{1}{n}
 E\left( \sum\limits_{i=1}^{n} (x_{i}-\overline{x})^{2} \right)=nE(x_{i}^{2})-nE(\overline{x}^{2})=n(\mu^{2}+\sigma^{2})-n\left( \mu^{2}+\frac{\sigma^{2}}{n} \right) =(n-1)\sigma^{2}
 \]</div>
 <p>若是有偏的也是一种估计，并且叫做极大似然估计(MLE)</p>
-<h3 id="_13">样本矩及其函数</h3>
+<h3 id="_13">样本矩及其函数<a class="headerlink" href="#_13" title="Permanent link">⚓︎</a></h3>
 <p>常见统计量除了样本均值与样本方差外的更一般推广是样本矩：
 + <span class="arithmatex">\(k\)</span>阶原点矩：<span class="arithmatex">\(a_{k}=\frac{1}{n}\sum\limits_{i=1}^{n}x_{i}^{k}\)</span>
 + <span class="arithmatex">\(k\)</span>阶中心矩：<span class="arithmatex">\(b_{k}=\frac{1}{n}\sum\limits_{i=1}^{n}\left( x_{i}-\overline{x} \right)^{k}\)</span></p>
@@ -1258,7 +1254,7 @@ E\left( \sum\limits_{i=1}^{n} (x_{i}-\overline{x})^{2} \right)=nE(x_{i}^{2})-nE(
     + 反映总体分布密度曲线与对称性的偏离方向和程度
 + 样本峰度：<span class="arithmatex">\(\hat{\beta_{k}}=\frac{b_{4}}{b_{2}^{2}}-3\)</span> 
     + 反映总体分布密度曲线在其峰值附近的陡峭程度和尾部粗细</p>
-<h3 id="_14">次序统计量及其分布</h3>
+<h3 id="_14">次序统计量及其分布<a class="headerlink" href="#_14" title="Permanent link">⚓︎</a></h3>
 <p>简单来说按照大小顺序将样本排序并编号就可以称作次序统计量</p>
 <p>我们关心次序统计量的分布情况，为简单起见先讨论单个次序统计量的分布如下：</p>
 <p>其中第<span class="arithmatex">\(k\)</span>个次序统计量<span class="arithmatex">\(x_{(k)}\)</span>的密度函数为(<span class="arithmatex">\(p(x)\)</span>为总体<span class="arithmatex">\(X\)</span>的密度函数)</p>
@@ -1272,7 +1268,7 @@ p_{ij}(x)=\frac{n!}{(i-1)!(j-i-1)!(n-j)!}\left[ F(y) \right]^{i-1}\left[ F(z)-F(
 \]</div>
 <p>同样可以按照一元的情形类似讨论即可</p>
 <p>实际问题中也会用到一些有关次序统计量的函数<span class="arithmatex">\(R_{n}=x_{(n)}-x_{(1)}\)</span>称为样本极差</p>
-<h3 id="_15">样本分位数与样本中位数</h3>
+<h3 id="_15">样本分位数与样本中位数<a class="headerlink" href="#_15" title="Permanent link">⚓︎</a></h3>
 <p>样本中位数是比较常见的统计量并且表示起来也简单，我们将直接给出更一般的<span class="arithmatex">\(p\)</span>分位数<span class="arithmatex">\(m_{p}\)</span>的定义（包括不加证明的给出<span class="arithmatex">\(n\to \infty\)</span>时的渐进分布）</p>
 <p>中位数</p>
 <div class="arithmatex">\[
@@ -1299,21 +1295,21 @@ m_{p}\sim N\left( x_{p}, \frac{p(1-p)}{n\cdot p^{2}(x_{p})} \right),m_{0.5}\sim 
 \]</div>
 <p>中位数相比样本均值有更好的对极端值的抗干扰性，也叫做稳健性</p>
 <p>以下是次序统计量的应用部分：五数概括与箱线图(Box-Whisker plot)</p>
-<h3 id="_16">五数概括与箱线图</h3>
+<h3 id="_16">五数概括与箱线图<a class="headerlink" href="#_16" title="Permanent link">⚓︎</a></h3>
 <p>所谓五数概括就是指最小观测值，最大观测值，第一、三四分位数，中位数</p>
 <p>利用这五个数可以大致表现样本数据分布的形状，箱线图大致分为
 + 左偏分布
 + 右偏分布
 + 对称分布</p>
-<h2 id="_17">三大抽样分布</h2>
+<h2 id="_17">三大抽样分布<a class="headerlink" href="#_17" title="Permanent link">⚓︎</a></h2>
 <p>统计学的三大分布都是利用正态分布导出的，充分体现了正态分布的重要性，三大分布的导出方式也需要记住和掌握，还需要多利用三大分布完成习题.</p>
 <p>下面再额外给出三大分布有关的工具(分布族)</p>
 <blockquote>
 <p>统计分布常用于总体的建模，因此我们处理的往往不是单个的分布，而是一族分布。<strong>一个分布族共用一个函数形式，其中包含一个或多个参数，用以确定具体的分布。</strong></p>
 </blockquote>
-<h3 id="gamma"><span class="arithmatex">\(\Gamma\)</span>分布族</h3>
+<h3 id="gamma"><span class="arithmatex">\(\Gamma\)</span>分布族<a class="headerlink" href="#gamma" title="Permanent link">⚓︎</a></h3>
 <p><span class="arithmatex">\(X\sim \Gamma(\alpha,\beta)\)</span></p>
-<h3 id="chi2"><span class="arithmatex">\(\chi^{2}\)</span>分布(卡方分布)</h3>
+<h3 id="chi2"><span class="arithmatex">\(\chi^{2}\)</span>分布(卡方分布)<a class="headerlink" href="#chi2" title="Permanent link">⚓︎</a></h3>
 <p><code>K·Pearson</code></p>
 <p><span class="arithmatex">\(\chi^{2}\)</span>的构造为<span class="arithmatex">\(\chi^{2}=\sum\limits_{i=1}^{n}x_{i}^{2}\)</span>，那么如何得到它的概率密度函数(PDF)?</p>
 <p>利用正态分布的性质可以得到，若是<span class="arithmatex">\(X\sim N(0,1),\chi^{2}\sim Ga\left( \frac{1}{2}, \frac{1}{2} \right)\)</span>，根据可加性得到卡方分布的概率密度函数为<span class="arithmatex">\(p(y)=\chi^{2}(n)=Ga\left( \frac{n}{2}, \frac{1}{2} \right)= \frac{\left( \frac{1}{2} \right)^{\frac{n}{2}}}{\Gamma\left( \frac{n}{2} \right)}y^{\frac{n}{2}-1}e^{- \frac{y}{2}}\)</span></p>
@@ -1326,12 +1322,12 @@ $$
 <p>(1)<span class="arithmatex">\(\overline{x}\)</span>与<span class="arithmatex">\(s^{2}\)</span>相互独立
 (2)<span class="arithmatex">\(\overline{x}\sim N\left( \mu, \frac{\sigma^{2}}{n} \right)\)</span>
 (3)<span class="arithmatex">\(\dfrac{(n-1)s^{2}}{\sigma^{2}}\sim \chi^{2}(n-1)\)</span></p>
-<h3 id="f"><span class="arithmatex">\(F\)</span>分布</h3>
+<h3 id="f"><span class="arithmatex">\(F\)</span>分布<a class="headerlink" href="#f" title="Permanent link">⚓︎</a></h3>
 <p>构造方法是<span class="arithmatex">\(X_{1}\sim \chi^{2}(m),X_{2}\sim \chi^{2}(n)\)</span>，并且独立，使得<span class="arithmatex">\(F= \frac{\frac{X_{1}}{m}}{\frac{X_{2}}{n}}\sim F(m,n)\)</span> </p>
 <p>也可以看出<span class="arithmatex">\(F=\frac{\frac{\sum\limits_{i=1}^{m}y_{i}^{2}}{m}}{\frac{\sum\limits_{i=1}^{n}x_{i}^{2}}{n}}\)</span>,并根据一系列变换得到<span class="arithmatex">\(\frac{\Gamma \left( \frac{m+n}{2} \right)\left( \frac{m}{n} \right)^{\frac{m}{2}}}{\Gamma \left( \frac{m}{2}\Gamma \left( \frac{n}{2} \right) \right)}y^{\frac{m}{2}-1}\left( 1+ \frac{m}{n}y \right)^{- \frac{m+n}{2}}\)</span></p>
 <p>利用<span class="arithmatex">\(\chi^{2}\)</span>分布的性质可以得到相关<span class="arithmatex">\(F\)</span>分布的性质：<span class="arithmatex">\(X_{i}\sim N(\mu_{1},\sigma_{1}^{^{2}}),Y_{i}\sim N(\mu_{2},\sigma_{2}^{^{2}})\)</span></p>
 <p>并且两个样本相互独立的情况下，有<span class="arithmatex">\(F= \dfrac{s_{x}^{2}/\sigma_{1}^{2}}{s_{y}^{2}/\sigma_{2}^{2}}\sim F(m-1,n-1)\)</span></p>
-<h3 id="t"><span class="arithmatex">\(t\)</span>分布</h3>
+<h3 id="t"><span class="arithmatex">\(t\)</span>分布<a class="headerlink" href="#t" title="Permanent link">⚓︎</a></h3>
 <p><code>Gosset and R·A·Fisher</code></p>
 <p><span class="arithmatex">\(t= \frac{y_{1}}{\sqrt{ \left( \sum\limits_{i=1}^{n}x_{i}^{2} \right) /n }}\)</span>,若是两个随机变量独立，<span class="arithmatex">\(X_{1}\sim N(0,1),X_{2}\sim \chi^{2}(n),t=\frac{X_{1}}{\sqrt{ X_{2} / n }}\)</span></p>
 <p><span class="arithmatex">\(X_{1},-X_{1}\overset{IID}{\sim}N(0,1)\)</span>，那么<span class="arithmatex">\(t^{2}= \frac{X_{1}^{2}}{X_{2}^{2} / n}\sim F(1,n)\)</span>,也称为自由度为<span class="arithmatex">\(n\)</span>的<span class="arithmatex">\(t\)</span>分布</p>
@@ -1339,14 +1335,14 @@ $$
 <p><code>Proof</code></p>
 <p>因为<span class="arithmatex">\(\frac{X_{2}}{n}\sim E[X_{i}^{2}]=1\)</span>，而且分子趋向于标准正态分布，再使用<span class="arithmatex">\(Slutsky\)</span>定理，可以直接得到<span class="arithmatex">\(t\)</span>分布依概率收敛到标准正态分布</p>
 <p>或者也可以直接使用PDF进行证明，<span class="arithmatex">\(p_{t}(y)= \frac{\Gamma \left( \frac{n+1}{2} \right)}{\sqrt{ n\pi }\Gamma \left( \frac{n}{2} \right)}\left( 1+ \frac{y^{2}}{n} \right)^{-\frac{n+1}{2}}\)</span></p>
-<h2 id="_18">充分统计量</h2>
-<h3 id="_19">充分性的概念</h3>
+<h2 id="_18">充分统计量<a class="headerlink" href="#_18" title="Permanent link">⚓︎</a></h2>
+<h3 id="_19">充分性的概念<a class="headerlink" href="#_19" title="Permanent link">⚓︎</a></h3>
 <blockquote>
 <p>"样本加工不损失信息"称为充分性</p>
 </blockquote>
 <p>一个简单的定义：在给定统计量<span class="arithmatex">\(T\)</span>的取值后，<span class="arithmatex">\(x_{1},\dots,x_{n}\)</span>的条件分布与<span class="arithmatex">\(\theta\)</span>无关，则称统计量<span class="arithmatex">\(T\)</span>是<span class="arithmatex">\(\theta\)</span>的充分统计量</p>
 <p>也就是<span class="arithmatex">\(F_{\theta}(X|T=t)\)</span>不依赖于参数<span class="arithmatex">\(\theta\)</span>，此条件分布已不含<span class="arithmatex">\(\theta\)</span>的信息</p>
-<h3 id="_20">因子分解定理</h3>
+<h3 id="_20">因子分解定理<a class="headerlink" href="#_20" title="Permanent link">⚓︎</a></h3>
 <blockquote>
 <p>[!TIP] 充分性原则
 在充分统计量存在的场合，任何统计推断都可以基于充分统计量进行，这样可以简化统计推断的程序，通常将该原则称为充分性原则</p>
@@ -1362,7 +1358,7 @@ $$
 </blockquote>
 <p>那么进行推广得到更一般的命题也就是：</p>
 <p>若统计量<span class="arithmatex">\(T\)</span>是充分统计量，存在某个函数<span class="arithmatex">\(h(\cdot)\)</span>使得<span class="arithmatex">\(T\)</span>可以表示为<span class="arithmatex">\(t=h(s)\)</span>，则说明统计量<span class="arithmatex">\(S\)</span>也是充分统计量</p>
-<h2 id="_21">习题</h2>
+<h2 id="_21">习题<a class="headerlink" href="#_21" title="Permanent link">⚓︎</a></h2>
 <blockquote>
 <p>[!tldr] HW1
 茆诗松(2010) 概率论与数理统计(第二版)
@@ -1408,13 +1404,11 @@ $$
         
       </main>
       
-        <footer class="md-footer">
-  
-    
-  
-  <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
+      
+      <div class="md-footer-copyright">
+        <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2024-2026 Eurekaimer
@@ -1428,10 +1422,117 @@ $$
     </a>
   
 </div>
+      </div>
+
+      <div class="footer-center-box">
+          <div class="runtime-info">
+              <span>本站已运行</span>
+              <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
+              <span>天</span>
+          </div>
+          <div class="icp-info">
+              <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
+          </div>
+      </div>
+
       
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Eurekaimer" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/QQ.png" target="_blank" rel="noopener" title="QQ" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M434.1 420.4c-11.5 1.4-44.9-52.7-44.9-52.7 0 31.3-16.1 72.2-51 101.8 16.8 5.2 54.8 19.2 45.8 34.4-7.3 12.3-125.5 7.9-159.6 4-34.1 3.8-152.3 8.3-159.6-4-9-15.2 28.9-29.2 45.8-34.4-34.9-29.5-51.1-70.4-51.1-101.8 0 0-33.3 54.1-44.9 52.7-5.4-.6-12.4-29.6 9.3-99.7 10.3-33 22-60.5 40.1-105.8C60.9 98 109.2-.1 224.3-.1 338-.1 387.5 96 384.6 214.9c18.1 45.2 29.9 72.9 40.1 105.8 21.8 70.1 14.7 99.1 9.3 99.7z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/Wechat.jpg" target="_blank" rel="noopener" title="WeChat" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.33.33 0 0 0 .167-.054l1.903-1.114a.86.86 0 0 1 .717-.098 10.2 10.2 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348M5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18m5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.72.72 0 0 1 .598.082l1.584.926a.3.3 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.6.6 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/702046230?spm_id_from=333.1007.0.0" target="_blank" rel="noopener" title="Bilibili" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<2507983039@qq.com>" target="_blank" rel="noopener" title="Email 2507983039@qq.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+</div>
+      
+
     </div>
   </div>
-</footer>
+
+  <style>
+    .footer-center-box {
+        flex: 1; 
+        text-align: center; 
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        margin: 0 1rem;
+    }
+    .runtime-info {
+        color: #8C495A; 
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+    .icp-info a {
+        color: inherit;
+        opacity: 0.7;
+        font-size: 0.85rem;
+        text-decoration: none;
+    }
+    .icp-info a:hover {
+        opacity: 1;
+        color: var(--md-accent-fg-color);
+    }
+    @media (max-width: 76.1875em) {
+        .md-footer-meta__inner {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+    }
+  </style>
+
+  <script>
+    (function() {
+        var start = new Date('2024/10/28'); /* 建站日期 */
+        var now = new Date(); 
+        var diff = now - start;
+        
+        /* 直接算出总天数，取整 */
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        
+        var el = document.getElementById('run_days');
+        if(el) {
+            el.innerHTML = days;
+        }
+    })();
+  </script>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -1445,7 +1546,7 @@ $$
       
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.expand","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>

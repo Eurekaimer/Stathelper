@@ -1,6 +1,5 @@
 ---
-tags:
-  - test
+comments: true
 ---
 
 <style>
@@ -99,32 +98,6 @@ tags:
   }
 </style>
 
-<div style="text-align: center; color: #8C495A; margin-bottom: 20px;">
-    <span>本站已经运行</span>
-    <span id="runtime_box"></span>
-</div>
-
-<script>
-  function timingTime(){
-    let start = '2024-10-28 00:00:00'
-    let startTime = new Date(start).getTime()
-    let currentTime = new Date().getTime()
-    let difference = currentTime - startTime
-    let m = Math.floor(difference / 1000)
-    let mm = m % 60
-    let f = Math.floor(m / 60)
-    let ff = f % 60
-    let s = Math.floor(f / 60)
-    let ss = s % 24
-    let day = Math.floor(s / 24)
-    return day + "天" + ss + "时" + ff + "分" + mm + '秒'
-  }
-  setInterval(()=>{
-    const target = document.getElementById('runtime_box');
-    if(target) target.innerHTML = timingTime();
-  }, 1000)
-</script>
-
 # Home
 
 <div class="blog-card-container">
@@ -135,13 +108,25 @@ tags:
     <div class="blog-card-right">
         <div class="blog-card-title">Yuri Anime List</div>
         <div class="blog-card-desc">
-            这里收录了所有百合题材的番剧推荐与评价，点击查看详细列表与评分排行。
+            收录百合题材TV+剧场版的详细列表与评分排行(Ref: Bangumi)
+        </div>
+    </div>
+</div>
+
+<div class="blog-card-container">
+    <a href="/friends-link" class="blog-card-link"></a>
+    <div class="blog-card-left">
+        <img src="https://lain.bgm.tv/r/400/pic/cover/l/73/26/110467_Fx9tT.jpg" alt="Cover">
+    </div>
+    <div class="blog-card-right">
+        <div class="blog-card-title">Friends Link</div>
+        <div class="blog-card-desc">
+            朋友们
         </div>
     </div>
 </div>
 
 !!! info "官方文档"
-    Zensical 官方网站: [https://zensical.org/](https://zensical.org/)  
     Zensical 官方文档: [https://zensical.org/docs/](https://zensical.org/docs/)
 
 目前大概是将原本[MkDocs博客](https://www.eurekaimer.xyz/)的一些板块迁移过来了

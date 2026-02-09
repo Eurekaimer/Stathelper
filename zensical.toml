@@ -20,12 +20,21 @@ nav = [
         "STAT260/index.md",
         { "Chapter 1" = "STAT260/Chapter-1.md" },
         ]},
-    { "CS61A" = [
-        "CS61A/index.md",
-        { "Week 1" = "CS61A/Week 1.md" },
-        { "Week 2" = "CS61A/Week 2.md" },
-        { "Week 3" = "CS61A/Week 3.md" },
+    { "CS" = [
+        "CS/index.md",
+        { "CS61A" = [
+            "CS61A/index.md",
+            { "Week 1" = "CS61A/Week 1.md" },
+            { "Week 2" = "CS61A/Week 2.md" },
+            { "Week 3" = "CS61A/Week 3.md" },
+            { "Week 4" = "CS61A/Week 4.md" },
+            { "Week 5" = "CS61A/Week 5.md" },
+            { "Week 6" = "CS61A/Week 6.md" },
+            { "Week 7" = "CS61A/Week 7.md" },
+            { "Project 1 Hog" = "CS61A/Project 1-The Game of Hog.md" },
+            { "Project 2 Cat" = "CS61A/Project 2-CS 61A Autocorrected Typing Software.md" },
         ]},
+    ]},
     { "Analysis" = [
         "Analysis/index.md",
         { "Mathematical Analysis" = [
@@ -81,9 +90,14 @@ generic = true
 [project.markdown_extensions.pymdownx.tasklist]
 custom_checkbox = true
 
+# toc link
+[project.markdown_extensions.toc]
+permalink = "⚓︎"
+toc_depth = 3
+
 [project.theme]
 variant = "modern"
-# custom_dir = "overrides"
+custom_dir = "overrides"
 favicon = "images/xiaoju.jpg"
 language = "zh"
 
@@ -98,7 +112,7 @@ features = [
     "content.tabs.link",
     "content.tooltips",
     "header.autohide",
-    "navigation.expand",
+    # "navigation.expand",
     "navigation.footer",
     "navigation.indexes",
     "navigation.instant",
@@ -144,8 +158,31 @@ logo = "lucide/pi"
 repo = "fontawesome/brands/github"
 
 # ----------------------------------------------------------------------------
-# The "extra" section contains miscellaneous settings.
+# The "extra" section contains miscellaneous settings. material/mdi/wechat
 # ----------------------------------------------------------------------------
-#[[project.extra.social]]
-#icon = "fontawesome/brands/github"
-#link = "https://github.com/user/repo"
+[project.markdown_extensions.pymdownx.emoji]
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/Eurekaimer"
+name = "GitHub"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/qq"
+link = "https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/QQ.png" 
+name = "QQ"
+
+[[project.extra.social]]
+icon = "simple/wechat"
+link = "https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/Wechat.jpg" 
+name = "WeChat"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/bilibili"
+link = "https://space.bilibili.com/702046230?spm_id_from=333.1007.0.0" 
+name = "Bilibili"
+
+[[project.extra.social]]
+icon = "fontawesome/solid/paper-plane"
+link = "mailto:<2507983039@qq.com>" 
+name = "Email 2507983039@qq.com"

@@ -267,10 +267,10 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../CS61A/" class="md-tabs__link">
+        <a href="../../../CS/" class="md-tabs__link">
           
   
-  CS61A
+  CS
 
         </a>
       </li>
@@ -566,10 +566,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -590,14 +586,14 @@
   
   
   
-    <a href="../../../CS61A/" class="md-nav__link">
+    <a href="../../../CS/" class="md-nav__link">
       
   
   
   <span class="md-ellipsis">
     
   
-    CS61A
+    Index
   
 
     
@@ -1141,7 +1137,7 @@
   
 
 
-<h1 id="1">第1章 集合与实数集</h1>
+<h1 id="1">第1章 集合与实数集<a class="headerlink" href="#1" title="Permanent link">⚓︎</a></h1>
 <p>本章实际是一个预备知识篇(Preliminaries)，介绍基本的集合论概念和有关性质.</p>
 <blockquote>
 <p>[!tldr] 重点
@@ -1152,8 +1148,8 @@
 + <span class="arithmatex">\(\mathbb{R}^{n}\)</span>中的拓扑概念
 + 基本的点集拓扑方法</p>
 </blockquote>
-<h2 id="_1">集合及其运算</h2>
-<h3 id="_2">基本概念</h3>
+<h2 id="_1">集合及其运算<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
+<h3 id="_2">基本概念<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h3>
 <p>基本的集合论知识在高中已经学过，这里不赘述.</p>
 <p>有一些基本的定理(或许称为性质更贴切)如下(证明留做习题)</p>
 <blockquote>
@@ -1178,7 +1174,7 @@
 <div class="arithmatex">\[
 B_{n}=A_{n}-\bigcup\limits_{i=1}^{n-1} A_{i}
 \]</div>
-<h3 id="n">n维欧式空间</h3>
+<h3 id="n">n维欧式空间<a class="headerlink" href="#n" title="Permanent link">⚓︎</a></h3>
 <p>我们还需要一般的<strong>欧氏空间</strong>的定义，那么我们就需要定义距离(度量)以形成度量空间，在此之前是一个<strong>直积</strong>的定义(方便起见，直接定义<span class="arithmatex">\(n\)</span>维的).</p>
 <div class="arithmatex">\[
 \prod_{k=1}^{n} X_{k}=\left\{ \left( x_{1},x_{2},\dots,x_{n} \right) :x_{k}\in X_{k},1 \leq k \leq n \right\} 
@@ -1199,7 +1195,7 @@ B_{n}=A_{n}-\bigcup\limits_{i=1}^{n-1} A_{i}
 <p>它就可以称为一个范数，空间<span class="arithmatex">\(\mathbb{R}^{n}\)</span>配备此范数后就构成了一个赋范线性空间，称为n维欧几里得空间</p>
 </blockquote>
 <p>Remark: 有了加法、数乘、欧氏距离后的<span class="arithmatex">\(R^{n}\)</span>称为<span class="arithmatex">\(n\)</span>维欧氏空间</p>
-<h2 id="_3">集合序列的极限</h2>
+<h2 id="_3">集合序列的极限<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
 <p>定义好<span class="arithmatex">\(n\)</span>维欧式空间后很自然地会开始讨论极限，对于一般序列的极限，在数学分析中已经研究的比较清楚，那么为了将集合论语言应用于接下来的研究中，就需要利用集合论表示集合序列的极限.</p>
 <p>为了讨论方便起见，可以先考虑<strong>单调</strong>的集列，对于任意给定的集合序列我们可以构成两个不同的单调集列：</p>
 <div class="arithmatex">\[
@@ -1235,7 +1231,7 @@ B_{n}=\bigcup\limits_{k=n}^{\infty} A_{k},C_{n}=\bigcap\limits_{k=n}^{\infty} A_
 \varliminf\limits_{ n \to \infty } A_{n}&amp;=\bigcup\limits_{n=1}^{\infty} \bigcap\limits_{k=n}^{\infty} A_{k}=\bigcup\limits_{n=1}^{\infty} A_{n}
 \end{aligned}
 \]</div>
-<h2 id="_4">映射</h2>
+<h2 id="_4">映射<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
 <p>主要还是回忆了基本的映射关系，不再赘述</p>
 <ul>
 <li>单射</li>
@@ -1246,13 +1242,13 @@ B_{n}=\bigcup\limits_{k=n}^{\infty} A_{k},C_{n}=\bigcap\limits_{k=n}^{\infty} A_
 </ul>
 <p>注1：尤其注意一下特征函数，虽然形式很简单但是在实分析中经常用到</p>
 <p>注2：还要留心映射与集合运算之间的关系：<span class="arithmatex">\(f\left( \bigcup\limits_{\lambda}A_{\lambda} \right)=\bigcup\limits_{\lambda}f(A_{\lambda})\)</span></p>
-<h2 id="_5">集合的等价、基数</h2>
+<h2 id="_5">集合的等价、基数<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
 <p>这部分将分为四小节介绍
 1. 基本定义
 2. 有限集、无限集、可数集
 3. 连续统势
 4. 基数的比较</p>
-<h3 id="_6">基本定义</h3>
+<h3 id="_6">基本定义<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h3>
 <p>主要的定义是</p>
 <ul>
 <li>什么是<strong>等价</strong><ul>
@@ -1263,7 +1259,7 @@ B_{n}=\bigcup\limits_{k=n}^{\infty} A_{k},C_{n}=\bigcap\limits_{k=n}^{\infty} A_
 <li>什么是<strong>基数和势</strong></li>
 </ul>
 <p>注：通过等价关系形成等价类的思想也值得熟悉一下，在后续的证明中也时常用到(分类可以说是一种常见的问题)</p>
-<h3 id="_7">有限集、无限集、可数集</h3>
+<h3 id="_7">有限集、无限集、可数集<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h3>
 <p>集合分类：</p>
 <ul>
 <li>至多可数集<ul>
@@ -1313,7 +1309,7 @@ A=(A-A_{1})\bigcup A_{1}\sim (A-A_{1})\bigcup\left( A_{1}\bigcup B \right)=A\big
 \]</div>
 <p>利用无限集中可以找到一个可数子集的性质和可数子集的可数并仍然为可数集(也就是将可数集当做桥梁其余不变)</p>
 <p>注：这也是一种实用的技巧，用可数无穷相互映射，其余不可数的部分相互抵消(恒等映射即可)</p>
-<h3 id="_8">连续统势</h3>
+<h3 id="_8">连续统势<a class="headerlink" href="#_8" title="Permanent link">⚓︎</a></h3>
 <p><strong>周性伟</strong>的定义是与<span class="arithmatex">\([0,1]\)</span>区间等价的就具有连续统势，由此可以变换到任意区间甚至实数轴都具有连续统势</p>
 <p>有关连续统势的重要扩充：</p>
 <ul>
@@ -1325,7 +1321,7 @@ A=(A-A_{1})\bigcup A_{1}\sim (A-A_{1})\bigcup\left( A_{1}\bigcup B \right)=A\big
 <p>注：有关n元数列有连续统势的证明实际就是证明<span class="arithmatex">\((0,1]\)</span>的无限小数和有限小数可以与n元数列一一映射，这就涉及到了进制的转换，也可以参考Zorich中的证明，写的也十分的详细.</p>
 <p>主要是利用这个等式<span class="arithmatex">\(\sum\limits_{i=1}^{m} \frac{k_{i}-1}{n^{i}}&lt; x\leqslant \sum\limits_{i=1}^{m-1} \frac{k_{i}-1}{n^{i}}+ \frac{k_{m}}{n^{m}}\)</span>，趋于无穷时就有<span class="arithmatex">\(x= \sum\limits_{i=1}^{\infty} \frac{a_{i}}{n^{i}}\)</span></p>
 <p>注：一维连续函数也具有连续统势，连续函数被其在有理点的取值唯一确定，那么只需要把<span class="arithmatex">\(f\)</span>在有理数上的取值写成一个数列就可以得到连续函数全体到<span class="arithmatex">\(\mathbb{R}\)</span>的<strong>可数直积</strong>的单射，所以连续函数的数目要小于等于连续统，反之因为任何一个实数对应一个常值函数，所以连续统小于等于连续函数数目，即证.</p>
-<h3 id="_9">基数的比较</h3>
+<h3 id="_9">基数的比较<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h3>
 <p>主定理：Bernstein定理，证明的方法也比较多样，这里摘取一个周性伟书中利用等价的方法：</p>
 <blockquote>
 <p>[!NOTE] Bernstein定理
@@ -1349,7 +1345,7 @@ A\sim A_{2} &amp;\implies A\sim A_{1} \implies A\sim B
 <p>比较精炼的证明也可以参考Folland，采用了一种“链条式”的证明方法，笔者曾经在初次阅读时被绕晕过</p>
 <p>还有一个关于基数的重要命题(定理)是不存在基数最大的集<span class="arithmatex">\(\mu&lt;2^{\mu}\)</span>(难点在于证明不等价，使用到的构造是罗素悖论中使用过的，也就是从A到A的集族映射记为<span class="arithmatex">\(f\)</span>，<span class="arithmatex">\(A^{*}=\left\{ x \in A,x\not\in f(x) \right\}\)</span>)，这样讨论就会得出矛盾了.</p>
 <p>注：关于基数的比较，也可以参考Folland通过<span class="arithmatex">\(A,B\)</span>之间的单射和满射关系定义基数的序关系，通过证明单射和满射证明基数大小关系也是一种常见思路</p>
-<h2 id="mathbbrn"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>中的拓扑</h2>
+<h2 id="mathbbrn"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>中的拓扑<a class="headerlink" href="#mathbbrn" title="Permanent link">⚓︎</a></h2>
 <blockquote>
 <p>本节对<span class="arithmatex">\(\mathbb{R}^{n}\)</span> 中点集建立拓扑性质.拓扑学的英文为Topology,原意为地志学.在数学中，拓扑性质是指集合在连续变换下不变的性质.连续的概念必须由邻域、距离等概念来刻画,后者是极限概念的基础.本书中,<span class="arithmatex">\(\mathbb{R}^{n}\)</span>中点集的拓扑性质可以理解为与距离概念相关的性质,即邻域、开集、闭集等概念的性质.</p>
 </blockquote>
@@ -1366,13 +1362,13 @@ A\sim A_{2} &amp;\implies A\sim A_{1} \implies A\sim B
 <li><span class="arithmatex">\(\mathbb{R}^{n}\)</span>上的连续函数、点与集的距离</li>
 <li>开覆盖、紧集</li>
 </ul>
-<h3 id="_10">邻域</h3>
+<h3 id="_10">邻域<a class="headerlink" href="#_10" title="Permanent link">⚓︎</a></h3>
 <p>若<span class="arithmatex">\(x \in \mathbb{R}^{n},\varepsilon&gt;0\)</span></p>
 <div class="arithmatex">\[
 V(x,\varepsilon)=\left\{ y \in \mathbb{R}^{n},d(x,y)&lt;\varepsilon \right\} 
 \]</div>
 <p>称为<span class="arithmatex">\(x\)</span>的<span class="arithmatex">\(\varepsilon\)</span>邻域，若是更进一步有<span class="arithmatex">\(E \in \mathbb{R}^{n },\exists\varepsilon&gt;0,s.t.V(x,\varepsilon)\subset E\)</span></p>
-<h3 id="mathbbrn_1"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>中的开集和闭集</h3>
+<h3 id="mathbbrn_1"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>中的开集和闭集<a class="headerlink" href="#mathbbrn_1" title="Permanent link">⚓︎</a></h3>
 <p>有关开集和闭集的定义和性质必须牢固掌握：</p>
 <p>若是<span class="arithmatex">\(G\subset \mathbb{R}^{n},G\)</span>是其每一点的邻域，则<span class="arithmatex">\(G\)</span>为开集，开集的补集称为闭集</p>
 <blockquote>
@@ -1396,14 +1392,14 @@ V(x,\varepsilon)=\left\{ y \in \mathbb{R}^{n},d(x,y)&lt;\varepsilon \right\}
 </blockquote>
 <p><code>Proof.</code></p>
 <p>使用反证法找到开邻域即可，另一边则是证明<span class="arithmatex">\(F^{c}\)</span>不为开集，这是一种常用的手法，由于开集使用集合语言描述比较方便而且直接，在证明闭集的过程中往往考虑证明其的补集不为开集</p>
-<h3 id="mathbbrn_2"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>中的开集</h3>
+<h3 id="mathbbrn_2"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>中的开集<a class="headerlink" href="#mathbbrn_2" title="Permanent link">⚓︎</a></h3>
 <p>显然实数轴上的开区间是开集，从直觉上来想一维的开集应当是许多个开区间组成的，这就是下面构成区间定义构建的动机</p>
 <p>设<span class="arithmatex">\(G\)</span>是<span class="arithmatex">\(R\)</span>中的开集，<span class="arithmatex">\((a,b)\)</span>是开区间，若是<span class="arithmatex">\((a,b)\subset G\)</span>但<span class="arithmatex">\(a\not\in G,b\not\in G\)</span>，则<span class="arithmatex">\((a,b)\)</span>称为<span class="arithmatex">\(G\)</span>的一个构成区间，注意<span class="arithmatex">\(a,b\)</span>可以为<span class="arithmatex">\(\infty\)</span></p>
 <p>为了更加明确开集是由构成区间构成的这一点，我们应当可以分两步证明：
 1. 开集中的每一点都属于该集合的一个构成区间
 2. 开集是至多可数个两两不相交的开区间的并</p>
 <p>下面的几节更多的是定义的记忆和理解，只有对定义非常熟悉才能在证明的时候不至于手忙脚乱.</p>
-<h3 id="mathbbrn_3"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>中集的内点、内核、附着点和闭包</h3>
+<h3 id="mathbbrn_3"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>中集的内点、内核、附着点和闭包<a class="headerlink" href="#mathbbrn_3" title="Permanent link">⚓︎</a></h3>
 <p>设<span class="arithmatex">\(E\subset \mathbb{R}^{n},x \in \mathbb{R}^{n}\)</span></p>
 <ul>
 <li><strong>内点</strong>：<span class="arithmatex">\(E\)</span>是<span class="arithmatex">\(x\)</span>的邻域，<span class="arithmatex">\(x\)</span>是<span class="arithmatex">\(E\)</span>的内点</li>
@@ -1418,7 +1414,7 @@ V(x,\varepsilon)=\left\{ y \in \mathbb{R}^{n},d(x,y)&lt;\varepsilon \right\}
 <li><span class="arithmatex">\(\overline{E}\)</span>是闭集，<span class="arithmatex">\(E\subset  \overline{E}\)</span>，且是<span class="arithmatex">\(E\)</span>中最小的闭集</li>
 </ul>
 <p>推论：<span class="arithmatex">\(E=E^{\circ}\iff E\)</span>是开集，<span class="arithmatex">\(E= \overline{E}\iff E\)</span>是闭集</p>
-<h3 id="_11">聚点、导集、孤立点及完备集</h3>
+<h3 id="_11">聚点、导集、孤立点及完备集<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h3>
 <p>在附着点的基础上提出聚点的概念：任何邻域除去自身外与<span class="arithmatex">\(E\)</span>有非空交称为<strong>聚点</strong>，聚点全体称为<strong>导集</strong><span class="arithmatex">\(E'\)</span>，若是<span class="arithmatex">\(x\in E\)</span>但不是聚点，就称为<strong>孤立点</strong>，没有孤立点的闭集称为<strong>完备集</strong></p>
 <p>注：完备集的定义容易被忽视，这里额外加粗</p>
 <p>根据定义将给出下面的性质</p>
@@ -1427,7 +1423,7 @@ V(x,\varepsilon)=\left\{ y \in \mathbb{R}^{n},d(x,y)&lt;\varepsilon \right\}
 <li>对任何<span class="arithmatex">\(E\subset \mathbb{R}^{n}\)</span>，<span class="arithmatex">\(\overline{E}=E\bigcup E'\)</span></li>
 </ul>
 <p>注：<span class="arithmatex">\(E\)</span>并上是为了加入孤立点，这也变相给出了一个推论<span class="arithmatex">\(\overline{E}=E=E'\)</span>可以推出<span class="arithmatex">\(E\)</span>是完备集</p>
-<h3 id="_12">疏集与稠集</h3>
+<h3 id="_12">疏集与稠集<a class="headerlink" href="#_12" title="Permanent link">⚓︎</a></h3>
 <p>这也是很重要的但是容易被遗忘的定义：</p>
 <p>设<span class="arithmatex">\(E\subset \mathbb{R}^{n}\)</span>，若是<span class="arithmatex">\(\mathbb{R}^{n}\)</span>中任何非空开集必有非空开子集与<span class="arithmatex">\(E\)</span>不相交，则<span class="arithmatex">\(E\)</span>称为疏集，若<span class="arithmatex">\(\mathbb{R}^{n}\)</span>中任何非空开集与<span class="arithmatex">\(E\)</span>有非空交，则<span class="arithmatex">\(E\)</span>称为稠集</p>
 <p>这个定义可能略微有点抽象，这里用例子加以说明：整数全体是<span class="arithmatex">\(\mathbb{R}\)</span>中疏集，有理数全体是<span class="arithmatex">\(\mathbb{R}\)</span>中稠集</p>
@@ -1439,7 +1435,7 @@ V(x,\varepsilon)=\left\{ y \in \mathbb{R}^{n},d(x,y)&lt;\varepsilon \right\}
 </blockquote>
 <p>通常若是有<span class="arithmatex">\(A\subset B, \overline{A} \supset B\)</span>，<span class="arithmatex">\(A\)</span>也称为<span class="arithmatex">\(B\)</span>的稠子集，例如<span class="arithmatex">\((0,1)\)</span>中的有理数全体为<span class="arithmatex">\((0,1)\)</span>的稠子集</p>
 <p>这里的资料确实比较少也不是特别重点的内容但还是要注意不要忽略</p>
-<h3 id="mathbbrncantorcantor"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>中的完备集、Cantor完备集与Cantor函数</h3>
+<h3 id="mathbbrncantorcantor"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>中的完备集、Cantor完备集与Cantor函数<a class="headerlink" href="#mathbbrncantorcantor" title="Permanent link">⚓︎</a></h3>
 <p>设<span class="arithmatex">\(F\)</span>是<span class="arithmatex">\(\mathbb{R}\)</span>中的完备集，由定义<span class="arithmatex">\(F\)</span>是闭集，<span class="arithmatex">\(F^{c}\)</span>是开集那么可以利用构成区间得到<span class="arithmatex">\(F^{c}=\bigcup\limits_{i=1}^{\infty}(a_{i},b_{i})\)</span>，且区间两两不交，且没有孤立点也就是两个区间之间没有公共端点，反之也就是开区间列两两不交且无公共端点则<span class="arithmatex">\(F\)</span>为完备集，也就是下面的定理</p>
 <blockquote>
 <p>[!NOTE] Theorem 1.5.11
@@ -1473,11 +1469,11 @@ f(0)=&amp;0, f(1)=1\\
 \]</div>
 <p>容易知道该函数单增连续</p>
 </blockquote>
-<h3 id="mathbbrn_4"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>中的长方体</h3>
+<h3 id="mathbbrn_4"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>中的长方体<a class="headerlink" href="#mathbbrn_4" title="Permanent link">⚓︎</a></h3>
 <p>既然在<span class="arithmatex">\(\mathbb{R}\)</span>上我们使用开区间作为构成单元去覆盖逼近一切集合，在<span class="arithmatex">\(\mathbb{R}^{n}\)</span>上我们就可以考虑开区间的并——半开方体(开长方体、闭长方体一样)</p>
 <p>我们容易得到任意一个边长为<span class="arithmatex">\(\lambda\)</span>的方体应当都可以表示为有限个边长为<span class="arithmatex">\(\frac{\lambda}{2}\)</span>的方体的并</p>
 <p>进而有<span class="arithmatex">\(\mathbb{R}^{n}\)</span>中<strong>任一开集都是可数个两两不交的半开方体的并</strong>，证明依靠上面的分割性质，不断缩小方体的边长实现极限的逼近(可达)</p>
-<h3 id="mathbbrn_5"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>上的连续函数、点与集的距离</h3>
+<h3 id="mathbbrn_5"><span class="arithmatex">\(\mathbb{R}^{n}\)</span>上的连续函数、点与集的距离<a class="headerlink" href="#mathbbrn_5" title="Permanent link">⚓︎</a></h3>
 <p>连续函数的定义在数分中已有记载，但是在集合上的连续还是稍微说明</p>
 <p>设<span class="arithmatex">\(D\subset \mathbb{R}^{n},f:D \to \mathbb{R},x \in D\)</span>，若是<span class="arithmatex">\(\lim\limits_{ \substack{y\to x\\y \in D}}=f(x)\)</span>，则称<span class="arithmatex">\(f\)</span>沿<span class="arithmatex">\(D\)</span>在<span class="arithmatex">\(x\)</span>上连续</p>
 <p>下面有一个定理给出连续的充要条件：</p>
@@ -1511,7 +1507,7 @@ d(x,D)=\inf\left\{ d(x,y):y \in D \right\}
 设<span class="arithmatex">\(\left\{ F_{k} \right\}_{k\geqslant 1}\)</span>是<span class="arithmatex">\(\mathbb{R}^{n}\)</span>中一列单减的非空有界闭集，则<span class="arithmatex">\(\bigcap\limits_{k=1}^{\infty}F_{k}\neq \emptyset\)</span></p>
 </blockquote>
 <p>注：无界的反例很容易举比如<span class="arithmatex">\(\left[ k,+\infty \right]\)</span></p>
-<h3 id="_13">开覆盖、紧集</h3>
+<h3 id="_13">开覆盖、紧集<a class="headerlink" href="#_13" title="Permanent link">⚓︎</a></h3>
 <p>之所以将开覆盖和紧集放在一起是因为，紧集的定义中含有了开覆盖，并且涉及到开覆盖的题目往往需要说明集合是紧集，而如果含有有界闭(在<span class="arithmatex">\(\mathbb{R}^{n}\)</span>中这与紧集等价)的条件，往往也会使用到相关的定义作为证明的方法.</p>
 <p>所谓开覆盖就是<span class="arithmatex">\(\mathbb{R}^{n}\)</span>中的一族开集满足<span class="arithmatex">\(E\subset \bigcup \left\{ G_{\lambda}:\lambda\in\Lambda \right\}\)</span>，则<span class="arithmatex">\(\left\{ G_{\lambda} \right\}\)</span>称为<span class="arithmatex">\(E\)</span>的一个开覆盖，若是<span class="arithmatex">\(E\)</span>的任一开覆盖存在有限子覆盖(有限个开集)仍构成<span class="arithmatex">\(E\)</span>的一个开覆盖我们就称<span class="arithmatex">\(E\)</span>为紧集.</p>
 <p>下面这个定理在数分中已经证明过这里只给出结果：</p>
@@ -1560,13 +1556,11 @@ d(x,D)=\inf\left\{ d(x,y):y \in D \right\}
         
       </main>
       
-        <footer class="md-footer">
-  
-    
-  
-  <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
+      
+      <div class="md-footer-copyright">
+        <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2024-2026 Eurekaimer
@@ -1580,10 +1574,117 @@ d(x,D)=\inf\left\{ d(x,y):y \in D \right\}
     </a>
   
 </div>
+      </div>
+
+      <div class="footer-center-box">
+          <div class="runtime-info">
+              <span>本站已运行</span>
+              <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
+              <span>天</span>
+          </div>
+          <div class="icp-info">
+              <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
+          </div>
+      </div>
+
       
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Eurekaimer" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/QQ.png" target="_blank" rel="noopener" title="QQ" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M434.1 420.4c-11.5 1.4-44.9-52.7-44.9-52.7 0 31.3-16.1 72.2-51 101.8 16.8 5.2 54.8 19.2 45.8 34.4-7.3 12.3-125.5 7.9-159.6 4-34.1 3.8-152.3 8.3-159.6-4-9-15.2 28.9-29.2 45.8-34.4-34.9-29.5-51.1-70.4-51.1-101.8 0 0-33.3 54.1-44.9 52.7-5.4-.6-12.4-29.6 9.3-99.7 10.3-33 22-60.5 40.1-105.8C60.9 98 109.2-.1 224.3-.1 338-.1 387.5 96 384.6 214.9c18.1 45.2 29.9 72.9 40.1 105.8 21.8 70.1 14.7 99.1 9.3 99.7z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/Wechat.jpg" target="_blank" rel="noopener" title="WeChat" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.33.33 0 0 0 .167-.054l1.903-1.114a.86.86 0 0 1 .717-.098 10.2 10.2 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348M5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18m5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.72.72 0 0 1 .598.082l1.584.926a.3.3 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.6.6 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/702046230?spm_id_from=333.1007.0.0" target="_blank" rel="noopener" title="Bilibili" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<2507983039@qq.com>" target="_blank" rel="noopener" title="Email 2507983039@qq.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+</div>
+      
+
     </div>
   </div>
-</footer>
+
+  <style>
+    .footer-center-box {
+        flex: 1; 
+        text-align: center; 
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        margin: 0 1rem;
+    }
+    .runtime-info {
+        color: #8C495A; 
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+    .icp-info a {
+        color: inherit;
+        opacity: 0.7;
+        font-size: 0.85rem;
+        text-decoration: none;
+    }
+    .icp-info a:hover {
+        opacity: 1;
+        color: var(--md-accent-fg-color);
+    }
+    @media (max-width: 76.1875em) {
+        .md-footer-meta__inner {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+    }
+  </style>
+
+  <script>
+    (function() {
+        var start = new Date('2024/10/28'); /* 建站日期 */
+        var now = new Date(); 
+        var diff = now - start;
+        
+        /* 直接算出总天数，取整 */
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        
+        var el = document.getElementById('run_days');
+        if(el) {
+            el.innerHTML = days;
+        }
+    })();
+  </script>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -1597,7 +1698,7 @@ d(x,D)=\inf\left\{ d(x,y):y \in D \right\}
       
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.expand","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>

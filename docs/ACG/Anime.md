@@ -57,7 +57,7 @@ tags:
         <div class="poster-wrapper">
             <img src="https://lain.bgm.tv/r/400/pic/cover/l/75/c1/431767_bX7FZ.jpg" loading="lazy">
             <div class="review-overlay">
-                向命运发出呐喊，真正真实的矛盾的对立冲突，歌曲风格喜好，3D强大
+                近年来少女乐队题材我心中的真正GOAT，向命运发出呐喊的歌声，真正真实的矛盾的对立冲突，风格正中我的好球区，3D和作画及其强大
             </div>
         </div>
         <div class="anime-info">
