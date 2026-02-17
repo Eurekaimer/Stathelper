@@ -151,7 +151,7 @@ comments: true
 </div>
 
 <div style="text-align: right;">
-    <img src="/images/Eurekaimer.png" alt="Eurekaimer Signature" style="width: 220px; opacity: 0.9; mix-blend-mode: multiply;">
+    <img src="https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/20260218021229.png" alt="Eurekaimer Signature" style="width: 220px; opacity: 0.9; mix-blend-mode: multiply;">
 </div>
 
 </div>
