@@ -130,3 +130,28 @@ comments: true
     Zensical 官方文档: [https://zensical.org/docs/](https://zensical.org/docs/)
 
 目前大概是将原本[MkDocs博客](https://www.eurekaimer.xyz/)的一些板块迁移过来了
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 2em;" markdown="1">
+
+<div style="flex: 1; padding-right: 30px; display: flex; flex-direction: column; gap: 1.5em; align-items: flex-start;" markdown="1">
+
+<div>
+站点声明<br>
+<span style="font-size: 0.9em; color: gray; line-height: 1.6;">
+站长：Eurekaimer<br>
+本站所有内容遵循 CC BY-SA 4.0 协议<br>
+如需联系，请查看页面底部页脚信息
+</span>
+</div>
+
+[请我喝下午茶](https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/buy_me_a_coffee.png){ .md-button .md-button--primary }
+
+</div>
+
+<div style="text-align: right;">
+    <img src="/images/Eurekaimer.png" alt="Eurekaimer Signature" style="width: 220px; opacity: 0.9; mix-blend-mode: multiply;">
+</div>
+
+</div>

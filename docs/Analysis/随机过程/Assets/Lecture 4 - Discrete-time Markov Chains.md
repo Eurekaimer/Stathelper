@@ -2,30 +2,30 @@
 # Lecture 4 - Discrete-time Markov Chains
 
 
-> [!tldr] Syllabus
-> + Markou链
-> + Chapman-Kolmogorou方程
-> + 不变分布
+!!! tldr "Syllabus"
+    + Markou链
+    + Chapman-Kolmogorou方程
+    + 不变分布
 
 
-> [!tip] HW2
-> Sheldon Ross 2.5 2.8 2.17 2.20 2.29 2.36
+!!! tip "HW2"
+    Sheldon Ross 2.5 2.8 2.17 2.20 2.29 2.36
 
 ## 离散时间Markov链
 
 
-> [!NOTE] Defnition4.1 (离散时间Markov链)
-> 设$E$ 是一个可数集合，不妨为$\mathbb{N}^{+}=\{1,2,\ldots\}$ 。称状态空间为$E$ 的离散时间随机过程$\{ X_{n}$, $n= 0, 1, 2, \ldots \}$ 为一个(离散时间)Markou链，如果对于任意$n\geq0$ ，任意状态$i_0,i_1,\ldots,i_{n-1},i,j\in E$ ，有Markou性(4.1)：
-> 
-> $$
-> \begin{aligned}
-> &P\{X_{n+1}=j|X_n=i,X_{n-1}=i_{n-1},\dots,X_1=i_1,X_0=i_0\}\\
-> =&P\{X_{n+1}=j|X_n=i\}
-> \end{aligned}
-> $$
-> 
-> 成立。
-> 
+!!! note "Defnition4.1 (离散时间Markov链)"
+    设$E$ 是一个可数集合，不妨为$\mathbb{N}^{+}=\{1,2,\ldots\}$ 。称状态空间为$E$ 的离散时间随机过程$\{ X_{n}$, $n= 0, 1, 2, \ldots \}$ 为一个(离散时间)Markou链，如果对于任意$n\geq0$ ，任意状态$i_0,i_1,\ldots,i_{n-1},i,j\in E$ ，有Markou性(4.1)：
+
+    $$
+    \begin{aligned}
+    &P\{X_{n+1}=j|X_n=i,X_{n-1}=i_{n-1},\dots,X_1=i_1,X_0=i_0\}\\
+    =&P\{X_{n+1}=j|X_n=i\}
+    \end{aligned}
+    $$
+
+    成立。
+
 
 
 称$P(n,i;n+1,j)$ 为时刻$n$处于状态$i$,时刻$n+1$转移到状态的转移函数。若它与$n$ 无关，则记为$P_{ij}$ ，此时称$\{X_n\}$ 为一个时齐Markou链，矩阵$P=(P_{ij})_{i,j\in E}$ 称为一步转移矩阵。我们之后都考虑时齐Markou链。
@@ -64,9 +64,9 @@ $$\displaystyle\sum_{j\in E}P_{ij}=1,\quad\forall i\in E$$
 ## 例子
 
 
-> [!example] Example4.2 (一维简单随机游走)
-> 考虑一个在Z上运动的粒子，它每一次等可能地向左或向右移动一步，即
-> 
+!!! example "Example4.2 (一维简单随机游走)"
+    考虑一个在Z上运动的粒子，它每一次等可能地向左或向右移动一步，即
+
 $$P_{i,i+1}=P_{i,i-1}=\frac{1}{2},\quad\forall i\in\mathbb{Z}.$$
 >
 粒子在Z上的位置为一个随机过程，称为一维简单随机游走。
@@ -87,8 +87,8 @@ $$S_n:=S_0+\xi_1+\cdots+\xi_n=S_{n-1}+\xi_n.$$
 $\xi_{n}$ 可以服从更一般的分布，此时， $S_n$ 称为一般随机游走。
 
 
-> [!EXAMPLE] Example4.3 (Ehrenfest模型)
-> 在统计热力学的研究中，一个经典的模型是Ehrenfest模型，用来模拟气体分子在两个容器中的扩散过程。考虑甲乙两个容器，其中总共的气体分子为$N$ 。假设单位时间内，有且只有一个分子在甲乙两个容器之间扩散，扩散的分子是随机选取的。
+!!! example "Example4.3 (Ehrenfest模型)"
+    在统计热力学的研究中，一个经典的模型是Ehrenfest模型，用来模拟气体分子在两个容器中的扩散过程。考虑甲乙两个容器，其中总共的气体分子为$N$ 。假设单位时间内，有且只有一个分子在甲乙两个容器之间扩散，扩散的分子是随机选取的。
 
 记n时间后甲容器内的气体分子数为$X_{n}$ ，则$X_{n}$是一个状态空间为$E=\{0,1,\ldots,N\}$ 的离散时间Markou链，转移概率为
 
@@ -96,14 +96,14 @@ $$P\left(X_{n+1}=j|X_n=i\right)=\left\{\begin{array}{cc}1-\frac{i}{N},&j=i+1\\\f
 
 直观上，如果一开始甲容器里没有气体分子，经过自由扩散，两个容器中的气体分子数量应该会趋于一致。这本质上是热力学第二定律描述的熵增现象，说明在封闭系统中，微观随机行为会导致宏观熵的增加。
 
-> [!EXAMPLE] Example4.4 (图上的随机游走)
-> 设$\mathcal{G}=(\mathcal{V},\mathcal{E})$ 为一个图，对于节点$,j\in\mathcal{V}$ ，如果$(i,j)\in$ $\varepsilon$ ，则称节点i， $j$ 相邻，记为$i\sim j$
-> 
-> 考虑一个位置位于图上节点的粒子，它每次随机地移动到相邻节点上。记$X_{n}$ 为它在时刻$n$ 所处的位置，则$\{X_n\}$ 是一个状态空间为V的离散时间Markov链，转移概率为
-> 
-> $$P_{ij}=\begin{cases}\frac{1}{\deg(i)}&\text{if}j\sim i,\\[2ex]0&otherwise.\end{cases}$$
-> 
-> 其中$\deg(i)$ 为节点i的度（degree)，表示节点i相邻的节点的数目。
+!!! example "Example4.4 (图上的随机游走)"
+    设$\mathcal{G}=(\mathcal{V},\mathcal{E})$ 为一个图，对于节点$,j\in\mathcal{V}$ ，如果$(i,j)\in$ $\varepsilon$ ，则称节点i， $j$ 相邻，记为$i\sim j$
+
+    考虑一个位置位于图上节点的粒子，它每次随机地移动到相邻节点上。记$X_{n}$ 为它在时刻$n$ 所处的位置，则$\{X_n\}$ 是一个状态空间为V的离散时间Markov链，转移概率为
+
+    $$P_{ij}=\begin{cases}\frac{1}{\deg(i)}&\text{if}j\sim i,\\[2ex]0&otherwise.\end{cases}$$
+
+    其中$\deg(i)$ 为节点i的度（degree)，表示节点i相邻的节点的数目。
 
 
 ## Chapman-Kolmogorov方程
@@ -112,12 +112,12 @@ $$P\left(X_{n+1}=j|X_n=i\right)=\left\{\begin{array}{cc}1-\frac{i}{N},&j=i+1\\\f
 
 $$P_{ij}^{(n)}=P\{X_{n+m}=j|X_{m}=i\},\quad n\ge0,\quad i,j\ge0.$$
 
-> [!NOTE] Proposition 4.5 (Chapman-Kolmogorov方程 CK-Equation)
-> 对任意$i,j\in E,m,n\geqslant0$
-> 
-> $$P_{ij}^{(n+m)}=\sum_{k\in E}P_{ik}^{(n)}P_{kj}^{(m)}$$
->
-> 注：实际是一个例子，由于重要性记为Prop.
+!!! note "Proposition 4.5 (Chapman-Kolmogorov方程 CK-Equation)"
+    对任意$i,j\in E,m,n\geqslant0$
+
+    $$P_{ij}^{(n+m)}=\sum_{k\in E}P_{ik}^{(n)}P_{kj}^{(m)}$$
+
+    注：实际是一个例子，由于重要性记为Prop.
 
 
 `Proof.`
@@ -139,13 +139,13 @@ $$P^{(n+m)}=P^{(n)}\cdot P^{(m)},$$
 
 $$P^{(n)}=P\cdot P^{(n-1)}=P\cdot P\cdot P^{(n-2)}=\cdots=P^{n}.$$
 
-> [!example] Example4.6 (两状态的Markov链 $I$)
-> 
-> 设离散时间Markov 链的样本空间只有两个状态。一步转移概率矩阵为
-> 
-> $$P=\left(\begin{array}{cc}1-\alpha&\alpha\\\beta&1-\beta\end{array}\right)$$
->
-> 其中$\alpha,\beta\in(0,1)$ 。
+!!! example "Example4.6 (两状态的Markov链 $I$)"
+
+    设离散时间Markov 链的样本空间只有两个状态。一步转移概率矩阵为
+
+    $$P=\left(\begin{array}{cc}1-\alpha&\alpha\\\beta&1-\beta\end{array}\right)$$
+
+    其中$\alpha,\beta\in(0,1)$ 。
 
 
 我们想要计算它的n步转移矩阵，由Chapman-Kolmogorou方程，只需要计算$P^{n}$ 。做**特征值分解**,$P$的两个特征值为
@@ -172,9 +172,9 @@ $$\lim\limits_{n\to\infty}P_{11}^{(n)}=\lim\limits_{n\to\infty}P_{01}^{(n)}=\fra
 这是我们之后要学习的遍历性。
 
 
-> [!question] 思考
-> 如果$|1-\alpha-\beta|=1$ ，即$\alpha=\beta=1$ 时会发生什么？
-> 
+!!! question "思考"
+    如果$|1-\alpha-\beta|=1$ ，即$\alpha=\beta=1$ 时会发生什么？
+
 
 ## 不变分布
 
@@ -187,12 +187,12 @@ P(X_{1}=j) &=\sum_{k\in E}P(X_{0}=k)P(X_{1}=j|X_{0}=k) \\
 
 把分布$\mu$ 视为状态空间$E$上的行向量，那么$X_{1}$ 的分布$\mu_{1}$为$\mu P$,自然地,$X_n$ 的分布为$\mu P^{(n)}=$ $\mu P^{n}$
 
-> [!NOTE] Definition4.7 (不变测度)
-> 设$\pi=\{\pi_{i},i\in E\}$ 为$E$ 上的测度，若π满足不变方程
-> 
-> $$\pi_j=\sum_{k\in E}\pi_kP_{kj},\quad\forall j\in E$$
-> 
-> 则称$\pi$为$P$的不变测度(inwariant measure)。进一步，若$\sum\limits _{i\in E}\pi _{i}=1$，则称$\pi$为不变分布。也称$\pi$为以$P$为转移矩阵的Markov链的不变测度。
+!!! note "Definition4.7 (不变测度)"
+    设$\pi=\{\pi_{i},i\in E\}$ 为$E$ 上的测度，若π满足不变方程
+
+    $$\pi_j=\sum_{k\in E}\pi_kP_{kj},\quad\forall j\in E$$
+
+    则称$\pi$为$P$的不变测度(inwariant measure)。进一步，若$\sum\limits _{i\in E}\pi _{i}=1$，则称$\pi$为不变分布。也称$\pi$为以$P$为转移矩阵的Markov链的不变测度。
 
 这也可以理解为是收敛性的一种体现
 
@@ -233,16 +233,16 @@ Markov链研究中的一个基本问题是确定所有的不变分布。
 
 我们在后面的学习中会回答这些问题。
 
-> [!Example] Example4.8(两状态的Markov链 $II$)
-> 考虑状态空间为$\{0,1\}$ ，转移矩阵为
-> 
-> $$P=\left(\begin{array}{cc}1-\alpha&\alpha\\\beta&1-\beta\end{array}\right)$$
-> 
-> 的Markov链，它的不变分布$\pi$ 满足：
-> 
-> $$\begin{array}{c}\pi_0(1-\alpha)+\pi_1\beta=\pi_0\\ 
-> \pi_0\alpha+\pi_1(1-\beta)=\pi_1\end{array}$$
-> 
+!!! example "Example4.8(两状态的Markov链 $II$)"
+    考虑状态空间为$\{0,1\}$ ，转移矩阵为
+
+    $$P=\left(\begin{array}{cc}1-\alpha&\alpha\\\beta&1-\beta\end{array}\right)$$
+
+    的Markov链，它的不变分布$\pi$ 满足：
+
+    $$\begin{array}{c}\pi_0(1-\alpha)+\pi_1\beta=\pi_0\\
+    \pi_0\alpha+\pi_1(1-\beta)=\pi_1\end{array}$$
+
 
 
 结合$\pi_{0}+\pi_{1}=1$ ，可以解得
@@ -250,11 +250,11 @@ Markov链研究中的一个基本问题是确定所有的不变分布。
 $$\pi_0=\frac{\beta}{\alpha+\beta},\pi_1=\frac{\alpha}{\alpha+\beta}.$$
 
 
-> [!QUESTION] 思考
-> 
-> $$\lim\limits_{n\to\infty}P^{(n)}=\frac{1}{\alpha+\beta}\left(\begin{array}{cc}\beta&\alpha\\\beta&\alpha\end{array}\right)=\left(\begin{array}{c}\pi\\\pi\end{array}\right).$$
-> 
-> 回顾转移概率的极限和不变分布之间有什么关系呢？
+!!! question "思考"
+
+    $$\lim\limits_{n\to\infty}P^{(n)}=\frac{1}{\alpha+\beta}\left(\begin{array}{cc}\beta&\alpha\\\beta&\alpha\end{array}\right)=\left(\begin{array}{c}\pi\\\pi\end{array}\right).$$
+
+    回顾转移概率的极限和不变分布之间有什么关系呢？
 
 Recall: 与前文的两状态Markov链$I$中的不变分布的极限值相等，我们不免思考其中是否存在什么联系？
 

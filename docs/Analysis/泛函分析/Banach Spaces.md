@@ -1,25 +1,25 @@
 # Banach Spaces
 
 
-> [!tldr] Outline
-> + Normed spaces
-> + Banach spaces
-> + Seperable Banach spaces
-> + Completeness and Compactness in Banach spaces
+!!! tldr "Outline"
+    + Normed spaces
+    + Banach spaces
+    + Seperable Banach spaces
+    + Completeness and Compactness in Banach spaces
 
 泛函分析的基础就是下面所提到的赋范空间，在一个向量空间上赋以一个范数，因此称为赋范空间(Normed space)，这是泛函分析中最为基本的研究对象，我们将完备性引入其中得到Banach空间
 
 
-> [!tip] 补充
-> 也可以参考张恭庆的《泛函分析》一书，其中详细讲述了这一类空间是如何加强条件而产生的，由准范数的定义出发定义$F^{*}$空间，进而完备化定义$Frechet$空间，再添加齐次性使得准范数加强为范数，诱导出下面的赋范线性空间($B^{*}$空间)，完备化后就是本章要重点讲述的$Banach$空间
+!!! tip "补充"
+    也可以参考张恭庆的《泛函分析》一书，其中详细讲述了这一类空间是如何加强条件而产生的，由准范数的定义出发定义$F^{*}$空间，进而完备化定义$Frechet$空间，再添加齐次性使得准范数加强为范数，诱导出下面的赋范线性空间($B^{*}$空间)，完备化后就是本章要重点讲述的$Banach$空间
 
 
-> [!cite] 注：拓扑向量空间
-> 而**[拓扑向量空间](拓扑向量空间(TVS))(Topological Vector Space, TVS)**则是泛函分析的基本研究对象，是指带有拓扑的向量空间，这样的拓扑对无限维向量空间有不同选择，而有限维实或复向量空间上符合Hausdorff条件的拓扑向量空间结构唯一，需要注意TVS是对赋范空间的推广，它允许使用比范数诱导的拓扑更弱，更一般的拓扑(有些TVS的拓扑不能被任何度量诱导)，因此有更加一般的性质！
-> 
-> 比较重要的拓扑向量空间的例子就是Banach空间和Hilbert空间，它们是满足额外条件的拓扑向量空间，而大致的包含关系是这样的：
-> 
-> 内积空间$\subset$赋范空间$\subset$可度量化的TVS$\subset$拓扑向量空间
+    [!cite] 注：拓扑向量空间
+    而**[拓扑向量空间](拓扑向量空间(TVS))(Topological Vector Space, TVS)**则是泛函分析的基本研究对象，是指带有拓扑的向量空间，这样的拓扑对无限维向量空间有不同选择，而有限维实或复向量空间上符合Hausdorff条件的拓扑向量空间结构唯一，需要注意TVS是对赋范空间的推广，它允许使用比范数诱导的拓扑更弱，更一般的拓扑(有些TVS的拓扑不能被任何度量诱导)，因此有更加一般的性质！
+
+    比较重要的拓扑向量空间的例子就是Banach空间和Hilbert空间，它们是满足额外条件的拓扑向量空间，而大致的包含关系是这样的：
+
+    内积空间$\subset$赋范空间$\subset$可度量化的TVS$\subset$拓扑向量空间
 
 下面先介绍赋范(线性)空间
 
@@ -27,13 +27,13 @@
 
 所谓的“赋范”就是指给空间赋以一个范数，那么就应当先给出范数的定义：
 
-> [!NOTE] Definition(norm)
-> Let $E$ be a vector space over the field $\mathbb{K}=\mathbb{R}\ or\ \mathbb{C}$, and let a function $\lVert \cdot \rVert: E\to \mathbb{R}_{+}:=[0,\infty)$ is a *norm* if the following 3 conditions are satisfied:
-> 1. $\lVert x \rVert \geqslant 0$ for all $x\in E$ and $\lVert x \rVert = 0\iff x=0$
-> 2. $\lVert \lambda x \rVert =\lvert \lambda \rvert\lVert x \rVert$ for all $\lambda\in \mathbb{K}$ and $x\in E$
-> 3. $\lVert x+y \rVert \leqslant \lVert x \rVert + \lVert y \rVert$ for all $x,y\in E$ (Triangle inequality)
-> 
-> and we call $(E,\lVert \cdot \rVert)$ a **normed(vector) space**
+!!! note "Definition(norm)"
+    Let $E$ be a vector space over the field $\mathbb{K}=\mathbb{R}\ or\ \mathbb{C}$, and let a function $\lVert \cdot \rVert: E\to \mathbb{R}_{+}:=[0,\infty)$ is a *norm* if the following 3 conditions are satisfied:
+    1. $\lVert x \rVert \geqslant 0$ for all $x\in E$ and $\lVert x \rVert = 0\iff x=0$
+    2. $\lVert \lambda x \rVert =\lvert \lambda \rvert\lVert x \rVert$ for all $\lambda\in \mathbb{K}$ and $x\in E$
+    3. $\lVert x+y \rVert \leqslant \lVert x \rVert + \lVert y \rVert$ for all $x,y\in E$ (Triangle inequality)
+
+    and we call $(E,\lVert \cdot \rVert)$ a **normed(vector) space**
 
 
 A norm will induce a metric $d$ and it's defined by
@@ -44,38 +44,38 @@ $$
 
 这是非常显然的，度量就是两个向量差的范数，所以有了范数就一定有度量和距离的概念
 
-> [!warning] Remark：LCS and TVS
-> Some terms may be used later: locally convex space(LCS for short), topological vector spaces(TVS)
-> We note that $\mathbb{K}=\mathbb{C}\ or\ \mathbb{R}$, so we should consider $\overline{x}y\not\neq x \overline{y}$
+!!! warning "Remark：LCS and TVS"
+    Some terms may be used later: locally convex space(LCS for short), topological vector spaces(TVS)
+    We note that $\mathbb{K}=\mathbb{C}\ or\ \mathbb{R}$, so we should consider $\overline{x}y\not\neq x \overline{y}$
 
 We should know some about *topological vector spaces(TVS)*. You can find more about TVS in [[拓扑向量空间(TVS)]](赋予了范数拓扑的赋范空间是一个局部凸拓扑向量空间(LCS))
 
 给出一些简单范数的例子(证明只需要根据定义check)
 
-> [!example] 范数例子
-> 1. 欧式范数
-> 在有限维的向量空间上定义一组基，定义范数($\lVert \cdot \rVert : E\to[0,+\infty)$)为：
-> 
-> $$\lVert x \rVert _{2}:= \left( \sum\limits_{i=1}^{n} \lvert x_{i} \rvert ^{2} \right) ^{ \frac{1}{2}},\forall x=\sum\limits_{i=1}^{n} x_{i}e_{i}\in E$$
-> 
-> 2. $p$范数
-> 对于$1\leqslant p < \infty$，定义在$\mathbb{K}^{n}$上的范数为
-> 
-> $$\lVert x \rVert _{p}=\left( \sum\limits_{i=1}^{n} \lvert x_{i} \rvert ^{p} \right)^{\frac{1}{p}}$$
-> 
-> 比较特别的是无穷范数$\lVert x \rVert_{\infty}=\max\limits_{1\leqslant i \leqslant n}\lvert x_{i} \rvert$，事实上这只是针对于序列的，关于函数空间也有相应的$p$范数会在后续定义
-> 
-> 3. *Frobenius norm* or *Hilbert-Schmidt norm*
-> 定义矩阵函数：$M_{mn}\to[0,+\infty)$如下：
-> 
-> $$\lVert A \rVert =\left( \sum\limits_{i=1}^{m} \sum\limits_{j=1}^{n} \lvert a_{ij} \rvert ^{2} \right)^{\frac{1}{2}},\forall A=(a_{ij}){1\leqslant i \leqslant m, 1\leqslant j \leqslant n}\in M_{mn}$$
+!!! example "范数例子"
+    1. 欧式范数
+    在有限维的向量空间上定义一组基，定义范数($\lVert \cdot \rVert : E\to[0,+\infty)$)为：
+
+    $$\lVert x \rVert _{2}:= \left( \sum\limits_{i=1}^{n} \lvert x_{i} \rvert ^{2} \right) ^{ \frac{1}{2}},\forall x=\sum\limits_{i=1}^{n} x_{i}e_{i}\in E$$
+
+    2. $p$范数
+    对于$1\leqslant p < \infty$，定义在$\mathbb{K}^{n}$上的范数为
+
+    $$\lVert x \rVert _{p}=\left( \sum\limits_{i=1}^{n} \lvert x_{i} \rvert ^{p} \right)^{\frac{1}{p}}$$
+
+    比较特别的是无穷范数$\lVert x \rVert_{\infty}=\max\limits_{1\leqslant i \leqslant n}\lvert x_{i} \rvert$，事实上这只是针对于序列的，关于函数空间也有相应的$p$范数会在后续定义
+
+    3. *Frobenius norm* or *Hilbert-Schmidt norm*
+    定义矩阵函数：$M_{mn}\to[0,+\infty)$如下：
+
+    $$\lVert A \rVert =\left( \sum\limits_{i=1}^{m} \sum\limits_{j=1}^{n} \lvert a_{ij} \rvert ^{2} \right)^{\frac{1}{2}},\forall A=(a_{ij}){1\leqslant i \leqslant m, 1\leqslant j \leqslant n}\in M_{mn}$$
 
 下面给出一些关于$l_{\infty}$的子空间的例子
 
-> [!example] important normed subspaces of $l_{\infty}$
-> (1) $c=\left\{ (x_{n})_{n=1}^{\infty}:\lim\limits_{ n \to \infty }x_{n}\ exists \right\}$
-> (2) $c_{0}=\left\{ (x_{n})_{n=1}^{\infty}:\lim\limits_{ n \to \infty }x_{n}=0 \right\}$
-> (3) $c_{00}=\left\{ (x_{n})_{n=1}^{\infty}:x_{n}=0 \right\}$ $x_{n}=0$ for all but at most finitely many $n$
+!!! example "important normed subspaces of $l_{\infty}$"
+    (1) $c=\left\{ (x_{n})_{n=1}^{\infty}:\lim\limits_{ n \to \infty }x_{n}\ exists \right\}$
+    (2) $c_{0}=\left\{ (x_{n})_{n=1}^{\infty}:\lim\limits_{ n \to \infty }x_{n}=0 \right\}$
+    (3) $c_{00}=\left\{ (x_{n})_{n=1}^{\infty}:x_{n}=0 \right\}$ $x_{n}=0$ for all but at most finitely many $n$
 
 其中第一个就是一个极限存在的数列，第二个就是一个极限是0的数列，第三个则是一个至多有有限多个项能够取到0的极限为0的数列
 
@@ -84,10 +84,10 @@ We should know some about *topological vector spaces(TVS)*. You can find more ab
 实际上在上面关于$p$范数的三角不等式性质证明中我们需要两个著名的不等式($H \ddot{o} lder$ inequality and Minkowski inequality)，在此citing with proof，后续不再赘述
 
 
-> [!tip] Theorem($H\ddot{o}lder$'s inequality)
-> Here use $\mu$ as a positive measure and a set $\Omega$, let $1<p<\infty$. For any $f\in L^{p}(\Omega,\mu)$ and $g\in L^{q}(\Omega,\mu)$, where $\frac{1}{p}+ \frac{1}{q}=1$, we have $fg\in L^{1}(\Omega,\mu)$ and
-> 
-> $$\lVert fg \rVert _{1}=\int_{\Omega}\lvert fg \rvert d \mu \leqslant \left( \int_{\Omega}\lvert f \rvert ^{p} d\mu \right)^{\frac{1}{p}}\left( \int_{\Omega}\lvert g \rvert ^{q}d\mu \right)^{\frac{1}{q}}=\lVert f \rVert _{p}\lVert g \rVert _{q}$$
+!!! tip "Theorem($H\ddot{o}lder$'s inequality)"
+    Here use $\mu$ as a positive measure and a set $\Omega$, let $1<p<\infty$. For any $f\in L^{p}(\Omega,\mu)$ and $g\in L^{q}(\Omega,\mu)$, where $\frac{1}{p}+ \frac{1}{q}=1$, we have $fg\in L^{1}(\Omega,\mu)$ and
+
+    $$\lVert fg \rVert _{1}=\int_{\Omega}\lvert fg \rvert d \mu \leqslant \left( \int_{\Omega}\lvert f \rvert ^{p} d\mu \right)^{\frac{1}{p}}\left( \int_{\Omega}\lvert g \rvert ^{q}d\mu \right)^{\frac{1}{q}}=\lVert f \rVert _{p}\lVert g \rVert _{q}$$
 
 `Proof.`
 
@@ -112,14 +112,14 @@ $$
 So we get it.
 
 
-> [!tip] Theorem(Minkowski inequality)
-> Let $\mu$ be a positive measure on a set $\Omega$，$1\leqslant p < \infty$ and $f,g\in L^{p}(\Omega,\mu)$. We have
-> 
-> $$\lVert f+g \rVert _{p}\leqslant \lVert f \rVert _{p}+\lVert g \rVert _{p}$$
-> 
-> that is,
-> 
-> $$\left( \int_{\Omega}\lvert f+g \rvert ^{p}d\mu \right)^{\frac{1}{p}}\leqslant\left( \int_{\Omega}\lvert f \rvert ^{p}d\mu \right)^{ \frac{1}{p}}+\left( \int_{\Omega}\lvert g \rvert ^{p} d\mu\right)^{\frac{1}{p}}$$
+!!! tip "Theorem(Minkowski inequality)"
+    Let $\mu$ be a positive measure on a set $\Omega$，$1\leqslant p < \infty$ and $f,g\in L^{p}(\Omega,\mu)$. We have
+
+    $$\lVert f+g \rVert _{p}\leqslant \lVert f \rVert _{p}+\lVert g \rVert _{p}$$
+
+    that is,
+
+    $$\left( \int_{\Omega}\lvert f+g \rvert ^{p}d\mu \right)^{\frac{1}{p}}\leqslant\left( \int_{\Omega}\lvert f \rvert ^{p}d\mu \right)^{ \frac{1}{p}}+\left( \int_{\Omega}\lvert g \rvert ^{p} d\mu\right)^{\frac{1}{p}}$$
 
 `Proof.`
 
@@ -151,12 +151,12 @@ $$
 给出$\ell_{p}$空间的定义：
 
 
-> [!NOTE] Definiotion($l_{p}$ space)
-> Let $I$ be a set and $1\leqslant p < \infty$ and $l_{p}(I)$ to be the set of all functions $x:I\to \mathbb{K}$ s.t.
-> 
-> $$\sum\limits_{i\in I}\lvert x(i) \rvert^{p}:=\lim\limits_{ F\in \mathcal{F} }\lvert x(i) \rvert ^{p}<\infty   $$
-> 
-> where $\mathcal{F}$ is the direct family of finite subsets of $I$ ordered by set inclusion
+!!! note "Definiotion($l_{p}$ space)"
+    Let $I$ be a set and $1\leqslant p < \infty$ and $l_{p}(I)$ to be the set of all functions $x:I\to \mathbb{K}$ s.t.
+
+    $$\sum\limits_{i\in I}\lvert x(i) \rvert^{p}:=\lim\limits_{ F\in \mathcal{F} }\lvert x(i) \rvert ^{p}<\infty   $$
+
+    where $\mathcal{F}$ is the direct family of finite subsets of $I$ ordered by set inclusion
 
 实际上$\ell^{p}$空间是$L^{p}$空间在计数测度的一种特殊情况
 
@@ -165,16 +165,16 @@ $$
 关于$L^{p}$空间的内容可以参考实分析教材或是wikipedia，相关的博客[香蕉空间](https://www.bananaspace.org/wiki/Lp_%E7%A9%BA%E9%97%B4)的撰写也很有意思，列在下面(老师的讲义中也有这一部分，所以不重复叙述了)
 
 
-> [!tip] Generation($L^{p}$ space)
-> 设$(X,\mathcal{A},\mu)$为测度空间，$f:X\to \mathbb{K}$为可测函数，$p\in[0,+\infty]$，则$f$的$L^{p}$范数($p-$范数)，记为$\lVert f \rVert_{p}\in[0,+\infty]$，定义如下
-> 
-> $$\lVert f \rVert _{p}=\left( \int_{X}\lvert f \rvert ^{p}d\mu \right)^{\frac{1}{p}}$$
->
->其中的积分为Lebesgue积分，若是$p=\infty$，将$\lVert f \rVert_{\infty}$定义为对于几乎所有$x\in X$成立的最小上确界(essential)，当$\mu(X)>0$，称作$\lvert f \rvert$的本质上确界(essential supremum)，此时$L^{\infty}$范数也称为一致范数
->
->$$ess\ \sup\ f = inf\left\{ \beta:\lvert f(t) \rvert \leqslant \beta\ \mu-a.e. \right\}  $$
->
-> $\ell^{p}$是取$X=\mathbb{Z}_{>0}$并采用计数测度而得到的$L^{p}$空间，其元素可视为形如$x=(x_{1},x_{2},\dots)$并使得范数$\lVert x \rVert_{p}=\left( \sum\limits_{i=1}^{\infty}\lvert x_{i} \rvert ^{p}\right) ^{\frac{1}{p}}$有限的实数列
+!!! tip "Generation($L^{p}$ space)"
+    设$(X,\mathcal{A},\mu)$为测度空间，$f:X\to \mathbb{K}$为可测函数，$p\in[0,+\infty]$，则$f$的$L^{p}$范数($p-$范数)，记为$\lVert f \rVert_{p}\in[0,+\infty]$，定义如下
+
+    $$\lVert f \rVert _{p}=\left( \int_{X}\lvert f \rvert ^{p}d\mu \right)^{\frac{1}{p}}$$
+
+    其中的积分为Lebesgue积分，若是$p=\infty$，将$\lVert f \rVert_{\infty}$定义为对于几乎所有$x\in X$成立的最小上确界(essential)，当$\mu(X)>0$，称作$\lvert f \rvert$的本质上确界(essential supremum)，此时$L^{\infty}$范数也称为一致范数
+
+    $$ess\ \sup\ f = inf\left\{ \beta:\lvert f(t) \rvert \leqslant \beta\ \mu-a.e. \right\}  $$
+
+    $\ell^{p}$是取$X=\mathbb{Z}_{>0}$并采用计数测度而得到的$L^{p}$空间，其元素可视为形如$x=(x_{1},x_{2},\dots)$并使得范数$\lVert x \rVert_{p}=\left( \sum\limits_{i=1}^{\infty}\lvert x_{i} \rvert ^{p}\right) ^{\frac{1}{p}}$有限的实数列
 
 essential supremum的定义是很好用的，它说明$ess\ \sup(f-g)=0$等价于两函数相差一个零测集，可以视作等价，记为$[f]$或是简单的$f$表示在$\Omega$上只与$f$相差一个零测集的可测函数的等价类
 
@@ -193,47 +193,47 @@ $$
 > BV(Bounded Variation)即有界变差
 
 
-> [!tip] Theorem
-> Let $E,F$ be two normed spaces. A linear operator $T$ from $E$ into $F$ is continuous with respect to the norm topology of $E$ and $F$ if and only if for any sequence $(x_{n})_{n\in \mathbb{N}}$ in $E$
-> 
-> $$x_{n}\to 0\ in \ E \implies Tx_{n}\to 0\ in\ F$$
+!!! tip "Theorem"
+    Let $E,F$ be two normed spaces. A linear operator $T$ from $E$ into $F$ is continuous with respect to the norm topology of $E$ and $F$ if and only if for any sequence $(x_{n})_{n\in \mathbb{N}}$ in $E$
+
+    $$x_{n}\to 0\ in \ E \implies Tx_{n}\to 0\ in\ F$$
 
 这个定理回答了赋范线性空间下如何判断线性算子连续性的问题，当且仅当它在零点处是序列连续的，这个定理成立的关键就是线性算子的线性性和赋范空间的平移不变性
 
 给出范数等价的定义
 
-> [!NOTE] Definition(equivalent of norms)
-> Two norms $\lVert \cdot \rVert_{1},\lVert \cdot \rVert_{2}$ defined on a vector space $E$ are equivalent if there are constants $\alpha,\beta>0$ such that 
-> 
-> $$\alpha \lVert x \rVert_{1}\leqslant \lVert x \rVert_{2}\leqslant \beta \lVert x \rVert _{1}$$
-> 
-> in this case, we write $\lVert \cdot \rVert_{1}\sim \lVert \cdot \rVert_{2}$
+!!! note "Definition(equivalent of norms)"
+    Two norms $\lVert \cdot \rVert_{1},\lVert \cdot \rVert_{2}$ defined on a vector space $E$ are equivalent if there are constants $\alpha,\beta>0$ such that
+
+    $$\alpha \lVert x \rVert_{1}\leqslant \lVert x \rVert_{2}\leqslant \beta \lVert x \rVert _{1}$$
+
+    in this case, we write $\lVert \cdot \rVert_{1}\sim \lVert \cdot \rVert_{2}$
 
 关于norm topology的定义可以参考[wikipedia](https://en.wikipedia.org/wiki/Operator_topologies)，简单来说就是拓扑诱导生成度量，而度量产生拓扑(一个满足相应条件的集族)，范数拓扑就可以简单理解为所有开球的任意并集构成的集合，而开球族可以利用球心和半径定义(实际上是拓扑基的定义)
 
 用范数拓扑的语言来写范数等价性条件就是：
 
-> [!NOTE] Proposition(equivalent of norms)
-> Two norms $\lVert \cdot \rVert_{1},\lVert \cdot \rVert_{2}$ defined on a vector space $E$ are equivalent if and only if they define the same norm topology on $E$
+!!! note "Proposition(equivalent of norms)"
+    Two norms $\lVert \cdot \rVert_{1},\lVert \cdot \rVert_{2}$ defined on a vector space $E$ are equivalent if and only if they define the same norm topology on $E$
 
 实际上对于有限维向量空间$E$而言，任意两个范数是等价的，也就是说只有一种范数拓扑定义在$E$上
 
 
 再给出赋范线性空间等价的定义
 
-> [!NOTE] Definition(equivalent of normed spaces)
-> Two normed spaces $E$ and $F$ are equivalent(resp. isometrically isomorphic) if there is a bijective linear map $T:E\to F$ such that both $T$ and $T^{-1}$ are continuous(resp. isometries)
+!!! note "Definition(equivalent of normed spaces)"
+    Two normed spaces $E$ and $F$ are equivalent(resp. isometrically isomorphic) if there is a bijective linear map $T:E\to F$ such that both $T$ and $T^{-1}$ are continuous(resp. isometries)
 
 
 ## Exercises 2.1
 
-> [!question] (1)
-> If $E$ is a linear space on which is given a mapping $p: E \to [0, \infty)$ with the properties:
-> (a) $p(x) = 0 \iff x = 0$;
-> (b) $p(\lambda x) = |\lambda|p(x)$ for any $x \in E$ and $\lambda \in \mathbb{K}$.
-> Prove that $p$ is a norm if and only if $U_E := \{x \in E : p(x) \le 1\}$ is convex.
+!!! question "(1)"
+    If $E$ is a linear space on which is given a mapping $p: E \to [0, \infty)$ with the properties:
+    (a) $p(x) = 0 \iff x = 0$;
+    (b) $p(\lambda x) = |\lambda|p(x)$ for any $x \in E$ and $\lambda \in \mathbb{K}$.
+    Prove that $p$ is a norm if and only if $U_E := \{x \in E : p(x) \le 1\}$ is convex.
 
->纯定义，Gemini3写的
+    纯定义，Gemini3写的
 
 `Proof.`
 
@@ -257,10 +257,10 @@ $$
 
 Thus $p$ is a norm.
 
-> [!question] (2)
-> Prove that the norm topology defined by a norm $\|\cdot\|$ of a normed space $E$ is a vector topology.
+!!! question "(2)"
+    Prove that the norm topology defined by a norm $\|\cdot\|$ of a normed space $E$ is a vector topology.
 
->需要熟知向量拓扑和范数拓扑的定义，由范数生成的拓扑一定是一个向量拓扑，所以每一个赋范空间都是一个
+    需要熟知向量拓扑和范数拓扑的定义，由范数生成的拓扑一定是一个向量拓扑，所以每一个赋范空间都是一个
 
 `Proof.`
 
@@ -292,11 +292,11 @@ $$\|\lambda_n x_n - \lambda x\| \le M \|x_n - x\| + |\lambda_n - \lambda| \|x\|$
 
 As $n \to \infty$, $\|x_n - x\| \to 0$ and $|\lambda_n - \lambda| \to 0$, so the entire expression converges to 0. Thus the norm topology is a vector topology.
 
-> [!question] (3)
-> Prove that the norm function is continuous with respect to the norm topology, that is,
-> $x_n \to x$ in $E \implies \|x_n\| \to \|x\|$ in $\mathbb{R}$.
+!!! question "(3)"
+    Prove that the norm function is continuous with respect to the norm topology, that is,
+    $x_n \to x$ in $E \implies \|x_n\| \to \|x\|$ in $\mathbb{R}$.
 
->范数函数关于它所生成的拓扑是连续的，有点废话，实际上算是Lipschitz连续
+    范数函数关于它所生成的拓扑是连续的，有点废话，实际上算是Lipschitz连续
 
 `Proof.`
 
@@ -306,10 +306,10 @@ $| \|x_n\| - \|x\| | \le \|x_n - x\|$
 
 If $x_n \to x$ in $E$, then by definition $\|x_n - x\| \to 0$. Therefore, $| \|x_n\| - \|x\| | \to 0$, which means $\|x_n\| \to \|x\|$ in $\mathbb{R}$.
 
-> [!question] (4)
-> Convergent sequence in a normed space is a bounded sequence.
+!!! question "(4)"
+    Convergent sequence in a normed space is a bounded sequence.
 
->纯无聊，这是数学分析的定义问题
+    纯无聊，这是数学分析的定义问题
 
 `Proof.`
 
@@ -319,10 +319,10 @@ $$\|x_n\| = \|x_n - x + x\| \le \|x_n - x\| + \|x\| < 1 + \|x\|$$
 
 Let $M = \max\{\|x_1\|, \|x_2\|, \dots, \|x_N\|, 1 + \|x\|\}$. Then $\|x_n\| \le M$ for all $n \in \mathbb{N}$. Thus, the sequence is bounded.
 
-> [!question] (5)
-> Let $E$ be a normed space and $x_0, y_0$ in $E$ such that $\|x_0 + y_0\| = \|x_0\| + \|y_0\|$. Prove that for all $\lambda, \mu \ge 0$, $\|\lambda x_0 + \mu y_0\| = \lambda\|x_0\| + \mu\|y_0\|$.
+!!! question "(5)"
+    Let $E$ be a normed space and $x_0, y_0$ in $E$ such that $\|x_0 + y_0\| = \|x_0\| + \|y_0\|$. Prove that for all $\lambda, \mu \ge 0$, $\|\lambda x_0 + \mu y_0\| = \lambda\|x_0\| + \mu\|y_0\|$.
 
->仍然非常简单
+    仍然非常简单
 
 `Proof.`
 
@@ -343,10 +343,10 @@ $$\|\lambda x_0 + \mu y_0\| \le \|\lambda x_0\| + \|\mu y_0\| = \lambda \|x_0\| 
 
 Since the quantity is bounded both above and below by $\lambda \|x_0\| + \mu \|y_0\|$, equality holds.
 
-> [!question] (6)
-> Let $T$ be a continuous one-to-one linear operator from a normed space $E_1$ onto a normed space $E_2$. Prove that $T^{-1}$ is a linear operator. If $T^{-1}$ is continuous then $T$ is said to be a *topological isomorphism* from $E_1$ onto $E_2$; and $E_1$ is said to be *topologically isomorphic* to $E_2$. In this case, there exist positive numbers $\alpha, \beta > 0$ such that $\alpha \|x\| \le \|Tx\| \le \beta \|x\|$.
+!!! question "(6)"
+    Let $T$ be a continuous one-to-one linear operator from a normed space $E_1$ onto a normed space $E_2$. Prove that $T^{-1}$ is a linear operator. If $T^{-1}$ is continuous then $T$ is said to be a *topological isomorphism* from $E_1$ onto $E_2$; and $E_1$ is said to be *topologically isomorphic* to $E_2$. In this case, there exist positive numbers $\alpha, \beta > 0$ such that $\alpha \|x\| \le \|Tx\| \le \beta \|x\|$.
 
->直接计算$T^{-1}$是线性的
+    直接计算$T^{-1}$是线性的
 
 `Proof.`
 
@@ -356,10 +356,10 @@ Similarly, $T(kx) = kTx = ku$. Applying $T^{-1}$: $T^{-1}(ku) = kx = kT^{-1}u$. 
 
 Now assume $T^{-1}$ is continuous. Since $T$ is a continuous linear operator, it is bounded. Thus, there exists $\beta > 0$ such that $\|Tx\| \le \beta \|x\|$ for all $x \in E_1$. This provides the upper bound. Since $T^{-1}$ is a continuous linear operator, it is bounded. Thus there exists a constant $C > 0$ such that $\|T^{-1}y\| \le C\|y\|$ for all $y \in E_2$. Let $y = Tx$. Then $\|x\| \le C\|Tx\|$. This implies $\|Tx\| \ge \frac{1}{C}\|x\|$. Let $\alpha = \frac{1}{C}$. Since $C > 0$, $\alpha > 0$. Combining these inequalities, we get $\alpha \|x\| \le \|Tx\| \le \beta \|x\|$.
 
-> [!question] (7)
-> Let $\mathcal{P}$ be the vector space of polynomials defined on $[0, 1]$. Since $\mathcal{P}$ is a linear subspace of $C[0, 1]$, it has the sup-norm $\|\cdot\|_\infty$. And since $\mathcal{P}$ is a linear subspace of $L^1[0, 1]$, it has another norm $\|\cdot\|_1$. Show that $\|\cdot\|_\infty$ and $\|\cdot\|_1$ are not equivalent on $\mathcal{P}$.
+!!! question "(7)"
+    Let $\mathcal{P}$ be the vector space of polynomials defined on $[0, 1]$. Since $\mathcal{P}$ is a linear subspace of $C[0, 1]$, it has the sup-norm $\|\cdot\|_\infty$. And since $\mathcal{P}$ is a linear subspace of $L^1[0, 1]$, it has another norm $\|\cdot\|_1$. Show that $\|\cdot\|_\infty$ and $\|\cdot\|_1$ are not equivalent on $\mathcal{P}$.
 
->直接反证法即可
+    直接反证法即可
 
 `Proof. `
 
@@ -374,12 +374,12 @@ $$ \|f_n\|_\infty = 1, \quad \|f_n\|_1 = \frac{1}{n+1}. $$
 On other hand, $\|f_n\|_1 \geq \frac{1}{\beta}\|f_n\|_\infty = \frac{1}{\beta}$, which is a contradiction. 
 
 
-> [!question] (8)
-> Let $a > 0$. On $C[0,1]$, we consider two norms: $\left\Vert \cdot \right\Vert_\infty$ and
-> 
-> $$ \left\Vert f \right\Vert_0 = a \int_0^1 |f(t)| dt, \quad \forall f \in C[0,1]. $$
-> 
-> Prove that $\left\Vert f \right\Vert = \min\{\left\Vert f \right\Vert_\infty, \left\Vert f \right\Vert_0\}$ is a norm on $C[0,1]$ if and only if $a \leq 1$.
+!!! question "(8)"
+    Let $a > 0$. On $C[0,1]$, we consider two norms: $\left\Vert \cdot \right\Vert_\infty$ and
+
+    $$ \left\Vert f \right\Vert_0 = a \int_0^1 |f(t)| dt, \quad \forall f \in C[0,1]. $$
+
+    Prove that $\left\Vert f \right\Vert = \min\{\left\Vert f \right\Vert_\infty, \left\Vert f \right\Vert_0\}$ is a norm on $C[0,1]$ if and only if $a \leq 1$.
 
 `Proof.`
 
@@ -447,8 +447,8 @@ $$
 直接取$n=4a,\varepsilon =\frac{1}{n}$即可满足上述不等式组($4a+\frac{1}{4a}> \frac{1}{4}+\frac{a}{2}$)，因此三角不等式不成立.
 
 
-> [!question] (9)
-> Let $1 < p < \infty$ and $G = \{(\xi_n)_{n \in \mathbb{N}} \in \ell_p : \sum_{n=1}^\infty \xi_n = 0\}$. Prove that $G \subseteq \ell_p$ is not closed.
+!!! question "(9)"
+    Let $1 < p < \infty$ and $G = \{(\xi_n)_{n \in \mathbb{N}} \in \ell_p : \sum_{n=1}^\infty \xi_n = 0\}$. Prove that $G \subseteq \ell_p$ is not closed.
 
 `Proof.`
 
@@ -469,17 +469,17 @@ $$\|x^{(k)} - e_1\|_p = \left( \sum_{j=1}^k \left| -\frac{1}{k} \right|^p \right
 
 由于 $1 < p < \infty$，所以 $\frac{1}{p} - 1 < 0$。因此，当 $k \to \infty$ 时，$\|x^{(k)} - e_1\|_p \to 0$。这说明 $e_1$ 是 $G$ 的一个极限点，但 $e_1 \notin G$。因此 $G$ 不是闭集。
 
-> [!question] (10)
-> Is the set of all polynomials open in $C[-1, 1]$?
+!!! question "(10)"
+    Is the set of all polynomials open in $C[-1, 1]$?
 
 `Sol.`
 
 不是。设 $P$ 是 $C[-1, 1]$ 中所有多项式构成的集合。$P$ 是 $C[-1, 1]$ 的一个真子空间（根据魏尔斯特拉斯逼近定理，$P$ 在 $C[-1, 1]$ 中稠密，但也存在非多项式的连续函数，例如 $f(x) = |x|$ 或 $e^{|x|}$，故 $P \neq C[-1, 1]$）。如果在赋范空间中一个线性子空间是开集，那么它必须包含一个原点的邻域（开球）。根据第 (11) 题的结论，**任何包含开球的线性子空间必然是整个空间**。由于 $P \neq C[-1, 1]$，所以 $P$ 不包含任何开球，因此 $P$ 不是开集。事实上，真子空间的内部一定是空集。
 
-> [!question] (11)
-> Let $E$ be normed space. Find all linear subspaces $E_0 \subseteq E$ which contain a ball.
+!!! question "(11)"
+    Let $E$ be normed space. Find all linear subspaces $E_0 \subseteq E$ which contain a ball.
 
->主要是说这件事：任何包含开球的线性子空间必然是整个空间
+    主要是说这件事：任何包含开球的线性子空间必然是整个空间
 
 `Sol.`
 
@@ -491,8 +491,8 @@ $$\|x^{(k)} - e_1\|_p = \left( \sum_{j=1}^k \left| -\frac{1}{k} \right|^p \right
 
 对于 $E$ 中任意非零元素 $x \in E$，我们可以对其进行缩放：令 $y = \frac{r}{2\|x\|} x$。显然 $\|y\| = \frac{r}{2\|x\|} \|x\| = \frac{r}{2} < r$，所以 $y \in B(0, r) \subseteq E_0$。由于 $E_0$ 是线性空间，它对数乘封闭，所以 $x = \frac{2\|x\|}{r} y$ 必定也属于 $E_0$。对于 $x=0$，显然 $0 \in E_0$。因此，对于任意 $x \in E$，都有 $x \in E_0$，即 $E \subseteq E_0$。综上所述，$E_0 = E$。
 
-> [!question] (12)
-> Given any $1 < p < \infty$, find an element $a$ such that $a \in \ell_p$ but $a \notin \ell_q$ for all $1 \le q \le p$.
+!!! question "(12)"
+    Given any $1 < p < \infty$, find an element $a$ such that $a \in \ell_p$ but $a \notin \ell_q$ for all $1 \le q \le p$.
 
 解答：
 题目中要求 $a \notin \ell_q$ for all $1 \le q \le p$ 包含 $q=p$ 的情况，这是不可能的，因为若 $a \in \ell_p$，则 $a$ 必然属于 $\ell_p$。推测题目意图是寻找 $a \in \ell_p$ 但对于所有 $1 \le q < p$，$a \notin \ell_q$。
@@ -509,12 +509,12 @@ $\sum_{n=1}^\infty |a_n|^p = \sum_{n=1}^\infty \frac{1}{n (\ln(n+1))^2}$。
 由调和级数发散可知 $\sum |a_n|^q$ 发散。
 因此，该元素 $a$ 满足条件（在 $q < p$ 的修正理解下）。
 
-> [!question] (13)
-> Show that if $(E, \|\cdot\|_E)$ is a normed space, $W$ is a vector space and $T: W \to E$ is a linear bijection, then
-> 
-> $$ \|x\|_W := \|Tx\|_E, \quad \forall x \in W $$
-> 
-> defines a norm on $W$.
+!!! question "(13)"
+    Show that if $(E, \|\cdot\|_E)$ is a normed space, $W$ is a vector space and $T: W \to E$ is a linear bijection, then
+
+    $$ \|x\|_W := \|Tx\|_E, \quad \forall x \in W $$
+
+    defines a norm on $W$.
 
 解答：
 我们需要验证 $\|\cdot\|_W$ 满足范数的三条公理：
@@ -535,21 +535,21 @@ $\|Tx + Ty\|_E \le \|Tx\|_E + \|Ty\|_E = \|x\|_W + \|y\|_W$。
 即 $\|x+y\|_W \le \|x\|_W + \|y\|_W$。
 综上，$\|\cdot\|_W$ 定义了 $W$ 上的一个范数。
 
-> [!question] (14)
-> Suppose that $U$ is an open subspace of a normed space $E$, show that $U = E$.
+!!! question "(14)"
+    Suppose that $U$ is an open subspace of a normed space $E$, show that $U = E$.
 
->(11)题的变式
+    (11)题的变式
 
 `Proof.`
 
 因为 $U$ 是 $E$ 的子空间，所以 $0 \in U$。因为 $U$ 是开集，所以存在一个 $r > 0$ 使得原点的开球 $B(0, r) \subset U$。这意味着 $U$ 是一个包含球的线性子空间。直接引用第 (11) 题的结论，任何包含球的线性子空间必定等于整个空间。所以 $U = E$。
 
-> [!question] (15)
-> If $E$ is a normed space and $M$ is a closed linear subspace of $E$, show that
-> 
-> $$ \|[x]\|_{E/M} = \inf_{u \in M} \|x + u\| $$
-> 
-> defines a norm on the quotient space $E/M$.
+!!! question "(15)"
+    If $E$ is a normed space and $M$ is a closed linear subspace of $E$, show that
+
+    $$ \|[x]\|_{E/M} = \inf_{u \in M} \|x + u\| $$
+
+    defines a norm on the quotient space $E/M$.
 
 解答：
 
@@ -584,27 +584,27 @@ $\|[x+y]\| \le \|x + y + u + v\| \le \|x+u\| + \|y+v\| < \|[x]\| + \|[y]\| + \ep
 
 主要知道Cauchy列和Banach空间是什么就可以了
 
-> [!abstract] Definition: 柯西列与 Banach 空间
-> 
-> **柯西列 (Cauchy Sequence)**
-> 设 $(x_n)$ 是赋范空间 $E$ 中的一个序列。如果对于任意给定的 $\varepsilon > 0$，都存在一个正整数 $N$，使得当 $m, n > N$ 时，都有 $\|x_m - x_n\| < \varepsilon$，则称该序列为柯西列。
-> 
-> **Banach 空间 (Banach Space)**
-> 如果赋范空间 $E$ 中的**每一个**柯西列都收敛于 $E$ 中的某一点（即空间是完备的），则称 $E$ 为 Banach 空间。
+!!! abstract "Definition: 柯西列与 Banach 空间"
 
-> [!example] Example 2.2.2: 柯西列不一定收敛 (反例)
-> 这是一个非常经典的例子，说明完备性不是理所当然的。
-> 
-> 考虑空间 $C[0,1]$（闭区间上的连续函数），装备 $1$-范数 $\|f\|_1 = \int_0^1 |f(t)| dt$。
-> 
-> 我们构造一个序列 $(f_n)_{n \ge 2}$，图形上看，它是一个在 $t=1/2$ 处越来越陡峭的折线：
-> $$
-> f_n(t) = \begin{cases} 
-> 0, & 0 \le t \le \frac{1}{2} - \frac{1}{n} \\
-> 1 - n(\frac{1}{2} - t), & \frac{1}{2} - \frac{1}{n} \le t \le \frac{1}{2} \\
-> 1, & \frac{1}{2} < t \le 1
-> \end{cases}
-> $$
+    **柯西列 (Cauchy Sequence)**
+    设 $(x_n)$ 是赋范空间 $E$ 中的一个序列。如果对于任意给定的 $\varepsilon > 0$，都存在一个正整数 $N$，使得当 $m, n > N$ 时，都有 $\|x_m - x_n\| < \varepsilon$，则称该序列为柯西列。
+
+    **Banach 空间 (Banach Space)**
+    如果赋范空间 $E$ 中的**每一个**柯西列都收敛于 $E$ 中的某一点（即空间是完备的），则称 $E$ 为 Banach 空间。
+
+!!! example "Example 2.2.2: 柯西列不一定收敛 (反例)"
+    这是一个非常经典的例子，说明完备性不是理所当然的。
+
+    考虑空间 $C[0,1]$（闭区间上的连续函数），装备 $1$-范数 $\|f\|_1 = \int_0^1 |f(t)| dt$。
+
+    我们构造一个序列 $(f_n)_{n \ge 2}$，图形上看，它是一个在 $t=1/2$ 处越来越陡峭的折线：
+    $$
+    f_n(t) = \begin{cases}
+    0, & 0 \le t \le \frac{1}{2} - \frac{1}{n} \\
+    1 - n(\frac{1}{2} - t), & \frac{1}{2} - \frac{1}{n} \le t \le \frac{1}{2} \\
+    1, & \frac{1}{2} < t \le 1
+    \end{cases}
+    $$
 
 
 1. 它是柯西列
@@ -626,8 +626,8 @@ $$ f(t) = \begin{cases} 0, & 0 \le t < 1/2 \\ 1, & 1/2 \le t \le 1 \end{cases} $
 注：如果换成上确界范数 $\|\cdot\|_\infty$，它就是 Banach 空间，因为一致极限保持连续性
 
 
-> [!example] 一个基本且重要的练习(Example 2.2.7)
-> If $1\leqslant p \leqslant \infty$, then $l^{p}$, $L^{p}[a,b]$ are Banach spaces under the corresponding $p-$norms $\lVert \cdot \rVert _p$ for $1\leqslant p\leqslant \infty$
+!!! example "一个基本且重要的练习(Example 2.2.7)"
+    If $1\leqslant p \leqslant \infty$, then $l^{p}$, $L^{p}[a,b]$ are Banach spaces under the corresponding $p-$norms $\lVert \cdot \rVert _p$ for $1\leqslant p\leqslant \infty$
 
 `Proof.`
 
@@ -754,33 +754,33 @@ $$ \|f(t) - f_n(t)\|_\infty \le \frac{1}{k}, \quad \forall n \ge N_k, $$
 
 which proves that $f = \lim_n f_n$ in $L^\infty[a,b]$. 
 
-> [!abstract] Proposition 2.2.5: 维数与完备性的关系
-> 
-> **定理**：不存在具有**可数维数**（指 Hamel 基是可数的）的无限维 Banach 空间
-> 
-> **证明逻辑**：
-> 
-> 假设空间 $E$ 有可数基 $\{x_1, x_2, \dots\}$，定义有限维闭子空间 $E_n = \text{span}\{x_1, \dots, x_n\}$
-> 
-> 显然 $E = \bigcup_{n=1}^\infty E_n$。根据 **Baire Category Theorem**（贝尔纲定理），Banach 空间不能写成可数个无处稠密集合的并。因此，至少有一个 $E_{n_0}$ 包含一个开球。线性子空间如果包含开球，它必须等于整个空间。即 $E = E_{n_0}$。这推导出 $E$ 是有限维的，产生矛盾。
-> 
-> **推论 (Example 2.2.6)**：
-> *   $c_{00}$（有限支集序列）有可数基，所以它**不是** Banach 空间。
-> *   $P[a,b]$（多项式空间）有可数基，所以它也**不是** Banach 空间。
+!!! abstract "Proposition 2.2.5: 维数与完备性的关系"
+
+    **定理**：不存在具有**可数维数**（指 Hamel 基是可数的）的无限维 Banach 空间
+
+    **证明逻辑**：
+
+    假设空间 $E$ 有可数基 $\{x_1, x_2, \dots\}$，定义有限维闭子空间 $E_n = \text{span}\{x_1, \dots, x_n\}$
+
+    显然 $E = \bigcup_{n=1}^\infty E_n$。根据 **Baire Category Theorem**（贝尔纲定理），Banach 空间不能写成可数个无处稠密集合的并。因此，至少有一个 $E_{n_0}$ 包含一个开球。线性子空间如果包含开球，它必须等于整个空间。即 $E = E_{n_0}$。这推导出 $E$ 是有限维的，产生矛盾。
+
+    **推论 (Example 2.2.6)**：
+    *   $c_{00}$（有限支集序列）有可数基，所以它**不是** Banach 空间。
+    *   $P[a,b]$（多项式空间）有可数基，所以它也**不是** Banach 空间。
 
 
-> [!info] Finite Dimensional Spaces (有限维相关性质)
-> 
-> **Proposition 2.2.9**：每一个**有限维**赋范空间都是完备的
-> *   因为有限维空间同构于 $\mathbb{K}^n$，而欧几里得空间是完备的
-> 
-> **Proposition 2.2.10**：赋范空间的每一个**有限维子空间**都是闭的
-> *   有限维子空间自身是完备的，完备子空间在 Hausdorff 空间中必然是闭集
+!!! info "Finite Dimensional Spaces (有限维相关性质)"
+
+    **Proposition 2.2.9**：每一个**有限维**赋范空间都是完备的
+    *   因为有限维空间同构于 $\mathbb{K}^n$，而欧几里得空间是完备的
+
+    **Proposition 2.2.10**：赋范空间的每一个**有限维子空间**都是闭的
+    *   有限维子空间自身是完备的，完备子空间在 Hausdorff 空间中必然是闭集
 
 
-> [!example] 反例
-> *   多项式空间 $P$ 在 $C[0,1]$ 中不是闭的（因为根据 Weierstrass 定理，多项式可以逼近非多项式的连续函数，如 $e^t$）
-> *   $c_{00}$ 在 $\ell_\infty$ 中不是闭的（可以逼近无限项非零的序列，如 $1, 1/2, 1/3 \dots$）
+!!! example "反例"
+    *   多项式空间 $P$ 在 $C[0,1]$ 中不是闭的（因为根据 Weierstrass 定理，多项式可以逼近非多项式的连续函数，如 $e^t$）
+    *   $c_{00}$ 在 $\ell_\infty$ 中不是闭的（可以逼近无限项非零的序列，如 $1, 1/2, 1/3 \dots$）
 
 
 ## Exercises 2.2
@@ -789,8 +789,8 @@ which proves that $f = \lim_n f_n$ in $L^\infty[a,b]$.
 
 
 
-> [!question] HW2-1
-> Let $P$ be the vector space of polynomials definded on $[0,1]$. It has two norms $\lVert \cdot \rVert_{\infty}$​ and $\lVert \cdot \rVert_{1}$​ . Show that the two norms are not equivalent.
+!!! question "HW2-1"
+    Let $P$ be the vector space of polynomials definded on $[0,1]$. It has two norms $\lVert \cdot \rVert_{\infty}$​ and $\lVert \cdot \rVert_{1}$​ . Show that the two norms are not equivalent.
 
 
 `Proof.`
@@ -804,12 +804,12 @@ which proves that $f = \lim_n f_n$ in $L^\infty[a,b]$.
 对于任意的固定常数$C$，总有$n+1>C$时使得$\lVert f \rVert_{\infty}\leqslant C\lVert f \rVert_{1}$不成立，因此两个范数显然不等价
 
 
-> [!question] HW2-2
-> If $(E,\lVert \cdot \rVert _{E}​)$ is a normed space, $W$ is a vector space and $T:W\to E$ is a linear bijection, then
-> 
-> $$\lVert x \rVert _{W}=\lVert Tx \rVert _{E}$$
-> 
-> define a norm on $W$
+!!! question "HW2-2"
+    If $(E,\lVert \cdot \rVert _{E}​)$ is a normed space, $W$ is a vector space and $T:W\to E$ is a linear bijection, then
+
+    $$\lVert x \rVert _{W}=\lVert Tx \rVert _{E}$$
+
+    define a norm on $W$
 
 题目应当是验证这是一个范数，我们按照定义验证三条性质：
 
@@ -842,52 +842,52 @@ $$
 
 ### 可分性 (Separability)
 
-> [!NOTE] Definition 2.3.1 (可分性 / Separability)
-> 一个赋范空间 $E$ 被称为 **可分的 (separable)**，如果它包含一个**可数的 (countable)** 且在范数意义下**稠密的 (dense)** 子集 $M$。否则，$E$ 被称为 **不可分的**。
-> 
-> *   **直观理解**：如果一个空间是可分的，说明空间中的任意元素都可以被一个（固定的）可数集中的元素以任意精度逼近。
+!!! note "Definition 2.3.1 (可分性 / Separability)"
+    一个赋范空间 $E$ 被称为 **可分的 (separable)**，如果它包含一个**可数的 (countable)** 且在范数意义下**稠密的 (dense)** 子集 $M$。否则，$E$ 被称为 **不可分的**。
 
-> [!example] 常见 Banach 空间的可分性判定
-> 
-> | 空间 | 可分性 | 稠密子集构造思路 / 不可分理由 |
-> | :--- | :--- | :--- |
-> | **$c_0$** | ✅ 可分 | 具有有理数坐标的有限项序列（尾部为0）。 |
-> | **$c$** | ✅ 可分 | 最终常数为有理数，且前有限项为有理数的序列。 |
-> | **$C[a,b]$** | ✅ 可分 | 有理系数多项式集合 (Weierstrass 逼近定理)。 |
-> | **$\ell^p$** $(1 \le p < \infty)$ | ✅ 可分 | 具有有理数坐标的有限项序列（尾部为0）。 |
-> | **$L^p[a,b]$** $(1 \le p < \infty)$| ✅ 可分 | 有理系数多项式集合（经过三步逼近）。 |
-> | **$\ell^\infty$** | ❌ **不可分** | 存在不可数个彼此距离为 1 的点（0-1序列）。 |
-> | **$L^\infty[a,b]$** | ❌ **不可分** | 存在不可数个彼此距离为 1 的函数（特征函数）。 |
+    *   **直观理解**：如果一个空间是可分的，说明空间中的任意元素都可以被一个（固定的）可数集中的元素以任意精度逼近。
 
-> [!summary] 证明思路归纳 (Proof Sketches)
-> 
-> **1. 序列空间与有限逼近 ($c, c_0, \ell^p$)**
-> *   **核心思想**：截断 + 有理化。
-> *   **逻辑**：对于收敛序列或 $p$-级数收敛的序列，其“尾部”趋于 0。先将无穷项截断为有限项 $N$，再将这有限项坐标用有理数 $r_i$ 逼近。
-> *   **构造**：$M = \{(r_1, \dots, r_N, 0, \dots) : r_i \in \mathbb{Q}\}$。
-> 
-> **2. 函数空间与多项式逼近 ($C[a,b], L^p$)**
-> *   **$C[a,b]$**：直接利用 **Weierstrass 逼近定理**，有理系数多项式在一致范数下稠密。
-> *   **$L^p[a,b]$**：采用**三步逼近法**：
->    1.  $L^p$ 函数 $\xrightarrow{截断}$ 有界且支集有限的函数。
->    2.  有界可测函数 $\xrightarrow{Lusin定理}$ 连续函数。
->    3.  连续函数 $\xrightarrow{Weierstrass}$ 有理系数多项式。
-> 
-> **3. 不可分的计数反例 ($\ell^\infty, L^\infty$)**
-> *   **核心思想**：构造一个**不可数**集，其中任意两点距离 $\ge 1$。
-> *   **$\ell^\infty$**：取 $A = \{ (\xi_n) : \xi_n \in \{0, 1\} \}$（不可数）。对于 $x \neq y \in A$，$\|x-y\|_\infty = 1$。
-> *   **$L^\infty[a,b]$**：取特征函数系 $\{\mathbf{1}_{[a, t]} : t \in [a, b]\}$（不可数）。对于 $t \neq s$，$\|\mathbf{1}_{[a, t]} - \mathbf{1}_{[a, s]}\|_\infty = 1$。
-> *   **推论**：若存在稠密子集，则在以这些点为心、半径为 $1/3$ 的互不相交的球中，每个球里至少要有一个稠密集的点。球不可数 $\implies$ 稠密集不可数。
+!!! example "常见 Banach 空间的可分性判定"
 
-> [!NOTE] Definition 2.3.3 (Schauder 基)
-> 设 $(e_n)_{n \in \mathbb{N}}$ 是 Banach 空间 $E$ 中的单位向量序列（$\|e_n\|=1$）。如果对于 $E$ 中的任意元素 $x$，都存在**唯一**的标量序列 $\alpha_n$ 使得：
-> 
-> $$ x = \sum_{n=1}^\infty \alpha_n e_n \quad (\text{即 } \lim_{n\to\infty} \left\|x - \sum_{i=1}^n \alpha_i e_i\right\| = 0) $$
-> 
-> 则称 $(e_n)$ 为 $E$ 的一个 **Schauder 基**。显然，Schauder 基是线性无关的。
+    | 空间 | 可分性 | 稠密子集构造思路 / 不可分理由 |
+    | :--- | :--- | :--- |
+    | **$c_0$** | ✅ 可分 | 具有有理数坐标的有限项序列（尾部为0）。 |
+    | **$c$** | ✅ 可分 | 最终常数为有理数，且前有限项为有理数的序列。 |
+    | **$C[a,b]$** | ✅ 可分 | 有理系数多项式集合 (Weierstrass 逼近定理)。 |
+    | **$\ell^p$** $(1 \le p < \infty)$ | ✅ 可分 | 具有有理数坐标的有限项序列（尾部为0）。 |
+    | **$L^p[a,b]$** $(1 \le p < \infty)$| ✅ 可分 | 有理系数多项式集合（经过三步逼近）。 |
+    | **$\ell^\infty$** | ❌ **不可分** | 存在不可数个彼此距离为 1 的点（0-1序列）。 |
+    | **$L^\infty[a,b]$** | ❌ **不可分** | 存在不可数个彼此距离为 1 的函数（特征函数）。 |
 
-> [!tip] Theorem 2.3.4 (Schauder 基与可分性)
-> 如果一个 Banach 空间 $E$ 拥有 Schauder 基，则 $E$ 是**可分的**。
+    [!summary] 证明思路归纳 (Proof Sketches)
+
+    **1. 序列空间与有限逼近 ($c, c_0, \ell^p$)**
+    *   **核心思想**：截断 + 有理化。
+    *   **逻辑**：对于收敛序列或 $p$-级数收敛的序列，其“尾部”趋于 0。先将无穷项截断为有限项 $N$，再将这有限项坐标用有理数 $r_i$ 逼近。
+    *   **构造**：$M = \{(r_1, \dots, r_N, 0, \dots) : r_i \in \mathbb{Q}\}$。
+
+    **2. 函数空间与多项式逼近 ($C[a,b], L^p$)**
+    *   **$C[a,b]$**：直接利用 **Weierstrass 逼近定理**，有理系数多项式在一致范数下稠密。
+    *   **$L^p[a,b]$**：采用**三步逼近法**：
+       1.  $L^p$ 函数 $\xrightarrow{截断}$ 有界且支集有限的函数。
+       2.  有界可测函数 $\xrightarrow{Lusin定理}$ 连续函数。
+       3.  连续函数 $\xrightarrow{Weierstrass}$ 有理系数多项式。
+
+    **3. 不可分的计数反例 ($\ell^\infty, L^\infty$)**
+    *   **核心思想**：构造一个**不可数**集，其中任意两点距离 $\ge 1$。
+    *   **$\ell^\infty$**：取 $A = \{ (\xi_n) : \xi_n \in \{0, 1\} \}$（不可数）。对于 $x \neq y \in A$，$\|x-y\|_\infty = 1$。
+    *   **$L^\infty[a,b]$**：取特征函数系 $\{\mathbf{1}_{[a, t]} : t \in [a, b]\}$（不可数）。对于 $t \neq s$，$\|\mathbf{1}_{[a, t]} - \mathbf{1}_{[a, s]}\|_\infty = 1$。
+    *   **推论**：若存在稠密子集，则在以这些点为心、半径为 $1/3$ 的互不相交的球中，每个球里至少要有一个稠密集的点。球不可数 $\implies$ 稠密集不可数。
+
+!!! note "Definition 2.3.3 (Schauder 基)"
+    设 $(e_n)_{n \in \mathbb{N}}$ 是 Banach 空间 $E$ 中的单位向量序列（$\|e_n\|=1$）。如果对于 $E$ 中的任意元素 $x$，都存在**唯一**的标量序列 $\alpha_n$ 使得：
+
+    $$ x = \sum_{n=1}^\infty \alpha_n e_n \quad (\text{即 } \lim_{n\to\infty} \left\|x - \sum_{i=1}^n \alpha_i e_i\right\| = 0) $$
+
+    则称 $(e_n)$ 为 $E$ 的一个 **Schauder 基**。显然，Schauder 基是线性无关的。
+
+!!! tip "Theorem 2.3.4 (Schauder 基与可分性)"
+    如果一个 Banach 空间 $E$ 拥有 Schauder 基，则 $E$ 是**可分的**。
 
 `Proof Sketch.`
 
@@ -899,12 +899,12 @@ $$
 
 ## Exercise 2.3
 
-> [!question] HW3-1
-> Show that a Banach space $V$ is separable if and only if
-> 
-> $$V=\overline{\bigcup\limits_{n=1}^{\infty} V_{n}}$$
-> 
-> where $(V_{n})_{n\in \mathbb{N}}$ are finite dimensional subspace of $V$
+!!! question "HW3-1"
+    Show that a Banach space $V$ is separable if and only if
+
+    $$V=\overline{\bigcup\limits_{n=1}^{\infty} V_{n}}$$
+
+    where $(V_{n})_{n\in \mathbb{N}}$ are finite dimensional subspace of $V$
 
 `Proof.`
 
@@ -943,10 +943,10 @@ $$
 
 因此$D$在$V$中稠密，可知$V$可分
 
-> [!question] (1)
-> Let $\mathbf{e}_k$ be the scalar sequence whose only nonzero term is '1' in the $k$th coordinate. Show that $\{e_k : k = 1, 2, \dots\}$ is a Schauder basis of the Banach space $(c_0, \|\cdot\|_\infty)$.
+!!! question "(1)"
+    Let $\mathbf{e}_k$ be the scalar sequence whose only nonzero term is '1' in the $k$th coordinate. Show that $\{e_k : k = 1, 2, \dots\}$ is a Schauder basis of the Banach space $(c_0, \|\cdot\|_\infty)$.
 
->根据定义进行验证即可
+    根据定义进行验证即可
 
 `Proof.`
 
@@ -964,8 +964,8 @@ $$
 
 综上，$\{e_k\}$ 是 $c_0$ 的 Schauder 基。
 
-> [!question] (2)
-> Let $\mathbf{e}_k$ be the scalar sequence whose only nonzero term is '1' in the $k$th coordinate, and let $\mathbf{e} = (1, 1, \dots)$ with all coordinates '1'. Show that $\{e_k : k = 1, 2, \dots\} \cup \{e\}$ is a Schauder basis of the Banach space $(c, \|\cdot\|_\infty)$.
+!!! question "(2)"
+    Let $\mathbf{e}_k$ be the scalar sequence whose only nonzero term is '1' in the $k$th coordinate, and let $\mathbf{e} = (1, 1, \dots)$ with all coordinates '1'. Show that $\{e_k : k = 1, 2, \dots\} \cup \{e\}$ is a Schauder basis of the Banach space $(c, \|\cdot\|_\infty)$.
 
 `Proof.`
 
@@ -983,8 +983,8 @@ $$ \left\| x - \left( l\mathbf{e} + \sum_{k=1}^n (\xi_k - l)e_k \right) \right\|
 
 **唯一性**：设 $x = \alpha \mathbf{e} + \sum_{k=1}^\infty \alpha_k e_k$。对两边取极限（$k \to \infty$），由于 $e_k$ 的项趋于 0，可知 $\lim x = \alpha \cdot 1 + 0$，故 $\alpha = l$。剩下的部分即归结为 $c_0$ 中系数的唯一性，得 $\alpha_k = \xi_k - l$。
 
-> [!question] (3)
-> Let $\mathbf{e}_k$ be the scalar sequence whose only nonzero term is '1' in the $k$th coordinate. Show that $\{e_k : k = 1, 2, \dots\}$ is a Schauder basis of the Banach space $(\ell_p, \|\cdot\|_p)$ when $1 \le p < +\infty$.
+!!! question "(3)"
+    Let $\mathbf{e}_k$ be the scalar sequence whose only nonzero term is '1' in the $k$th coordinate. Show that $\{e_k : k = 1, 2, \dots\}$ is a Schauder basis of the Banach space $(\ell_p, \|\cdot\|_p)$ when $1 \le p < +\infty$.
 
 `Proof.`
 
@@ -996,8 +996,8 @@ $$
 
 由于级数 $\sum |\xi_k|^p$ 收敛，其**尾部和**（Tail sum）当 $n \to \infty$ 时必趋于 0。即 $\lim\limits_{n \to \infty} \|x - s_n\|_p = 0$。因此 $x = \sum_{k=1}^\infty \xi_k e_k$。唯一性同理，由坐标对应直接得到。
 
-> [!question] (4)
-> Does the Banach space $(\ell_\infty, \|\cdot\|_\infty)$ have a Schauder basis?
+!!! question "(4)"
+    Does the Banach space $(\ell_\infty, \|\cdot\|_\infty)$ have a Schauder basis?
 
 `Answer.`
 
@@ -1013,11 +1013,11 @@ $$
 
 ### 完备性
 
-> [!info] 补充定义：完备性 (Completeness)
-> 一个赋范空间 $(E, \|\cdot\|)$ 被称为**完备的**（即 Banach 空间），如果 $E$ 中的每一个**柯西列 (Cauchy sequence)** 都收敛于 $E$ 中的某一点。
+!!! info "补充定义：完备性 (Completeness)"
+    一个赋范空间 $(E, \|\cdot\|)$ 被称为**完备的**（即 Banach 空间），如果 $E$ 中的每一个**柯西列 (Cauchy sequence)** 都收敛于 $E$ 中的某一点。
 
-> [!abstract] Theorem 2.4.4
-> 一个赋范空间 $E$ 是完备的，当且仅当 $E$ 中的每一个**绝对收敛 (absolutely convergent)** 的级数都在 $E$ 中收敛。
+!!! abstract "Theorem 2.4.4"
+    一个赋范空间 $E$ 是完备的，当且仅当 $E$ 中的每一个**绝对收敛 (absolutely convergent)** 的级数都在 $E$ 中收敛。
 
 `Proof.`
 
@@ -1026,11 +1026,11 @@ $$
 首先，由于 $(x_n)$ 是柯西列，我们可以选取一个**子列** $(x_{n_k})$，使得相邻项极其接近。具体来说，对于每一个 $k$，选取足够大的下标，使得：
 $$ \|x_{n_k} - x_{n_{k-1}}\| < \frac{1}{2^k}, \quad \forall k \ge 2 $$
 
-> [!tip] 技巧：构造裂项级数 (Telescoping Series)
-> 我们考虑由该子列相邻项之差构成的级数：
-> $$ x_{n_1} + \sum_{k=2}^{\infty} (x_{n_k} - x_{n_{k-1}}) $$
-> 注意到，这个级数的前 $m$ 项部分和 $S_m$ 恰好就是子列的第 $m$ 项：
-> $$ S_m = x_{n_1} + (x_{n_2} - x_{n_1}) + \dots + (x_{n_m} - x_{n_{m-1}}) = x_{n_m} $$
+!!! tip "技巧：构造裂项级数 (Telescoping Series)"
+    我们考虑由该子列相邻项之差构成的级数：
+    $$ x_{n_1} + \sum_{k=2}^{\infty} (x_{n_k} - x_{n_{k-1}}) $$
+    注意到，这个级数的前 $m$ 项部分和 $S_m$ 恰好就是子列的第 $m$ 项：
+    $$ S_m = x_{n_1} + (x_{n_2} - x_{n_1}) + \dots + (x_{n_m} - x_{n_{m-1}}) = x_{n_m} $$
 
 接下来验证该级数是否**绝对收敛**。根据我们在选取子列时的构造：
 $$ \sum_{k=2}^{\infty} \|x_{n_k} - x_{n_{k-1}}\| < \sum_{k=2}^{\infty} \frac{1}{2^k} = \frac{1}{2} < \infty $$
@@ -1039,35 +1039,35 @@ $$ \sum_{k=2}^{\infty} \|x_{n_k} - x_{n_{k-1}}\| < \sum_{k=2}^{\infty} \frac{1}{
 设级数的和为 $x$。根据“级数和”的定义，就是部分和序列的极限，因此我们得到了子列的收敛性：
 $$ x = \lim_{m \to \infty} S_m = \lim_{m \to \infty} x_{n_m} $$
 
-> [!success] 结论：从子列收敛到原序列收敛
-> 我们现在有一个柯西列 $(x_n)$，且它有一个收敛于 $x$ 的子列 $(x_{n_k})$。利用三角不等式：
-> $$ \|x_n - x\| \le \|x_n - x_{n_k}\| + \|x_{n_k} - x\| $$
-> *   当 $n, n_k$ 足够大时，第一项因柯西列性质趋于 0。
-> *   第二项因于列收敛趋于 0。
-> 
-> 因此 $\lim\limits_{n \to \infty} x_n = x$。即任意柯西列都收敛，空间完备。
+!!! success "结论：从子列收敛到原序列收敛"
+    我们现在有一个柯西列 $(x_n)$，且它有一个收敛于 $x$ 的子列 $(x_{n_k})$。利用三角不等式：
+    $$ \|x_n - x\| \le \|x_n - x_{n_k}\| + \|x_{n_k} - x\| $$
+    *   当 $n, n_k$ 足够大时，第一项因柯西列性质趋于 0。
+    *   第二项因于列收敛趋于 0。
 
->我们需要知道任何赋范空间都可以扩张成一个Banach空间（完备赋范空间）
+    因此 $\lim\limits_{n \to \infty} x_n = x$。即任意柯西列都收敛，空间完备。
 
-> [!abstract] Theorem 2.4.5 (完备化定理)
-> 设 $E$ 是一个赋范空间，总是存在一个 Banach 空间 $\tilde{E}$ 和一个从 $E$ 到 $\tilde{E}$ 的等距映射 $T$，使得 $T(E)$ 是 $\tilde{E}$ 的稠密子空间。
-> 
-> 换句话说，$\tilde{E}$ 是 $E$ 的完备化。此外，在等距同构的意义下，$E$ 的完备化 $\tilde{E}$ 是唯一的。
+    我们需要知道任何赋范空间都可以扩张成一个Banach空间（完备赋范空间）
+
+!!! abstract "Theorem 2.4.5 (完备化定理)"
+    设 $E$ 是一个赋范空间，总是存在一个 Banach 空间 $\tilde{E}$ 和一个从 $E$ 到 $\tilde{E}$ 的等距映射 $T$，使得 $T(E)$ 是 $\tilde{E}$ 的稠密子空间。
+
+    换句话说，$\tilde{E}$ 是 $E$ 的完备化。此外，在等距同构的意义下，$E$ 的完备化 $\tilde{E}$ 是唯一的。
 
 `Proof Sketch.`
 
 构造思路类似于从有理数构造实数。我们考虑 $E$ 中**所有柯西列**构成的向量空间 $\mathcal{E}$，并定义等价关系：如果两个柯西列的差趋于 0，则视为等价。商空间 $\tilde{E} = \mathcal{E} / \sim$ 在商范数下构成 Banach 空间。最后，原空间 $E$ 可以通过常数序列自然地、等距地嵌入到 $\tilde{E}$ 中，并且构成稠密子空间。
 
-> [!example] Example 2.4.6 (典型完备化例子)
-> *   **(a)** 装备 $p$-范数 ($1 \le p < \infty$) 的 $C[a, b]$ 不是完备的，其完备化是 $L^p[a, b]$。
-> *   **(b)** 有限支集序列空间 $c_{00}$ 的完备化是趋于 0 的序列空间 $c_0$。
-> *   **(c)** 多项式空间 $P[0, 1]$ 在上确界范数下的完备化是连续函数空间 $C[0, 1]$。
+!!! example "Example 2.4.6 (典型完备化例子)"
+    *   **(a)** 装备 $p$-范数 ($1 \le p < \infty$) 的 $C[a, b]$ 不是完备的，其完备化是 $L^p[a, b]$。
+    *   **(b)** 有限支集序列空间 $c_{00}$ 的完备化是趋于 0 的序列空间 $c_0$。
+    *   **(c)** 多项式空间 $P[0, 1]$ 在上确界范数下的完备化是连续函数空间 $C[0, 1]$。
 
 在有限维赋范空间中，有界闭集必定是紧集（Heine-Borel 性质）。但在无穷维空间中这一性质不再成立。Riesz 引理正是处理无穷维空间几何结构、描述这种差异的重要工具。
 
-> [!abstract] Theorem 2.4.7 (Riesz 引理)
-> 设 $Y$ 是赋范空间 $E$ 的**闭真子空间**（即 $Y \neq E$），且 $0 < \alpha < 1$。则存在范数为 1 的元素 $x_\alpha \in E$，使得它到子空间 $Y$ 的距离大于 $\alpha$，即：
-> $$ \|x_\alpha - y\| > \alpha, \quad \forall y \in Y $$
+!!! abstract "Theorem 2.4.7 (Riesz 引理)"
+    设 $Y$ 是赋范空间 $E$ 的**闭真子空间**（即 $Y \neq E$），且 $0 < \alpha < 1$。则存在范数为 1 的元素 $x_\alpha \in E$，使得它到子空间 $Y$ 的距离大于 $\alpha$，即：
+    $$ \|x_\alpha - y\| > \alpha, \quad \forall y \in Y $$
 
 `Proof.`
 
@@ -1080,8 +1080,8 @@ $$ \|x_\alpha - y\| = \left\| \frac{x - y_0}{\|x - y_0\|} - y \right\| = \frac{1
 
 $$\|x_\alpha - y\| \ge \frac{d}{\|x - y_0\|} > \frac{d}{d\alpha^{-1}} = \alpha$$
 
-> [!abstract] Theorem 2.4.8 (无穷维空间的单位球非紧)
-> 设 $E$ 是无穷维赋范空间。则其单位球 $U_E := \{x \in E : \|x\| \le 1\}$ 和单位球面 $S_E := \{x \in E : \|x\| = 1\}$ **都不是紧集**。
+!!! abstract "Theorem 2.4.8 (无穷维空间的单位球非紧)"
+    设 $E$ 是无穷维赋范空间。则其单位球 $U_E := \{x \in E : \|x\| \le 1\}$ 和单位球面 $S_E := \{x \in E : \|x\| = 1\}$ **都不是紧集**。
 
 `Proof.`
 
@@ -1093,10 +1093,10 @@ $$\|x_\alpha - y\| \ge \frac{d}{\|x - y_0\|} > \frac{d}{d\alpha^{-1}} = \alpha$$
 
 Banach 不动点定理是分析学中构造解和证明唯一性的核心工具。
 
-> [!abstract] Theorem 2.4.9 (Banach 不动点定理 / 压缩映射原理)
-> 设 $K$ 是 Banach 空间 $E$ 的非空闭子集，$\varphi: K \to K$ 是一个**压缩映射**，即存在常数 $0 < \rho < 1$ 使得：
-> $$ \|\varphi(x) - \varphi(y)\| \le \rho\|x - y\|, \quad \forall x, y \in K $$
-> 则 $\varphi$ 在 $K$ 中有且仅有一个不动点，即存在唯一的 $z_0 \in K$ 使得 $\varphi(z_0) = z_0$。
+!!! abstract "Theorem 2.4.9 (Banach 不动点定理 / 压缩映射原理)"
+    设 $K$ 是 Banach 空间 $E$ 的非空闭子集，$\varphi: K \to K$ 是一个**压缩映射**，即存在常数 $0 < \rho < 1$ 使得：
+    $$ \|\varphi(x) - \varphi(y)\| \le \rho\|x - y\|, \quad \forall x, y \in K $$
+    则 $\varphi$ 在 $K$ 中有且仅有一个不动点，即存在唯一的 $z_0 \in K$ 使得 $\varphi(z_0) = z_0$。
 
 `Proof.`
 
@@ -1110,12 +1110,12 @@ $$ \|x_m - x_n\| \le \sum_{i=n}^{m-1} \|x_{i+1} - x_i\| \le \left(\sum_{i=n}^{m-
 
 ## Exercise 2.4
 
-> [!question] HW3-2
-> Show that Theorem 2.4.9 need not hold if
-> 
-> $$\left|\varphi(x)-\varphi(y)\right|<\left|x-y\right|$$
-> 
-> But the result does still hold under this weakened condition if $K$ is compact
+!!! question "HW3-2"
+    Show that Theorem 2.4.9 need not hold if
+
+    $$\left|\varphi(x)-\varphi(y)\right|<\left|x-y\right|$$
+
+    But the result does still hold under this weakened condition if $K$ is compact
 
 `Proof.`
 
@@ -1176,9 +1176,9 @@ $$
 与$f(x_{0})$的极小性矛盾，因此$f(x_{0})=0$，即证不动点存在(唯一性是显然的)
 
 
-> [!tip] 紧集如何弥补收缩条件弱化所带来的不足
-> 原定理成立的核心是完备性和收缩性，因此可以保证$\lVert x_{n}-x_{n-1} \rVert$为柯西列，但是如果只是单纯的非减条件，可能会使得原本的数列收敛速度不够快，无法导出柯西列，因此结论可能不成立，那么这时候引入紧性就可以提供额外的拓扑结构，其作用体现在以下两点：
-> 1. 保证连续函数的最小值存在（极值定理）
-> 2. 利用距离严格递减性证明最小值必为零（反证法）
-> 
+!!! tip "紧集如何弥补收缩条件弱化所带来的不足"
+    原定理成立的核心是完备性和收缩性，因此可以保证$\lVert x_{n}-x_{n-1} \rVert$为柯西列，但是如果只是单纯的非减条件，可能会使得原本的数列收敛速度不够快，无法导出柯西列，因此结论可能不成立，那么这时候引入紧性就可以提供额外的拓扑结构，其作用体现在以下两点：
+    1. 保证连续函数的最小值存在（极值定理）
+    2. 利用距离严格递减性证明最小值必为零（反证法）
+
 

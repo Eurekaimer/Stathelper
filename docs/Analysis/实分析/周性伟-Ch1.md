@@ -3,8 +3,8 @@
 
 ## 1-10
 
-> [!question] Ch1 1
-> 证明定理1.1.1、1.1.3、1.1.4
+!!! question "Ch1 1"
+    证明定理1.1.1、1.1.3、1.1.4
 
 `Proof.`
 
@@ -33,12 +33,12 @@ $$
 
 (ii)$A\Delta B=B\Delta A$ 根据定义是显然的
 
-> [!Question] Ch1 2
-> 求证：
-> (i) $A-B=A\bigcap B^{c}=B^{c}-A^{c}$
-> (ii) $\bigcup\limits_{n=1}^{\infty}A_{n}-\bigcup\limits_{n=1}^{\infty}B_{n}\subset \bigcup\limits_{n=1}^{\infty}(A_{n}-B_{n})$
-> (iii)$\bigcup\limits_{n=1}^{\infty}\left( A-A_{n} \right)=A-\bigcap\limits_{n=1}^{\infty}A_{n}$
-> (iv)$A_{1}\times B_{1}-A_{2}\times B_{2}=\left[ \left( A_{1}-A_{2} \right)\times B_{1} \right]\bigcup\left[  A_{1}\times\left( B_{1}-B_{2} \right) \right]$
+!!! question "Ch1 2"
+    求证：
+    (i) $A-B=A\bigcap B^{c}=B^{c}-A^{c}$
+    (ii) $\bigcup\limits_{n=1}^{\infty}A_{n}-\bigcup\limits_{n=1}^{\infty}B_{n}\subset \bigcup\limits_{n=1}^{\infty}(A_{n}-B_{n})$
+    (iii)$\bigcup\limits_{n=1}^{\infty}\left( A-A_{n} \right)=A-\bigcap\limits_{n=1}^{\infty}A_{n}$
+    (iv)$A_{1}\times B_{1}-A_{2}\times B_{2}=\left[ \left( A_{1}-A_{2} \right)\times B_{1} \right]\bigcup\left[  A_{1}\times\left( B_{1}-B_{2} \right) \right]$
 
 
 `Proof.`
@@ -79,13 +79,13 @@ $(x,y)\in(A_{1}-A_{2})\times B_{1}\subset A_{1}\times B_{1},x \not\in A_{2},(x,y
 综上所述：$A_{1}\times B_{1}-A_{2}\times B_{2}=\left[ \left( A_{1}-A_{2} \right)\times B_{1} \right]\bigcup\left[  A_{1}\times\left( B_{1}-B_{2} \right) \right]$
 
 
-> [!question] Ch1 3
-> 设$f(x)$和$f_{n}(x)(n\geqslant 1)$都是$\mathbb{R}$上的实函数，求证：
-> 
-> $$\left\{ x:\lim\limits_{ n \to \infty } f_{n}(x)=f(x) \right\}=\bigcap\limits_{r=1}^{\infty} \bigcup\limits_{n=1}^{\infty} \bigcap\limits_{k=n}^{\infty} \left\{ x:\lvert f_{k}(x)-f(x) \rvert < \frac{1}{r} \right\}  
-> $$
-> 
-> 
+!!! question "Ch1 3"
+    设$f(x)$和$f_{n}(x)(n\geqslant 1)$都是$\mathbb{R}$上的实函数，求证：
+
+    $$\left\{ x:\lim\limits_{ n \to \infty } f_{n}(x)=f(x) \right\}=\bigcap\limits_{r=1}^{\infty} \bigcup\limits_{n=1}^{\infty} \bigcap\limits_{k=n}^{\infty} \left\{ x:\lvert f_{k}(x)-f(x) \rvert < \frac{1}{r} \right\}
+    $$
+
+
 `Proof.`
 
 根据连续的定义书写即可：将交翻译为任意，将并翻译为存在
@@ -97,11 +97,11 @@ $\forall r,\exists n\geqslant 1,\forall k \geqslant n, \lvert f_{k}(x)-f(x) \rve
 注：这个题目实际是相当重要的，蕴含了集合分解和集合表示的思想，还给出了并和交隐含的存在与任意的技巧.
 
 
-> [!question] Ch1 4
-> 证明：
-> (i)对任何集$A$和$B$，必有集$C$，使$A\Delta C=B$
-> (ii)$A\Delta(B\Delta C)=(A\Delta B)\Delta C$
-> (iii)$A_{1}\Delta A_{2}\Delta\dots\Delta A_{n}=\left\{ x:x\text{属于且仅属于}\left\{ A_{k} \right\}_{1\leqslant k \leqslant n}\text{中奇数个}A_{k} \right\}$
+!!! question "Ch1 4"
+    证明：
+    (i)对任何集$A$和$B$，必有集$C$，使$A\Delta C=B$
+    (ii)$A\Delta(B\Delta C)=(A\Delta B)\Delta C$
+    (iii)$A_{1}\Delta A_{2}\Delta\dots\Delta A_{n}=\left\{ x:x\text{属于且仅属于}\left\{ A_{k} \right\}_{1\leqslant k \leqslant n}\text{中奇数个}A_{k} \right\}$
 
 `Proof.`
 
@@ -126,9 +126,9 @@ $n=1,n=2$，可以将目标转变为$x\in(A_{1}\Delta\dots\Delta A_{n-1})\Delta 
 
 
 
-> [!question] Ch1 5
-> 设$\left\{ A_{n} \right\}_{n\geq_{1}}$是一个集列，令$B_{1}=A_{1},B_{n}=A_{n}-\bigcup\limits_{k=1}^{n-1}A_{k},n\geq 2$
-> 求证：$\left\{ B_{n} \right\}_{n\geq{1}}$两两不相交且$\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}$
+!!! question "Ch1 5"
+    设$\left\{ A_{n} \right\}_{n\geq_{1}}$是一个集列，令$B_{1}=A_{1},B_{n}=A_{n}-\bigcup\limits_{k=1}^{n-1}A_{k},n\geq 2$
+    求证：$\left\{ B_{n} \right\}_{n\geq{1}}$两两不相交且$\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}$
 
 `Proof.`
 
@@ -169,10 +169,10 @@ $$
 综上所述：$\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}$
 
 
-> [!question] Ch1 6
-> 设$\left\{ A_{n} \right\}$是一列集合.求证：
-> (i)$\chi_{\varlimsup\limits_{n\to \infty}A_{n}}(x)=\varlimsup\limits_{ n \to \infty }\chi_{A_{n}}(x)$
-> (ii)$\chi_{\varliminf\limits_{n\to \infty}A_{n}}(x)=\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)$
+!!! question "Ch1 6"
+    设$\left\{ A_{n} \right\}$是一列集合.求证：
+    (i)$\chi_{\varlimsup\limits_{n\to \infty}A_{n}}(x)=\varlimsup\limits_{ n \to \infty }\chi_{A_{n}}(x)$
+    (ii)$\chi_{\varliminf\limits_{n\to \infty}A_{n}}(x)=\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)$
 
 `Proof.`
 
@@ -190,12 +190,12 @@ $$
 若$x\notin \varliminf\limits_{ n \to \infty }A_{n}(\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)=0)$，有无穷多个集合不含有$x$，那么$\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=0=\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)$
 综上所述：证得$\chi_{\varliminf\limits_{n\to \infty}A_{n}}(x)=\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)$
 
-> [!question] Ch1 7
-> 设映射$f:X\to Y$，求证：
-> (i)若$A \subset X$, 则$A \subset f^{-1}[f(A)]$, 并且当$f$为一一映射时$A=f^{-1}[f(A)]$;
-> (ii)若$B\subset Y$，则$f\left[ f^{-1}(B) \right]=B\bigcap f(X)$且$f^{-1}(B^{c})=\left[ f^{-1}(B) \right]^{c}$
-> (iii)当且仅当$f$为一一映射时，对任何$A,B\subset X$有$f\left( A\bigcap B \right)=f(A)\bigcap f(B)$
-> (iv)当且仅当$f$为完全一一映射时, 对任何$A \subset X$有$f\left(A^{c}\right)=\left[f(A)\right]^{c}$.
+!!! question "Ch1 7"
+    设映射$f:X\to Y$，求证：
+    (i)若$A \subset X$, 则$A \subset f^{-1}[f(A)]$, 并且当$f$为一一映射时$A=f^{-1}[f(A)]$;
+    (ii)若$B\subset Y$，则$f\left[ f^{-1}(B) \right]=B\bigcap f(X)$且$f^{-1}(B^{c})=\left[ f^{-1}(B) \right]^{c}$
+    (iii)当且仅当$f$为一一映射时，对任何$A,B\subset X$有$f\left( A\bigcap B \right)=f(A)\bigcap f(B)$
+    (iv)当且仅当$f$为完全一一映射时, 对任何$A \subset X$有$f\left(A^{c}\right)=\left[f(A)\right]^{c}$.
 
 `Proof.`
 
@@ -253,9 +253,9 @@ $x\in A^{c},f(x)\not\in f(A)$，否则有$y\in A,f(x)=f(y)\implies x=y$矛盾，
 
 注：很容易把自己绕晕，可以多看看，尤其是对于任意的条件通过取不同集合证明不同的条件可以积累取特殊集合的技巧.
 
-> [!Question] Ch1 8
-> 设$f$ 是 $\mathbb{R}$上的实函数.若有 $M >0$，使对任何有限个两两不等的实数 $x_1,\dots,x_{n}$有$\left\lvert  \sum\limits_{k=1}^{n}f(x_{k})  \right\rvert\le M$.
-> 求证:$\left\{ x:f(x) \neq 0 \right\}$是至多可数集.
+!!! question "Ch1 8"
+    设$f$ 是 $\mathbb{R}$上的实函数.若有 $M >0$，使对任何有限个两两不等的实数 $x_1,\dots,x_{n}$有$\left\lvert  \sum\limits_{k=1}^{n}f(x_{k})  \right\rvert\le M$.
+    求证:$\left\{ x:f(x) \neq 0 \right\}$是至多可数集.
 
 
 `Proof.`
@@ -275,16 +275,16 @@ $x\in A^{c},f(x)\not\in f(A)$，否则有$y\in A,f(x)=f(y)\implies x=y$矛盾，
 注：这里也运用了集合分解的技术，导出矛盾的思路是，固定一个$\frac{1}{k}$然后才能通过题目给出的有限个条件制造出一个大于$M$的数
 
 
-> [!question] Ch1 9
-> 求证:$\mathbb{R}$上单调函数的间断点是至多可数的.
+!!! question "Ch1 9"
+    求证:$\mathbb{R}$上单调函数的间断点是至多可数的.
 
 `Proof.`
 
 由于是$\mathbb{R}$上单调函数$f$应当是单射，那么不妨先设单调递增，由此可知两边极限存在，任意选择$\mathbb{R}$上的一个间断点记为$x_{0}$，那么根据函数的单调性知道$f(x_{0}^{-})\le f(x_{0}^{+})$，如果不等那么取$(f(x_{0}^{-}),f(x_{0}^{+}))$中的一个有理点$q_{x_{0}}$，如果相等也就是可去间断点取$f(x_{0}^{-})$的小邻域内的有理数，这样就构成了间断点和有理数的一个单射，而全体有理数是至多可数的，那么间断点也一定是至多可数的.
 
 
-> [!question] Ch1 10
-> 设$f$是$[a,b]$上单增实值函数，$f([a,b])$是区间$[f(a),f(b)]$的稠子集，求证：$f$连续.
+!!! question "Ch1 10"
+    设$f$是$[a,b]$上单增实值函数，$f([a,b])$是区间$[f(a),f(b)]$的稠子集，求证：$f$连续.
 
 `Proof.`
 
@@ -294,8 +294,8 @@ $x\in A^{c},f(x)\not\in f(A)$，否则有$y\in A,f(x)=f(y)\implies x=y$矛盾，
 
 ## 11-20
 
-> [!question] Ch1 11
-> 若$A_{2} \subset A_{1}, B_{2} \subset B_{1}, A_{2} \sim B_{2}, A_{1} \sim B_{1}$, 试问是否必有 $A_{1}-A_{2} \sim B_{1}-B_{2}$ ?
+!!! question "Ch1 11"
+    若$A_{2} \subset A_{1}, B_{2} \subset B_{1}, A_{2} \sim B_{2}, A_{1} \sim B_{1}$, 试问是否必有 $A_{1}-A_{2} \sim B_{1}-B_{2}$ ?
 
 `Sol.`
 
@@ -307,8 +307,8 @@ $x\in A^{c},f(x)\not\in f(A)$，否则有$y\in A,f(x)=f(y)\implies x=y$矛盾，
 
 注：经典的反例题，可以适当积累一下
 
-> [!question] Ch1 12
-> 求证: 有限个可数集的直积是可数集. (无限个可数集呢?)
+!!! question "Ch1 12"
+    求证: 有限个可数集的直积是可数集. (无限个可数集呢?)
 
 `Proof.`
 
@@ -322,8 +322,8 @@ $x\in A^{c},f(x)\not\in f(A)$，否则有$y\in A,f(x)=f(y)\implies x=y$矛盾，
 
 
 
-> [!question] Ch1 13
-> 例 设实数集$E$不可数. 求证: 有$x$, 使对任何$\delta>0, E \cap(x-\delta, x+\delta)$不可数.
+!!! question "Ch1 13"
+    例 设实数集$E$不可数. 求证: 有$x$, 使对任何$\delta>0, E \cap(x-\delta, x+\delta)$不可数.
 
 `Proof.`
 
@@ -333,8 +333,8 @@ $x\in A^{c},f(x)\not\in f(A)$，否则有$y\in A,f(x)=f(y)\implies x=y$矛盾，
 注：很重要的题目，需要掌握取有理数这种证明手法，与之相关的题可以结合起来看如14，
 
 
-> [!question] Ch1 14
-> 求证：$E$中满足题13中条件的点$x$的全体是不可数集
+!!! question "Ch1 14"
+    求证：$E$中满足题13中条件的点$x$的全体是不可数集
 
 
 `Proof.`
@@ -349,8 +349,8 @@ $x\in A^{c},f(x)\not\in f(A)$，否则有$y\in A,f(x)=f(y)\implies x=y$矛盾，
 综上：$A$是不可数集
 
 
-> [!question] Ch1 15
-> 设$\{x_{n}\}_{n\geqslant 1}$是可数个实数. 试具体写出一个单增函数$f$, 它以$\{x_{n}\}_{n\geqslant 1}$为其间断点全体.
+!!! question "Ch1 15"
+    设$\{x_{n}\}_{n\geqslant 1}$是可数个实数. 试具体写出一个单增函数$f$, 它以$\{x_{n}\}_{n\geqslant 1}$为其间断点全体.
 
 `Sol.`
 
@@ -363,12 +363,12 @@ $x\in A^{c},f(x)\not\in f(A)$，否则有$y\in A,f(x)=f(y)\implies x=y$矛盾，
 
 注2：显然的构造方式不止这一种，但是需要注意的是不太能做到为$x_{n}$排序并且选取最小的那个，因为很有可能涉及无穷操作，这种证明是危险的.
 
-> [!question] Ch1 16
-> 证明:$\mathbb{R}$上的实函数$f$的第一类间断点(即左右极限存在有限的间断点)是至多可数的.
+!!! question "Ch1 16"
+    证明:$\mathbb{R}$上的实函数$f$的第一类间断点(即左右极限存在有限的间断点)是至多可数的.
 
 
-> [!TIP]+ Hint
-> 证明$\left\{ x:\lvert f(x)-f(x^{+}) \rvert> \frac{1}{n} \right\}$是至多可数集
+!!! tip "+ Hint"
+    证明$\left\{ x:\lvert f(x)-f(x^{+}) \rvert> \frac{1}{n} \right\}$是至多可数集
 
 `Proof.`
 
@@ -407,12 +407,12 @@ $$
 因此$\left\{ (x,x+\delta_{x}) ,x\in A_{k}\right\}$是两两不交的开区间，那么$A_{k}$是至多可数的，由于可数个至多可数集的并仍是至多可数的，我们得出$A$是至多可数集，那么左极限情形同理可证，综上可得，第一类间断点是至多可数的.
 
 
-> [!question] Ch1 17
-> 设$E\subset \mathbb{R}^{3}$,$E$ 中任何两点的距离是有理数,求证$E$至多可数
+!!! question "Ch1 17"
+    设$E\subset \mathbb{R}^{3}$,$E$ 中任何两点的距离是有理数,求证$E$至多可数
 
 
-> [!tip]+ Hint
-> 空间中两个圆，或是重合，或是至多相交两个点
+!!! tip "+ Hint"
+    空间中两个圆，或是重合，或是至多相交两个点
 
 `Proof.`
 
@@ -442,8 +442,8 @@ $$E\bigcap S(x_{0},r)\bigcap S(x_{1},r_{1})=\bigcup\limits_{r_{2}\in Q^{+}}E\big
 
 注：可以推广到$n$维，具体做法可以参考知乎上的一篇文章
 
-> [!question] Ch1 18
-> 求证: 有限$n$元数列全体及有理系数多项式全体都是可数集.
+!!! question "Ch1 18"
+    求证: 有限$n$元数列全体及有理系数多项式全体都是可数集.
 
 `Proof.`
 
@@ -453,8 +453,8 @@ $$E\bigcap S(x_{0},r)\bigcap S(x_{1},r_{1})=\bigcup\limits_{r_{2}\in Q^{+}}E\big
 再考虑有理系数多项式全体显然可以将多项式$\sum\limits_{k=0}^{n}a_{k}x^{k}$映到$(a_{0},a_{1},\dots,a_{n},0\dots)$上，那么也就是$\mathbb{Q}^{n}\times \left\{ \mathbb{Q}-\left\{ 0 \right\} \right\}$显然是至多可数的记为$A_{n}$那么$A=\bigcup\limits_{n=0}^{\infty}A_{n}$也是至多可数集
 
 
-> [!question] Ch1 19
-> 若$\mathbb{R}$中的集$A$不可数,求证:必有$x\in A$,使对任何$\delta>0$,$(x-\delta,x)$和$(x,x+\delta)$中都有$A$中的点,而且这种$x$全体也是不可数的.
+!!! question "Ch1 19"
+    若$\mathbb{R}$中的集$A$不可数,求证:必有$x\in A$,使对任何$\delta>0$,$(x-\delta,x)$和$(x,x+\delta)$中都有$A$中的点,而且这种$x$全体也是不可数的.
 
 `Proof.`
 
@@ -470,8 +470,8 @@ $$E\bigcap S(x_{0},r)\bigcap S(x_{1},r_{1})=\bigcup\limits_{r_{2}\in Q^{+}}E\big
 
 
 
-> [!question] Ch1 20
-> 例 设 $\overline{\overline{A \cup B}}=c$ (连续统势). 求证: $A$ 和 $B$ 中至少有一个的基数为 $c$.
+!!! question "Ch1 20"
+    例 设 $\overline{\overline{A \cup B}}=c$ (连续统势). 求证: $A$ 和 $B$ 中至少有一个的基数为 $c$.
 
 `Proof.`
 
@@ -484,8 +484,8 @@ $$E\bigcap S(x_{0},r)\bigcap S(x_{1},r_{1})=\bigcup\limits_{r_{2}\in Q^{+}}E\big
 
 ## 21-30
 
-> [!question] Ch1 21
-> 设 $\bigcup\limits_{n=1}^{\infty} A_{n}$ 有连续统势. 求证: 至少有一个 $A_{n}$ 有连续统势.
+!!! question "Ch1 21"
+    设 $\bigcup\limits_{n=1}^{\infty} A_{n}$ 有连续统势. 求证: 至少有一个 $A_{n}$ 有连续统势.
 
 `Proof.`
 
@@ -494,22 +494,22 @@ $$E\bigcap S(x_{0},r)\bigcap S(x_{1},r_{1})=\bigcup\limits_{r_{2}\in Q^{+}}E\big
 直接利用20题的结论，仿照上面的证明即可，每个$A_{n}$都没有连续统势
 
 
-> [!example] $\mathbb{R}^{\infty}$
-> $\forall x\in \mathbb{R}^{\infty},x=(x_{1},x_{2},\dots,x_{k}\dots)$
-> 
-> $$f(x)=\left\{ \left\{ (k,r) \right\} ,k\to x_{k},r\in \mathbb{Q},r<x_{k} \right\} $$
-> 
-> 这样定义了一个从$\mathbb{R}^{\infty}\to P(N\times \mathbb{Q})$的单射，另一边显然有它的势大于$\mathbb{R}$那么可得它有连续统势
+!!! example "$\mathbb{R}^{\infty}$"
+    $\forall x\in \mathbb{R}^{\infty},x=(x_{1},x_{2},\dots,x_{k}\dots)$
+
+    $$f(x)=\left\{ \left\{ (k,r) \right\} ,k\to x_{k},r\in \mathbb{Q},r<x_{k} \right\} $$
+
+    这样定义了一个从$\mathbb{R}^{\infty}\to P(N\times \mathbb{Q})$的单射，另一边显然有它的势大于$\mathbb{R}$那么可得它有连续统势
 
 
 
 
 
-> [!question] Ch1 22
-> 具体构造下列集之间的一个完全一一映射
-> (i)$\left[ 0,1 \right]$与$\left( 0,1 \right)$
-> (ii)$(0,1]$与$(0,1]\times(0,1]$
-> (iii)正整数列全体与严格单增正整数列全体
+!!! question "Ch1 22"
+    具体构造下列集之间的一个完全一一映射
+    (i)$\left[ 0,1 \right]$与$\left( 0,1 \right)$
+    (ii)$(0,1]$与$(0,1]\times(0,1]$
+    (iii)正整数列全体与严格单增正整数列全体
 
 `Proof.`
 
@@ -555,8 +555,8 @@ $x \not\in Q,y=x;x \in Q-\left\{ 0,1 \right\} ,\exists k \geq 1,s.t.x=x_{k},y=x_
 
 
 
-> [!question] Ch1 23
-> 求证：$\mathbb{R}$上实函数全体有基数$2^{c}$
+!!! question "Ch1 23"
+    求证：$\mathbb{R}$上实函数全体有基数$2^{c}$
 
 `Proof.`
 
@@ -568,22 +568,22 @@ $x \not\in Q,y=x;x \in Q-\left\{ 0,1 \right\} ,\exists k \geq 1,s.t.x=x_{k},y=x_
 
 综上可证.
 
-> [!question] Ch1 24
-> 若$A \cap B=\varnothing$，求证：$\bar{A} \cap B^{\circ }=\varnothing$。
+!!! question "Ch1 24"
+    若$A \cap B=\varnothing$，求证：$\bar{A} \cap B^{\circ }=\varnothing$。
 
 `Proof.`
 
 反证法，假设$\exists x_{0}\in \overline{A}\bigcap B^{\circ}$，那么根据内部的定义，$x_{0}\in B^{\circ}\implies \exists\epsilon, V(x_{0},\epsilon)\subset B$，再根据闭包的定义$x_{0}\in \overline{A} \implies  V(x_{0},\epsilon)\bigcap A \neq \emptyset$，综上$\exists x_{1}\in V(x_{0},\epsilon)\bigcap A,x_{1}\in B,x_{1}\in A\bigcap B$，与题设矛盾，即证$\bar{A} \cap B^{\circ }=\varnothing$
 
 
-> [!question] 25
-> 求证：
-> (i) $(A^c)^{\circ}=(\overline{A})^{c}$;
-> (ii) $\overline{A^{c}}=(A^{\circ})^{c}$
-> (iii) $\overline{A \cup B}=\overline{A} \cup \overline{B}$;
-> (iv) $\overline{A \cap B} \subset  \overline{A} \cap \overline{B}$;
-> (v) $A^{\circ}\bigcup B^{\circ}\subset\left( A\bigcup B \right)^{\circ}$
-> (vi) $\left( A\bigcap B \right)^{\circ}=A^{\circ}\bigcap B^{\circ}$
+!!! question "25"
+    求证：
+    (i) $(A^c)^{\circ}=(\overline{A})^{c}$;
+    (ii) $\overline{A^{c}}=(A^{\circ})^{c}$
+    (iii) $\overline{A \cup B}=\overline{A} \cup \overline{B}$;
+    (iv) $\overline{A \cap B} \subset  \overline{A} \cap \overline{B}$;
+    (v) $A^{\circ}\bigcup B^{\circ}\subset\left( A\bigcup B \right)^{\circ}$
+    (vi) $\left( A\bigcap B \right)^{\circ}=A^{\circ}\bigcap B^{\circ}$
 
 
 `Proof.`
@@ -648,8 +648,8 @@ x\in\left( A\bigcap B \right)^{\circ}&\iff \exists\delta>0,V(x,\delta)\subset\le
 $$
 
 
-> [!question] Ch1 26
-> 设A为开集。求证：为使$A \subset \overline{B}$，充要条件是A的任一非空开子集与B有非空交。
+!!! question "Ch1 26"
+    设A为开集。求证：为使$A \subset \overline{B}$，充要条件是A的任一非空开子集与B有非空交。
 
 `Proof.`
 
@@ -665,8 +665,8 @@ $\impliedby$
 
 取$\delta''=min(\delta,\delta'),V(x_{1},\delta'')\bigcap B=\emptyset$与题设矛盾
 
-> [!question] Ch1 27
-> 设 $A$ 为开集. 求证: $A \cap \overline{B} \subset \overline{A \cap B}$.
+!!! question "Ch1 27"
+    设 $A$ 为开集. 求证: $A \cap \overline{B} \subset \overline{A \cap B}$.
 
 `Proof.`
 
@@ -683,9 +683,9 @@ $$
 注：其实只需要说明$x_{0}$一定属于$A$即可(讨论半径即可)，也可以直接将$\delta_{1}$作为一个固定的数处理，当半径大于$\delta_{1}$时，选取在$\delta_{1}$内的一个点$x_{1}\in A\bigcap B$，如果半径小于$\delta_{1}$那么也显然.
 
 
-> [!question] Ch1 28
-> (i) 若 $A$ 为开集, 求证: $A \subset(\bar{A})^{\circ}$;
-> (ii) 若 $A$ 为闭集, 求证: $\overline{A^{\circ}}\subset A$.
+!!! question "Ch1 28"
+    (i) 若 $A$ 为开集, 求证: $A \subset(\bar{A})^{\circ}$;
+    (ii) 若 $A$ 为闭集, 求证: $\overline{A^{\circ}}\subset A$.
 
 `Proof.`
 
@@ -702,8 +702,8 @@ $$
 \end{aligned}
 $$
 
-> [!question] Ch1 29
-> 求证：$R^{n}$中任一集的导集是闭集
+!!! question "Ch1 29"
+    求证：$R^{n}$中任一集的导集是闭集
 
 `Proof.`
 
@@ -719,9 +719,9 @@ $d(x_{0},x_{2})\leqslant d(x_{0},x_{1})+d(x_{1},x_{2})\leqslant d(x_{0},x_{1})+\
 
 证毕
 
-> [!question] Ch1 30
-> (i) 若 $A \subset B$, 求证: $A^{\prime} \subset B^{\prime}$;
-> (ii) 若 $A^{\prime} \subset B \subset A$, 求证: $B$ 是闭集.
+!!! question "Ch1 30"
+    (i) 若 $A \subset B$, 求证: $A^{\prime} \subset B^{\prime}$;
+    (ii) 若 $A^{\prime} \subset B \subset A$, 求证: $B$ 是闭集.
 
 `Proof.`
 
@@ -747,8 +747,8 @@ $$
 ## 31-40
 
 
-> [!question] Ch1 31
-> 求证: $(A \cup B)^{\prime}=A^{\prime} \cup B^{\prime},(A \cap B)^{\prime} \subset A^{\prime} \cap B^{\prime}$.
+!!! question "Ch1 31"
+    求证: $(A \cup B)^{\prime}=A^{\prime} \cup B^{\prime},(A \cap B)^{\prime} \subset A^{\prime} \cap B^{\prime}$.
 
 `Proof`
 
@@ -776,8 +776,8 @@ $$
 
 
 
-> [!question] Ch1 32
-> 求证: $R^n$中任一集的孤立点是至多可数的.
+!!! question "Ch1 32"
+    求证: $R^n$中任一集的孤立点是至多可数的.
 
 `Proof.`
 
@@ -785,8 +785,8 @@ $$
 
 注：需要check两两孤立点的开球之间不交
 
-> [!question] Ch1 33
-> 若 $A$ 不可数, 求证: $A^{\prime}$ 也不可数.
+!!! question "Ch1 33"
+    若 $A$ 不可数, 求证: $A^{\prime}$ 也不可数.
 
 `Proof.`
 
@@ -795,8 +795,8 @@ $$
 那么显然有$A'$是不可数的
 
 
-> [!question] Ch1 34
-> 设对每一整数$n,F_n$是$[n,n+1)$中的闭集.求证：$\bigcup\limits_{n=-\infty}^{\infty}F_n$是 $\mathbb{R}$ 中的闭集.
+!!! question "Ch1 34"
+    设对每一整数$n,F_n$是$[n,n+1)$中的闭集.求证：$\bigcup\limits_{n=-\infty}^{\infty}F_n$是 $\mathbb{R}$ 中的闭集.
 
 `Proof.`
 
@@ -808,9 +808,9 @@ $$
 综上所述：$\bigcup\limits_{n=-\infty}^{\infty}F_n$是 $\mathbb{R}$ 中的闭集.
 
 
-> [!question] Ch1 35
-> 设$A\subset \mathbb{R}^{n}$，若对任何$x\in \mathbb{R}^{n}$，必有$a_{x}\in A$使$d(x,a_{x})=d(x,A)$
-> 求证：$A$是闭集.
+!!! question "Ch1 35"
+    设$A\subset \mathbb{R}^{n}$，若对任何$x\in \mathbb{R}^{n}$，必有$a_{x}\in A$使$d(x,a_{x})=d(x,A)$
+    求证：$A$是闭集.
 
 `Proof.`
 
@@ -825,8 +825,8 @@ $$
 
 注：这是闭集一个非常重要的性质，仍然是利用$A'\subset A$
 
-> [!question] Ch1 36
-> 设$f$在$\mathbb{R}$ 上单增.求证:$E=\{x:$对任何$\varepsilon>0$有$f(x+\varepsilon)-f(x-\varepsilon)>0\}$是闭集.
+!!! question "Ch1 36"
+    设$f$在$\mathbb{R}$ 上单增.求证:$E=\{x:$对任何$\varepsilon>0$有$f(x+\varepsilon)-f(x-\varepsilon)>0\}$是闭集.
 
 `Proof.`
 
@@ -837,8 +837,8 @@ $$
 根据开集的定义选取$\delta=\frac{\epsilon}{2},V(x,\delta)\subset (x-\epsilon,x+\epsilon)$，又因为$\forall x'\in V(x,\delta),\delta'= \frac{\epsilon}{4},V(x',\delta')\subset(x-\epsilon,x+\epsilon)$，易知$x'\in E^{c}$，那么有$V(x,\delta)\subset E^{c}$,由$x$的任意性知$E^{c}$为开集，$E$为闭集.
 
 
-> [!question] Ch1 37
-> 设$F\subset\mathbf{R}^n$是一个无限集.求证；为使$F$是有界闭集，充要条件是对$F$的任一无限子集$E$有$E^\prime\bigcap F\neq\emptyset.$
+!!! question "Ch1 37"
+    设$F\subset\mathbf{R}^n$是一个无限集.求证；为使$F$是有界闭集，充要条件是对$F$的任一无限子集$E$有$E^\prime\bigcap F\neq\emptyset.$
 
 `Proof.`
 
@@ -853,13 +853,13 @@ Step 2
 选取一个收敛点列$\left\{ x_{n} \right\}_{n\geqslant {1}}\subset F,x_{n}\to x$，那么设$E=\left\{ x_{n} \right\}_{n\geqslant 1}，E'=\left\{ x \right\},x\in F\left( E'\bigcap F \neq \emptyset \right)$
 
 
-> [!question] Ch1 38
-> 设 $E \subset \mathbf{R}$. 若 $E$ 被一个区间族 $\left\{I_{\lambda}\right\}_{\lambda \in \Lambda}$ 所覆盖, 求证: $E$ 可被 $\left\{I_{\lambda}\right\}_{\lambda \in \Lambda}$ 的一个可数子族所覆盖. 
+!!! question "Ch1 38"
+    设 $E \subset \mathbf{R}$. 若 $E$ 被一个区间族 $\left\{I_{\lambda}\right\}_{\lambda \in \Lambda}$ 所覆盖, 求证: $E$ 可被 $\left\{I_{\lambda}\right\}_{\lambda \in \Lambda}$ 的一个可数子族所覆盖.
 
 
-> [!tip]- Hint
-> 提示: 令 $a_{\lambda}$ 和 $b_{\lambda}$ 分别是 $I_{\lambda}$ 的左、右端点
-> $A=\left\{a_{\lambda}\right\}_{\lambda \in \Lambda}, B=\left\{b_{\lambda}\right\}_{\lambda \in \Lambda}, C=$ $\bigcup_{\lambda \in \Lambda}\left(a_{\lambda}, b_{\lambda}\right)$. 证明 $A-C$ 和 $B-C$ 都是至多可数集, 从而问题化为 $I_{\lambda}$ 都是开区间的情形.
+!!! tip "- Hint"
+    提示: 令 $a_{\lambda}$ 和 $b_{\lambda}$ 分别是 $I_{\lambda}$ 的左、右端点
+    $A=\left\{a_{\lambda}\right\}_{\lambda \in \Lambda}, B=\left\{b_{\lambda}\right\}_{\lambda \in \Lambda}, C=$ $\bigcup_{\lambda \in \Lambda}\left(a_{\lambda}, b_{\lambda}\right)$. 证明 $A-C$ 和 $B-C$ 都是至多可数集, 从而问题化为 $I_{\lambda}$ 都是开区间的情形.
 
 
 `Proof.`
@@ -875,8 +875,8 @@ Step 1 证明 $A-C$ 和 $B-C$ 都是至多可数集, 从而问题化为 $I_{\lam
 
 注：点集拓扑中的一个很重要的定理叫做$Lind elof$定理，可以抽象出一个$Lind elof$空间，答案可以在任何一本点集拓扑书中找到.
 
-> [!question] Ch1 39
-> 设$F_1$和$F_2$是两个闭集，其中一个有界. 求证：必有$x_1\in F_1$及$x_2\in F_2$使$d(x_1,x_2)=\inf\{d(y_1,y_2):y_1\in F_1,y_2\in F_2\}.$
+!!! question "Ch1 39"
+    设$F_1$和$F_2$是两个闭集，其中一个有界. 求证：必有$x_1\in F_1$及$x_2\in F_2$使$d(x_1,x_2)=\inf\{d(y_1,y_2):y_1\in F_1,y_2\in F_2\}.$
 
 `Proof.`
 
@@ -885,8 +885,8 @@ Step 1 证明 $A-C$ 和 $B-C$ 都是至多可数集, 从而问题化为 $I_{\lam
 利用Bolzano-Weierstrass定理，取$\left\{ x_{n}' \right\}$的收敛子列$\left\{ x_{n_{k}}' \right\},x_{n_{k}}'\to x_{1},k\to \infty$,又由于闭集性质$x_{1}\in F_{1}$
 那么有$d(x_{1},y_{n_{k}}')\to d(F_{1},F_{2})$，再利用三角不等式，$d(y_{n_{k}}',0)\leqslant d(x_{n_{k}}',y_{n_{k}}')+d(x_{n_{k}}',0)$也有界(其中一个是有界闭集)，那么仿照$F_{1}$中子列的证明，即可证得$F_{2}$存在收敛子列使得$k\to \infty,y_{n_{k}}'\to x_{2},d(x_{1},x_{2})=d(F_{1},F_{2})$，
 
-> [!question] Ch1 40
-> 求证: 闭区间不能表示成两个不相交非空闭集的并.
+!!! question "Ch1 40"
+    求证: 闭区间不能表示成两个不相交非空闭集的并.
 
 
 
@@ -895,8 +895,8 @@ Step 1 证明 $A-C$ 和 $B-C$ 都是至多可数集, 从而问题化为 $I_{\lam
 
 
 
-> [!question] Ch1 41
-> 例 求证开区间 $(a, b)$ 不能表示成可数个两两不相交的闭集 $\left\{F_n\right\}_{n \geqslant 1}$ 的并.
+!!! question "Ch1 41"
+    例 求证开区间 $(a, b)$ 不能表示成可数个两两不相交的闭集 $\left\{F_n\right\}_{n \geqslant 1}$ 的并.
 
 `Proof.`
 
@@ -922,8 +922,8 @@ Step 1 证明 $A-C$ 和 $B-C$ 都是至多可数集, 从而问题化为 $I_{\lam
 
 
 
-> [!question] Ch1 44
-> 设$\left\{f_k\right\}_{k \geqslant 1}$是R上一列连续函数。求证：$\left\{\underline\lim\limits_{k\to\infty}f_k(x)>0\right\}$是可数个闭集的并，$\left\{\overline\lim\limits_{k\to\infty}f_k(x)=\infty\right\}$是可数个开集的交。
+!!! question "Ch1 44"
+    设$\left\{f_k\right\}_{k \geqslant 1}$是R上一列连续函数。求证：$\left\{\underline\lim\limits_{k\to\infty}f_k(x)>0\right\}$是可数个闭集的并，$\left\{\overline\lim\limits_{k\to\infty}f_k(x)=\infty\right\}$是可数个开集的交。
 
 `Proof.`
 
@@ -957,8 +957,8 @@ $$
 同理可知，原式为可数个开集的交
 
 
-> [!question] Ch1 45
-> 求证：$\mathbb{R}$上任一实函数的连续点全体是可数个开集的交
+!!! question "Ch1 45"
+    求证：$\mathbb{R}$上任一实函数的连续点全体是可数个开集的交
 
 `Proof.`
 
@@ -975,8 +975,8 @@ $$\begin{aligned}
 从而可知$\left\{ x\in \mathbb{R},w_{f(x)}< \frac{1}{n} \right\}$是一个开集，那么可以得到它是可数个开集的交
 
 
-> [!question] Ch1 46
-> 求证: 闭集是可数个开集的交, 开集是可数个闭集的并.
+!!! question "Ch1 46"
+    求证: 闭集是可数个开集的交, 开集是可数个闭集的并.
 
 `Proof.`
 
@@ -1000,8 +1000,8 @@ $\forall x\in E,d(x,E)=0$属于交集显然成立，$E\subset \bigcap\limits_{n=
 
 
 
-> [!question] Ch1 47
-> 设$F_1$和$F_2$是两个不相交的闭集. 求证: 有不相交开集$G_1$和$G_2$, 使 $F_1\subset G_1, F_2\subset G_2$.
+!!! question "Ch1 47"
+    设$F_1$和$F_2$是两个不相交的闭集. 求证: 有不相交开集$G_1$和$G_2$, 使 $F_1\subset G_1, F_2\subset G_2$.
 
 `Proof.`
 
@@ -1014,8 +1014,8 @@ $\forall x\in F_{1},f(x)=-d(x,F_{2})<0,\forall x\in F_{2},f(x)=d(x,F_{1})>0$
 注：在点集拓扑中有相关的背景，这是$T_{4}$的空间，两个不相交的闭集，可以通过两个不相交的开集来分离，实际上任何一个度量空间都是$T_{4}$的
 
 
-> [!question] Ch1 48
-> 若有界闭集族$\{F_\lambda\}_{\lambda\in\Lambda}$中任何有限个元的交非空，求证$\bigcap\limits_{\lambda\in\Lambda} F_\lambda\neq\varnothing.$ 上述命题中若把“有界闭集”改成“闭集”,命题是否还成立？
+!!! question "Ch1 48"
+    若有界闭集族$\{F_\lambda\}_{\lambda\in\Lambda}$中任何有限个元的交非空，求证$\bigcap\limits_{\lambda\in\Lambda} F_\lambda\neq\varnothing.$ 上述命题中若把“有界闭集”改成“闭集”,命题是否还成立？
 
 `Proof.`
 
@@ -1026,8 +1026,8 @@ $\forall x\in F_{1},f(x)=-d(x,F_{2})<0,\forall x\in F_{2},f(x)=d(x,F_{1})>0$
 如果是闭集，构造反例选取有界开球的补：$F_{n}=\left\{ (x,y),x^{2}+y^{2}\geqslant n \right\}$，不难看出有限个元的交非空但是$n$从1到无穷的交为空集，故命题不成立
 
 
-> [!question] Ch1 49
-> 设$G$是开集，$\left\{ F_{\lambda} \right\}_{\lambda\in\Lambda}$是有界闭集族并且$\bigcap\limits_{\lambda\in\Lambda}F_{\lambda }\subset G$.求证：$\left\{ F_{\lambda} \right\}_{\lambda\in\Lambda}$中有有限个元，它们的交是$G$的子集
+!!! question "Ch1 49"
+    设$G$是开集，$\left\{ F_{\lambda} \right\}_{\lambda\in\Lambda}$是有界闭集族并且$\bigcap\limits_{\lambda\in\Lambda}F_{\lambda }\subset G$.求证：$\left\{ F_{\lambda} \right\}_{\lambda\in\Lambda}$中有有限个元，它们的交是$G$的子集
 
 `Proof.`
 
@@ -1039,8 +1039,8 @@ $\forall x\in F_{1},f(x)=-d(x,F_{2})<0,\forall x\in F_{2},f(x)=d(x,F_{1})>0$
 
 综上可证，有有限个元的交是$G$的子集
 
-> [!question] Ch1 50
-> 设 $f$ 在 $\mathbf{R}$ 上可微, 而且对任何 $\alpha \in \mathbf{R},\left\{x: f^{\prime}(x)=\alpha\right\}$ 是闭集. 求证: $f^{\prime}(x)$ 连续.
+!!! question "Ch1 50"
+    设 $f$ 在 $\mathbf{R}$ 上可微, 而且对任何 $\alpha \in \mathbf{R},\left\{x: f^{\prime}(x)=\alpha\right\}$ 是闭集. 求证: $f^{\prime}(x)$ 连续.
 
 `Proof.`
 
@@ -1051,8 +1051,8 @@ $\forall x\in F_{1},f(x)=-d(x,F_{2})<0,\forall x\in F_{2},f(x)=d(x,F_{1})>0$
 ## 51-60
 
 
-> [!question] Ch1 51
-> 求证: 用十进制小数表示 $[0,1]$ 中的数时, 其用不着数字 7 的一切数构成一完备集.
+!!! question "Ch1 51"
+    求证: 用十进制小数表示 $[0,1]$ 中的数时, 其用不着数字 7 的一切数构成一完备集.
 
 `Proof.`
 
@@ -1063,8 +1063,8 @@ $\forall x\in F_{1},f(x)=-d(x,F_{2})<0,\forall x\in F_{2},f(x)=d(x,F_{1})>0$
 
 
 
-> [!question] Ch1 52
-> 求证：满足题13中条件的点$x$全体是一个完备集
+!!! question "Ch1 52"
+    求证：满足题13中条件的点$x$全体是一个完备集
 
 `Proof.`
 
@@ -1080,8 +1080,8 @@ $2^{\circ}$ 无孤立点：任取$Y$中的点记为$x_{0},\forall\delta$,$(x_{0}
 
 53. 求证: $\mathbf{R}$ 中任一不可数闭集必是一个完备集与一个至多可数集的并.
 
-> [!question] Ch1 53
-> 求证: $\mathbf{R}$ 中任一非空完备集有连续统势.
+!!! question "Ch1 53"
+    求证: $\mathbf{R}$ 中任一非空完备集有连续统势.
 
 
 5554.  其中 $C$ 是 Cantor 完备集, $C+C=\left\{x+y: x, y \in C\right\}$, 并且对每一 $x \in[0,2]$, 具体描述 $C$ 中的 $y$ 和 $z$ 使 $x=y+z$. (提示: 仅取 0 和 2 的二元数列 $\left\{a_{n}\right\}$ 所对应的实数 $x=\sum_{n=1}^{\infty} \frac{a_{n}}{3^{n}}$ 都在 $C$ 中.)
@@ -1096,17 +1096,17 @@ $2^{\circ}$ 无孤立点：任取$Y$中的点记为$x_{0},\forall\delta$,$(x_{0}
 
 57. 若 $\mathbf{R}$ 上的连续函数列 $\left\{f_{k}\right\}_{k \geqslant 1}$ 使对每一 $x \in \mathbf{R}$, 数列 $\left\{f_{k}(x)\right\}_{k \geqslant 1}$ 有界, 求证: $\left\{f_{k}\right\}$ 必在一个区间上一致有界.
 
-> [!question] Ch1 58
-> 若 $f$ 在 $[0,1]$ 中所有有理点处连续. 求证: $f$ 至少在一个无理点处连续.
+!!! question "Ch1 58"
+    若 $f$ 在 $[0,1]$ 中所有有理点处连续. 求证: $f$ 至少在一个无理点处连续.
 
 `Proof.`
 
 利用45题的结论：
 
 
-> [!question] Ch1 59
-> 例 设对任何 $x, y \in \mathbf{R}, f(x+y)=f(x)+f(y)$. 现若 $f$ 不是连续函数
-> 求证: $\{(x, f(x)): x \in \mathbf{R}\}$ 在 $\mathbf{R}^{2}$ 中稠.
+!!! question "Ch1 59"
+    例 设对任何 $x, y \in \mathbf{R}, f(x+y)=f(x)+f(y)$. 现若 $f$ 不是连续函数
+    求证: $\{(x, f(x)): x \in \mathbf{R}\}$ 在 $\mathbf{R}^{2}$ 中稠.
 
 `Proof.`
 
@@ -1116,8 +1116,8 @@ $2^{\circ}$ 无孤立点：任取$Y$中的点记为$x_{0},\forall\delta$,$(x_{0}
 
 现在首先可证明对任何实数 $y$, 必有实数列 $\left\{b_{p}\right\}_{p \geqslant 1}$ 使 $\left(b_{p}, f\left(b_{p}\right)\right) \rightarrow(0, y)$. 事实上对每一 $p \geqslant 1$, 取 $k_{p}$ 使 $x_{k_{p}}<\frac{1}{p}$. 取有理数列 $\left\{r_{p}\right\}$ 使 $r_{p} f\left(x_{k_{p}}\right) \rightarrow y(p \rightarrow \infty)$.此时易证 $\left\{r_{p}\right\}$ 是有界的, 从而 $r_{p} x_{k_{p}} \rightarrow 0(p \rightarrow \infty)$. 取 $b_{p}=r_{p} x_{k_{p}}$ 即可. 现对任何 $(x, y) \in \mathbf{R}^{2}$, 由上述, 存在 $\left\{b_{p}\right\}_{p \geqslant 1}$ 使 $\left(b_{p}, f\left(b_{p}\right)\right) \rightarrow(0, y-f(x))(p \rightarrow \infty)$. 从而得知 $\left(b_{p}+x, f\left(b_{p}+x\right)\right) \rightarrow(x, y)$.
 
-> [!question] Ch1 60
-> 把 $[0,1)$ 表示成 $c$ 个两两不相交的完备集的并.
+!!! question "Ch1 60"
+    把 $[0,1)$ 表示成 $c$ 个两两不相交的完备集的并.
 
 
 

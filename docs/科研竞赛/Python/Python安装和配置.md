@@ -71,8 +71,8 @@ D:\Anaconda\Library\bin
 ```
 
 
-> [!info] 验证效果
-> 如果添加到PATH你可以直接在cmd或是终端中使用conda --version以及conda相关的命令，如果不添加你可以在Anaconda Powershell中使用，官方应该是不建议直接添加到PATH的，为了隔离环境和安全性的考虑笔者也不建议这么做，但是如果是新手可以考虑直接添加，日后删除即可。
+!!! info "验证效果"
+    如果添加到PATH你可以直接在cmd或是终端中使用conda --version以及conda相关的命令，如果不添加你可以在Anaconda Powershell中使用，官方应该是不建议直接添加到PATH的，为了隔离环境和安全性的考虑笔者也不建议这么做，但是如果是新手可以考虑直接添加，日后删除即可。
 
 
 ### 相关的命令

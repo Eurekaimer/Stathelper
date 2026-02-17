@@ -1,11 +1,11 @@
 # Hilbert Spaces
 
 
-> [!tldr] Outline
-> + Basic properties
-> + Best approximation
-> + Orthogonal Decomposition
-> + Orthonormal basis
+!!! tldr "Outline"
+    + Basic properties
+    + Best approximation
+    + Orthogonal Decomposition
+    + Orthonormal basis
 
 第三章主要研究的是Hilbert空间，也就是**完备内积空间**，第二章是为向量空间配备了范数(长度)，这一章则是通过引入内积为其添加了角度和投影的概念，使得空间的几何结构更加接近我们熟悉的$\mathbb{R}^{n}$，从而我们可以通过使用内积来同时表示长度和角度
 
@@ -17,17 +17,17 @@
 
 >显然你应当熟悉所谓内积的四条性质以便于验证
 
-> [!NOTE] Definition (Inner Product)
-> Let $E$ be a vector space over $\mathbb{K}$. A function
-> $$ \langle \cdot, \cdot \rangle : E \times E \to \mathbb{K} $$
-> is said to be an *inner product* of $E$ if
-> 
-> 1.  $\langle x, x \rangle \ge 0$ for all $x \in E$; and $\langle x, x \rangle = 0$ if and only if $x = 0$;
-> 2.  $\langle x, y \rangle = \overline{\langle y, x \rangle}$ for all $x, y \in E$;
-> 3.  $\langle \lambda x, y \rangle = \lambda \langle x, y \rangle$ for all $x, y \in E$;
-> 4.  $\langle x + y, z \rangle = \langle x, z \rangle + \langle y, z \rangle$ for all $x, y, z \in E$.
-> 
-> We call $(E, \langle \cdot, \cdot \rangle)$ a real or complex *inner product space* when the underlying field $\mathbb{K} = \mathbb{R}$ or $\mathbb{C}$, respectively.
+!!! note "Definition (Inner Product)"
+    Let $E$ be a vector space over $\mathbb{K}$. A function
+    $$ \langle \cdot, \cdot \rangle : E \times E \to \mathbb{K} $$
+    is said to be an *inner product* of $E$ if
+
+    1.  $\langle x, x \rangle \ge 0$ for all $x \in E$; and $\langle x, x \rangle = 0$ if and only if $x = 0$;
+    2.  $\langle x, y \rangle = \overline{\langle y, x \rangle}$ for all $x, y \in E$;
+    3.  $\langle \lambda x, y \rangle = \lambda \langle x, y \rangle$ for all $x, y \in E$;
+    4.  $\langle x + y, z \rangle = \langle x, z \rangle + \langle y, z \rangle$ for all $x, y, z \in E$.
+
+    We call $(E, \langle \cdot, \cdot \rangle)$ a real or complex *inner product space* when the underlying field $\mathbb{K} = \mathbb{R}$ or $\mathbb{C}$, respectively.
 
 关于内积的定义可以看作主要由下述性质构成：
 
@@ -36,33 +36,33 @@
 + 对第一变元的线性，实际上对于第二变元是共轭线性的也就是$\langle x,\lambda y\rangle= \overline{\lambda}\langle x,y\rangle$
 
 
-> [!NOTE] Definition(Hilbert空间)
-> 通过内积诱导的范数$\lVert x \rVert=\sqrt{ \langle x,x\rangle }$，如果内积空间在该范数下完备则称其为Hilbert空间
+!!! note "Definition(Hilbert空间)"
+    通过内积诱导的范数$\lVert x \rVert=\sqrt{ \langle x,x\rangle }$，如果内积空间在该范数下完备则称其为Hilbert空间
 
 注：容易知道$\lVert \cdot \rVert$满足范数的三条性质，并且将$E$的范数拓扑也称为内积拓扑
 
 我们接下来会讨论Cauchy-Schwartz不等式，实际上在数学分析和高等代数中就经常使用，这同样是内积空间中最著名的不等式，它建立了内积与范数（长度）之间的联系
 
-> [!abstract] Theorem Cauchy-Schwarz inequality
-> Let $(E, \langle \cdot, \cdot \rangle)$ be an inner product space. It holds that
-> 
-> $$ |\langle x, y \rangle| \le \sqrt{\langle x, x \rangle} \sqrt{\langle y, y \rangle}, \quad \forall x, y \in E. $$
-> 
-> The equality holds if and only if $x = \lambda y$ for some $\lambda \in \mathbb{K}$ or $y = 0$.
+!!! abstract "Theorem Cauchy-Schwarz inequality"
+    Let $(E, \langle \cdot, \cdot \rangle)$ be an inner product space. It holds that
+
+    $$ |\langle x, y \rangle| \le \sqrt{\langle x, x \rangle} \sqrt{\langle y, y \rangle}, \quad \forall x, y \in E. $$
+
+    The equality holds if and only if $x = \lambda y$ for some $\lambda \in \mathbb{K}$ or $y = 0$.
 
 证明手法可以采用非常经典的引入参数构造二次型和判别式方法，主要是利用内积的正定性质然后移项即可，在此不赘述了
 
 再给出内积的连续性概念
 
 
-> [!NOTE] Continuity of inner product
-> Let $x_{n},y_{n},x,y$ be elements of an inner product space $E$, $n=1,2,\dots$ and 
-> 
-> $$x_{n}\to x,y_{n} \to y$$
-> 
-> in the associated norm topology. Then
-> 
-> $$\langle x_{n} , y_{n} \rangle \to \langle x,y \rangle $$
+!!! note "Continuity of inner product"
+    Let $x_{n},y_{n},x,y$ be elements of an inner product space $E$, $n=1,2,\dots$ and
+
+    $$x_{n}\to x,y_{n} \to y$$
+
+    in the associated norm topology. Then
+
+    $$\langle x_{n} , y_{n} \rangle \to \langle x,y \rangle $$
 
 `Proof.`
 
@@ -79,10 +79,10 @@ $$
 
 下面给出能够判断一个空间是否由内积定义的重要定理——平行四边形定理
 
-> [!tip] Paralletlogram Law
-> A norm $\lVert \cdot \rVert$ of a vector space $E$ is defined through an inner product on $E$, if and only if ,
-> 
-> $$\lVert x+y \rVert ^{2}+\lVert x-y \rVert ^{2}=2(\lVert x \rVert ^{2}+\lVert y \rVert ^{2}),\forall x,y\in E$$
+!!! tip "Paralletlogram Law"
+    A norm $\lVert \cdot \rVert$ of a vector space $E$ is defined through an inner product on $E$, if and only if ,
+
+    $$\lVert x+y \rVert ^{2}+\lVert x-y \rVert ^{2}=2(\lVert x \rVert ^{2}+\lVert y \rVert ^{2}),\forall x,y\in E$$
 
 `Proof.`
 
@@ -105,24 +105,24 @@ $$
 
 我们需要通过范数来反解出内积的表达式。
 
-> [!note] 观察：如何“拼凑”出内积？
-> **情形 A：若 $\mathbb{K} = \mathbb{R}$ (实数域)**
-> 由方向一的展开式可知：
-> $\|x+y\|^2 - \|x-y\|^2 = 2\langle x, y \rangle + 2\langle y, x \rangle = 4\langle x, y \rangle$ (利用实内积对称性)。
-> 于是我们可以定义：
-> $$ \langle x, y \rangle = \frac{1}{4} (\|x+y\|^2 - \|x-y\|^2) \quad (3.2) $$
-> 
-> **情形 B：若 $\mathbb{K} = \mathbb{C}$ (复数域)**
-> 复数情形稍微复杂，因为 $\langle y, x \rangle = \overline{\langle x, y \rangle}$。我们利用 $i^k$ 的技巧。
-> 考虑展开式：
-> $\|x + i^k y\|^2 = \|x\|^2 + i^k \langle y, x \rangle + i^{-k} \langle x, y \rangle + \|y\|^2$。
-> 对 $k=0, 1, 2, 3$ 求和，并乘以 $i^k$：
-> $$ \sum_{k=0}^3 i^k \|x + i^k y\|^2 = \sum_{k=0}^3 i^k (\|x\|^2 + \|y\|^2) + \langle y, x \rangle \sum_{k=0}^3 i^{2k} + \langle x, y \rangle \sum_{k=0}^3 i^0 $$
-> 利用 $\sum_{k=0}^3 i^k = 0$ 和 $\sum_{k=0}^3 i^{2k} = 1-1+1-1=0$，只剩下最后一项$4\langle x, y \rangle$：
-> 
-> 于是，我们**定义**复空间上的内积为：
-> $$ \langle x, y \rangle = \frac{1}{4} \sum_{k=0}^3 i^k \|x + i^k y\|^2 \quad (3.3) $$
-> 这两个公式 (3.2) 和 (3.3) 被称为 **极化恒等式**。
+!!! note "观察：如何“拼凑”出内积？"
+    **情形 A：若 $\mathbb{K} = \mathbb{R}$ (实数域)**
+    由方向一的展开式可知：
+    $\|x+y\|^2 - \|x-y\|^2 = 2\langle x, y \rangle + 2\langle y, x \rangle = 4\langle x, y \rangle$ (利用实内积对称性)。
+    于是我们可以定义：
+    $$ \langle x, y \rangle = \frac{1}{4} (\|x+y\|^2 - \|x-y\|^2) \quad (3.2) $$
+
+    **情形 B：若 $\mathbb{K} = \mathbb{C}$ (复数域)**
+    复数情形稍微复杂，因为 $\langle y, x \rangle = \overline{\langle x, y \rangle}$。我们利用 $i^k$ 的技巧。
+    考虑展开式：
+    $\|x + i^k y\|^2 = \|x\|^2 + i^k \langle y, x \rangle + i^{-k} \langle x, y \rangle + \|y\|^2$。
+    对 $k=0, 1, 2, 3$ 求和，并乘以 $i^k$：
+    $$ \sum_{k=0}^3 i^k \|x + i^k y\|^2 = \sum_{k=0}^3 i^k (\|x\|^2 + \|y\|^2) + \langle y, x \rangle \sum_{k=0}^3 i^{2k} + \langle x, y \rangle \sum_{k=0}^3 i^0 $$
+    利用 $\sum_{k=0}^3 i^k = 0$ 和 $\sum_{k=0}^3 i^{2k} = 1-1+1-1=0$，只剩下最后一项$4\langle x, y \rangle$：
+
+    于是，我们**定义**复空间上的内积为：
+    $$ \langle x, y \rangle = \frac{1}{4} \sum_{k=0}^3 i^k \|x + i^k y\|^2 \quad (3.3) $$
+    这两个公式 (3.2) 和 (3.3) 被称为 **极化恒等式**。
 
 2. 验证构造出的函数是内积
 
@@ -212,17 +212,17 @@ $$ \langle x+z, y \rangle = \langle x, y \rangle + \langle z, y \rangle $$
 
 
 
-> [!question] (6)HW4-1
-> Let $H$ be an inner product space.
-> (a) If $a,b\in H\setminus \left\{ 0 \right\}$, and if $a'= \frac{a}{\lVert a \rVert^{2}}$ and $b'= \frac{b}{\lVert b \rVert^{2}}$, then
-> 
-> $$\lVert a'-b' \rVert = \frac{\lVert a-b \rVert }{\lVert a \rVert \lVert b \rVert }.$$
-> 
-> (b) Prove the Ptolemaic inequality
-> 
-> $$\lVert a-c \rVert \lVert b-d \rVert \leqslant \lVert a-b \rVert \lVert c-d \rVert +\lVert b-c \rVert \lVert a-d \rVert $$
-> 
-> for all $a,b,c,d\in H$
+!!! question "(6)HW4-1"
+    Let $H$ be an inner product space.
+    (a) If $a,b\in H\setminus \left\{ 0 \right\}$, and if $a'= \frac{a}{\lVert a \rVert^{2}}$ and $b'= \frac{b}{\lVert b \rVert^{2}}$, then
+
+    $$\lVert a'-b' \rVert = \frac{\lVert a-b \rVert }{\lVert a \rVert \lVert b \rVert }.$$
+
+    (b) Prove the Ptolemaic inequality
+
+    $$\lVert a-c \rVert \lVert b-d \rVert \leqslant \lVert a-b \rVert \lVert c-d \rVert +\lVert b-c \rVert \lVert a-d \rVert $$
+
+    for all $a,b,c,d\in H$
 
 `Proof.`
 
@@ -261,8 +261,8 @@ $$
 
 
 
-> [!question] (8)HW4-2
-> If $H$ is a Hilbert space and $M$ is a closed subspace of $H$, show that $H \texttt{/} M$ is also a Hilbert space.
+!!! question "(8)HW4-2"
+    If $H$ is a Hilbert space and $M$ is a closed subspace of $H$, show that $H \texttt{/} M$ is also a Hilbert space.
 
 
 我们应当先知道赋范空间的商范数如何定义，可以参考[planetmath](https://planetmath.org/quotientnorm)
@@ -330,16 +330,16 @@ $$
 我们还想要研究关于最小距离的概念，利用几何的观点先给出最优逼近的定义：
 
 
-> [!NOTE] Definition(Best approximation)
-> The distance from $x$ to $B$ is defined as $d(x,B)=\inf\limits_{y\in B}d(x,y)$，if there is an $\tilde{x}\in B$ such that $d(x, \tilde{x})=d(x,B)$, we call $\tilde{x}$ is a best approximation of $x$ in $X$ from $B$, or a best approximate element.
+!!! note "Definition(Best approximation)"
+    The distance from $x$ to $B$ is defined as $d(x,B)=\inf\limits_{y\in B}d(x,y)$，if there is an $\tilde{x}\in B$ such that $d(x, \tilde{x})=d(x,B)$, we call $\tilde{x}$ is a best approximation of $x$ in $X$ from $B$, or a best approximate element.
 
 下面给出最优逼近定理，在Hilbert空间中选取一个闭凸子集，在补集中选取任意一点，我们一定能够在闭凸子集中选取到其的最优逼近元
 
 
-> [!tip] Theorem
-> Let $B$ be a nonempty closed convex subset of a Hilbert space $H$. Let $x\in H\setminus B$. Then there exists a unique $\tilde{x}$ in $B$ such that
-> 
-> $$\lVert x-\tilde{x} \rVert =d(x,B)=\inf\limits_{y\in B}\lVert x-y \rVert $$
+!!! tip "Theorem"
+    Let $B$ be a nonempty closed convex subset of a Hilbert space $H$. Let $x\in H\setminus B$. Then there exists a unique $\tilde{x}$ in $B$ such that
+
+    $$\lVert x-\tilde{x} \rVert =d(x,B)=\inf\limits_{y\in B}\lVert x-y \rVert $$
 
 并且有等价条件：
 
@@ -355,13 +355,13 @@ $$\lVert \tilde{x}-\tilde{y} \rVert \leqslant \lvert x-y \rvert$$
 
 再定义投影：
 
-> [!NOTE] Definition (Projection Map)
-> 设 $B$ 是 Hilbert 空间 $H$ 中的一个**非空闭凸子集**。定义 **投影映射** $P_B : H \to B$，将任意 $x \in H$ 映射为 $P_B(x) = \tilde{x}$，其中 $\tilde{x}$ 是 $x$ 在 $B$ 中的 **(唯一) 最佳逼近元素**。
+!!! note "Definition (Projection Map)"
+    设 $B$ 是 Hilbert 空间 $H$ 中的一个**非空闭凸子集**。定义 **投影映射** $P_B : H \to B$，将任意 $x \in H$ 映射为 $P_B(x) = \tilde{x}$，其中 $\tilde{x}$ 是 $x$ 在 $B$ 中的 **(唯一) 最佳逼近元素**。
 
-> [!TIP] Corollary (投影的连续性)
-> Hilbert 空间 $H$ 中非空闭凸子集上的投影映射 $P_B$ 是连续的。事实上，$P_B$ 是一个**压缩映射 (contraction)**，即满足：
-> 
-> $$ \|P_B x - P_B y\| \le \|x - y\|, \quad \forall x, y \in H $$
+!!! tip "Corollary (投影的连续性)"
+    Hilbert 空间 $H$ 中非空闭凸子集上的投影映射 $P_B$ 是连续的。事实上，$P_B$ 是一个**压缩映射 (contraction)**，即满足：
+
+    $$ \|P_B x - P_B y\| \le \|x - y\|, \quad \forall x, y \in H $$
 
 `Proof.`
 
@@ -397,8 +397,8 @@ $$ \|u - v\| \le \|x - y\| $$
 ## Exercise 3.2
 
 
-> [!question] (4)HW5-1
-> Show that the projection map $P_{B}$ of a nonempty closed convex subset of a Hilbert space $H$ is linear if and only if $B$ is a vector subspace of $H$.
+!!! question "(4)HW5-1"
+    Show that the projection map $P_{B}$ of a nonempty closed convex subset of a Hilbert space $H$ is linear if and only if $B$ is a vector subspace of $H$.
 
 `Proof.`
 
@@ -431,11 +431,11 @@ $\forall x_{1},x_{2}\in H,\alpha\in \mathbb{K},x_{1}=b_{1}+z_{1},x_{2}=b_{2}+z_{
 
 下面研究内积空间非常重要的一个性质，也就是当内积为0的情况下称为正交的情形
 
-> [!NOTE] Definition orthogonal
-> 假设$X$是一个内积空间
-> (a) 若满足$\langle x,y\rangle=0$，两个$X$中元素$x,y$被称为正交可以记作$x\perp y$
-> (b) 若是有$\forall y\in S,x\perp y\implies x\perp S$，将元素与集合正交的概念扩展到两个集合正交即$\forall x\in S_{1},y\in S_{2}$，称两个集合正交
-> (c) 给出正交补的概念，若是$x\in X,x^{\perp}=\left\{ y\in X:\langle x,y\rangle=0 \right\}$，相应的可以给出正交补空间的概念，$S^{\perp}=\left\{ y\in X:\langle x, y\rangle =0 ,\forall x\in S \right\}$，将$S^{\perp}$记为$S$的正交补
+!!! note "Definition orthogonal"
+    假设$X$是一个内积空间
+    (a) 若满足$\langle x,y\rangle=0$，两个$X$中元素$x,y$被称为正交可以记作$x\perp y$
+    (b) 若是有$\forall y\in S,x\perp y\implies x\perp S$，将元素与集合正交的概念扩展到两个集合正交即$\forall x\in S_{1},y\in S_{2}$，称两个集合正交
+    (c) 给出正交补的概念，若是$x\in X,x^{\perp}=\left\{ y\in X:\langle x,y\rangle=0 \right\}$，相应的可以给出正交补空间的概念，$S^{\perp}=\left\{ y\in X:\langle x, y\rangle =0 ,\forall x\in S \right\}$，将$S^{\perp}$记为$S$的正交补
 
 根据正交的定义显然我们知道对于正交的两个元素有$\lVert x+y \rVert^{2}=\lVert x \rVert^{2}+\lVert y \rVert^{2}$，反向也成立如果$\mathbb{K}=\mathbb{R}$
 
@@ -447,24 +447,24 @@ $\forall x_{1},x_{2}\in H,\alpha\in \mathbb{K},x_{1}=b_{1}+z_{1},x_{2}=b_{2}+z_{
 
 下面是一些正交补的性质：
 
-> [!tip] 正交补的性质
-> 设 $S$ 和 $S_1$ 是内积空间 $X$ 的**子集**（注意：不一定是子空间）。
-> 
-> 1.  $S^\perp$ 是 $X$ 的**闭子空间**，且 $S \cap S^\perp = \{0\}$。
-> 2.  $S \subseteq S^{\perp\perp}$。
-> 3.  包含关系反转：若 $S \subseteq S_1$，则 $S_1^\perp \subseteq S^\perp$。
-> 4.  **三次正交等于一次正交**：$S^\perp = S^{\perp\perp\perp}$。
+!!! tip "正交补的性质"
+    设 $S$ 和 $S_1$ 是内积空间 $X$ 的**子集**（注意：不一定是子空间）。
+
+    1.  $S^\perp$ 是 $X$ 的**闭子空间**，且 $S \cap S^\perp = \{0\}$。
+    2.  $S \subseteq S^{\perp\perp}$。
+    3.  包含关系反转：若 $S \subseteq S_1$，则 $S_1^\perp \subseteq S^\perp$。
+    4.  **三次正交等于一次正交**：$S^\perp = S^{\perp\perp\perp}$。
 
 ### 正交分解定理
 
 我们希望能够通过正交关系对于空间进行一个划分，这就引出了我们本节最重要的正交分解定理
 
-> [!tip] Orthogonal Decomposition Theorem
-> If $M$ is a closed subspace of a Hilbert space $H$, then 
-> 
-> $$H=M\oplus M^{\perp}$$
-> 
-> and $M=M^{\perp\perp}$
+!!! tip "Orthogonal Decomposition Theorem"
+    If $M$ is a closed subspace of a Hilbert space $H$, then
+
+    $$H=M\oplus M^{\perp}$$
+
+    and $M=M^{\perp\perp}$
 
 注：正交分解定理的证明深度依赖于Hilbert空间中的最佳逼近理论。根据定理 3.3.5，如果$M$是Hilbert空间$H$的一个闭子空间，那么对于空间中任意给定的向量 $x$，元素 $y$ 是 $x$ 在 $M$ 中的最佳逼近元（即满足距离最小化），当且仅当$(x - y) \perp M$
 
@@ -479,12 +479,12 @@ $\forall x_{1},x_{2}\in H,\alpha\in \mathbb{K},x_{1}=b_{1}+z_{1},x_{2}=b_{2}+z_{
 
 下面再给出正交性质和最优逼近结合的一个性质展现：
 
-> [!abstract] Theorem (闭子空间上的最佳逼近)
-> 设 $M$ 是 Hilbert 空间 $H$ 的一个**闭子空间**，且 $x \in H$。$x$ 在 $M$ 中的**最佳逼近元**是唯一的元素 $y \in M$，满足条件：
-> 
-> $$ (x - y) \perp M $$
-> 
-> 也就是说，误差向量 $x - y$ 必须垂直于子空间 $M$。
+!!! abstract "Theorem (闭子空间上的最佳逼近)"
+    设 $M$ 是 Hilbert 空间 $H$ 的一个**闭子空间**，且 $x \in H$。$x$ 在 $M$ 中的**最佳逼近元**是唯一的元素 $y \in M$，满足条件：
+
+    $$ (x - y) \perp M $$
+
+    也就是说，误差向量 $x - y$ 必须垂直于子空间 $M$。
 
 注：直观理解就是，如果你想在一个平面 $M$ 上找一点 $y$ 离平面外的点 $x$ 最近，那么连线 $x-y$ 必须垂直于这个平面。如果连线是斜的，你总可以在平面上移动 $y$ 使得距离更近
 
@@ -494,12 +494,12 @@ $\forall x_{1},x_{2}\in H,\alpha\in \mathbb{K},x_{1}=b_{1}+z_{1},x_{2}=b_{2}+z_{
 
 
 
-> [!question] (4)HW5-2
-> For the Hilbert space $L^{2}[0,1]$, let
-> 
-> $$M=\left\{ f\in L^{2}[0,1]: \int_{0}^{1} f(t) \, dt =0 \right\} $$
-> 
-> Determine $M^{\perp}$. For $f_{0}(x)=\exp(x)$, determine $d(f_{0},M)$.
+!!! question "(4)HW5-2"
+    For the Hilbert space $L^{2}[0,1]$, let
+
+    $$M=\left\{ f\in L^{2}[0,1]: \int_{0}^{1} f(t) \, dt =0 \right\} $$
+
+    Determine $M^{\perp}$. For $f_{0}(x)=\exp(x)$, determine $d(f_{0},M)$.
 
 `Proof.`
 
@@ -514,10 +514,10 @@ $$
 
 
 
-> [!question] (5)HW5-3
-> Show that if $\langle x,y\rangle=0$ if and only if 
-> (i) $\lVert x+\alpha y \rVert \geqslant \lVert x \rVert$ for every $\alpha\in \mathbb{K}$ or 
-> (ii) $\lVert x+\alpha y \rVert=\lVert x-\alpha y \rVert$ for every $\alpha\in \mathbb{K}$
+!!! question "(5)HW5-3"
+    Show that if $\langle x,y\rangle=0$ if and only if
+    (i) $\lVert x+\alpha y \rVert \geqslant \lVert x \rVert$ for every $\alpha\in \mathbb{K}$ or
+    (ii) $\lVert x+\alpha y \rVert=\lVert x-\alpha y \rVert$ for every $\alpha\in \mathbb{K}$
 
 `Proof.`
 

@@ -1,11 +1,11 @@
 # 绪论
 
-> [!tldr] Outline
-> + Zorn's lemma
-> + Vector spaces
-> + Metric spaces
-> + Topological spaces
-> + Topological Vector Spaces
+!!! tldr "Outline"
+    + Zorn's lemma
+    + Vector spaces
+    + Metric spaces
+    + Topological spaces
+    + Topological Vector Spaces
 
 声明：关于本书中所采用的$\mathbb{K}$，指代$\mathbb{R}$或$\mathbb{C}$
 
@@ -26,10 +26,10 @@
 则称其为偏序，显然集合的包含关系是一个偏序，额外补充Direct Partial Ordering(定向偏序)的定义，这是一个具有特定性质的偏序关系：对于$I$中任意两个元素$x,y$，存在$I$中元素$z$使得$x\preceq z,y\preceq z$
 
 
-> [!example] 字典序，lexicographical order
-> 对于$\mathbb{R}^{2}$上的一个偏序定义如下：
-> 
-> 如果$x_{1}<x_{2}$或者在$x_{1}=x_{2},y_{1}\leqslant y_{2}$，那么称为$(x_{1},y_{1})\preceq (x_{2},y_{2})$
+!!! example "字典序，lexicographical order"
+    对于$\mathbb{R}^{2}$上的一个偏序定义如下：
+
+    如果$x_{1}<x_{2}$或者在$x_{1}=x_{2},y_{1}\leqslant y_{2}$，那么称为$(x_{1},y_{1})\preceq (x_{2},y_{2})$
 
 为了下面阐述Zorn引理，我们还需要一些特殊概念：
 
@@ -40,13 +40,13 @@
 
 下面就是本节最重要的内容：
 
-> [!tip] Zorn's Lemma
->  Let $(X, \preceq)$ be a partially ordered set such that every nonempty chain $C \subseteq X$ admits an upper bound (in $X$). Then $X$ has a maximal element.
+!!! tip "Zorn's Lemma"
+     Let $(X, \preceq)$ be a partially ordered set such that every nonempty chain $C \subseteq X$ admits an upper bound (in $X$). Then $X$ has a maximal element.
 
 等价形式：
 
-> [!tip] Axiom of Choice
->  Let $I$ and $X$ be two nonempty sets and, for each element $i \in I$, let $X_i \subseteq X$ be a nonempty subset. Then there exists a map $g : I \to X$ such that $g(i) \in X_i$ for every $i \in I$.
+!!! tip "Axiom of Choice"
+     Let $I$ and $X$ be two nonempty sets and, for each element $i \in I$, let $X_i \subseteq X$ be a nonempty subset. Then there exists a map $g : I \to X$ such that $g(i) \in X_i$ for every $i \in I$.
 
 
 Note that both Theorems 1.1.8 and 1.1.9 are axioms in the ZFC set theory system. One cannot prove or disprove any one of them (by other axioms in ZFC). However, they are equivalent.
@@ -63,11 +63,11 @@ $\mathbf{Remark:}$The Axiom of Choice is equivalent to Zorn's Lemma. In other wo
 给出一些例子(很多记号后续也会使用)
 
 
-> [!example] elementary examples
-> (a) $\mathbb{K}^{n}$，$n$元的向量空间
-> (b) $\mathbb{K}^{\mathbb{N}}=\left\{ (x_{1},\dots,x_{n},\dots): x_{i}\in \mathbb{K},\forall i\in \mathbb{N} \right\}$ 无穷维向量空间
-> (c) $\mathbb{C}[0,1]$：所有的定义在$[0,1]$上的$\mathbb{K}-valued$函数
-> (d) 定义在矩阵上的向量空间$M_{n}(\mathbb{K})$
+!!! example "elementary examples"
+    (a) $\mathbb{K}^{n}$，$n$元的向量空间
+    (b) $\mathbb{K}^{\mathbb{N}}=\left\{ (x_{1},\dots,x_{n},\dots): x_{i}\in \mathbb{K},\forall i\in \mathbb{N} \right\}$ 无穷维向量空间
+    (c) $\mathbb{C}[0,1]$：所有的定义在$[0,1]$上的$\mathbb{K}-valued$函数
+    (d) 定义在矩阵上的向量空间$M_{n}(\mathbb{K})$
 
 如果向量空间内部非空子集仍然满足加法和数乘的封闭，称其为子空间
 
@@ -141,12 +141,12 @@ $$
 (3) In Example 1.2.2, show that if $\mathbb{K} = \mathbb{R}$ then every continuous real-valued function $f$ with $\int_0^1 f(x) \, dx = 0$ vanishes somewhere in $[0, 1]$.
 
 
-> [!example] Example 1.2.2
-> The set
-> 
-> $$\left\{ f\in C[0,1]:\int_{0}^{1} f(t) \, dt =0 \right\} $$
-> 
-> is a linear subspace of $C[0,1]$
+!!! example "Example 1.2.2"
+    The set
+
+    $$\left\{ f\in C[0,1]:\int_{0}^{1} f(t) \, dt =0 \right\} $$
+
+    is a linear subspace of $C[0,1]$
 
 `Proof.`
 
@@ -163,13 +163,13 @@ $$
 
 ## Exercises 1.3
 
-> [!question] (1)
-> Show that if $d$ is a metric on$X$, then so is $\widetilde{d}$, where
-> 
-> $$
-> \widetilde{d}(x,y) = \frac{d(x,y)}{1+d(x,y)}, \quad \forall x,y \in X.
-> $$
-> 
+!!! question "(1)"
+    Show that if $d$ is a metric on$X$, then so is $\widetilde{d}$, where
+
+    $$
+    \widetilde{d}(x,y) = \frac{d(x,y)}{1+d(x,y)}, \quad \forall x,y \in X.
+    $$
+
 
 `Proof.`
 
@@ -223,19 +223,19 @@ $$
 因此，$\widetilde{d}$是$X$上的度量
 
 
-> [!question] (2)
-> If $(X, d_X)$ and $(Y, d_Y)$ are metric spaces, show that $(X \times Y, \rho_s)$ is a metric space, where $\rho_s$ is any one of the metrics defined by
-> 
-> $$
-> \rho_s((x_1, y_1), (x_2, y_2))
-> = \begin{cases}
-> [d_X(x_1, x_2)^s + d_Y(y_1, y_2)^s]^{\frac{1}{s}}, & \text{if } 1 \le s < \infty, \\
-> \\
-> \max \{d_1(x_1, x_2), d_2(y_1, y_2)\}, & \text{if } s = \infty.
-> \end{cases}
-> $$
-> 
-> Furthermore, if $X, Y$ are separable, show that $(X \times Y, \rho_s)$ is separable.
+!!! question "(2)"
+    If $(X, d_X)$ and $(Y, d_Y)$ are metric spaces, show that $(X \times Y, \rho_s)$ is a metric space, where $\rho_s$ is any one of the metrics defined by
+
+    $$
+    \rho_s((x_1, y_1), (x_2, y_2))
+    = \begin{cases}
+    [d_X(x_1, x_2)^s + d_Y(y_1, y_2)^s]^{\frac{1}{s}}, & \text{if } 1 \le s < \infty, \\
+    \\
+    \max \{d_1(x_1, x_2), d_2(y_1, y_2)\}, & \text{if } s = \infty.
+    \end{cases}
+    $$
+
+    Furthermore, if $X, Y$ are separable, show that $(X \times Y, \rho_s)$ is separable.
 
 `Proof.`
 
@@ -319,10 +319,10 @@ $$
 
 
 
-> [!question] (1)
-> Suppose that $(F_\lambda)_{\lambda \in \Lambda}$ is a family of closed subsets of a compact metric space $X$ with the property that the intersection of any finite number of the sets has non-empty intersection. Show that $\bigcap_{\lambda \in \Lambda} F_\lambda$ is non-empty.
+!!! question "(1)"
+    Suppose that $(F_\lambda)_{\lambda \in \Lambda}$ is a family of closed subsets of a compact metric space $X$ with the property that the intersection of any finite number of the sets has non-empty intersection. Show that $\bigcap_{\lambda \in \Lambda} F_\lambda$ is non-empty.
 
->一个比较简单的利用反证法证明的逻辑训练
+    一个比较简单的利用反证法证明的逻辑训练
 
 `Proof.`
 
@@ -337,8 +337,8 @@ $$X = \bigcup_{j=1}^n X \setminus F_{\lambda_j} = X \setminus \bigcap_{j=1}^n F_
 this implies that $\bigcap_{j=1}^n F_{\lambda_j} = \emptyset$, but this contradicts the assumption that such an intersection is always non-empty. 
 
 
-> [!question] (2)
-> Give an example in which non-equivalent metrics define the same topology.
+!!! question "(2)"
+    Give an example in which non-equivalent metrics define the same topology.
 
 `Sol.`
 

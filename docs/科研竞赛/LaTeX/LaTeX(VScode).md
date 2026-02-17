@@ -11,8 +11,8 @@
 ## 下载VScode
 
 
-> [!NOTE] 小记
-> 向世界上最伟大的IDE致敬
+!!! note "小记"
+    向世界上最伟大的IDE致敬
 
 只需要在[官网](https://code.visualstudio.com/Download)下载即可
 

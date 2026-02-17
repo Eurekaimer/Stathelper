@@ -2,10 +2,10 @@
 # Lecture 3 - Extensions of Poisson Process
 
 
-> [!tldr] Syllabus
-> + 非时齐Poisson过程
-> + 复合Poisson过程
-> + 条件Poisson过程
+!!! tldr "Syllabus"
+    + 非时齐Poisson过程
+    + 复合Poisson过程
+    + 条件Poisson过程
 
 
 ## 非时齐 Poisson 过程
@@ -13,27 +13,27 @@
 
 本小节放松平稳增量这一条件，也就是说过程的速率会依赖于时间，下面给出非时齐 Poisson 过程的定义
 
-> [!NOTE] Defnition 3.1 (非时齐 Poisson 过程) 
-> 若计数过程$\{N(t),t\geq0\}$满足：
-> 
-> (1) $N( 0) = 0;$
-> (2)具有独立增量；
-> (3) $P\{ N( t+ h) - N( t) = 1\} = \lambda ( t) h+ o( h)$, $\lambda ( t) , t\geq 0$为连续函数
-> (4) $P\{ N( t+ h) - N( t) \geq 2\} = o( h)$
-> 
-> 则称为具有强度函数$\lambda(t)$的非时齐(Nonhomogeneous)Poisson过程 。 
+!!! note "Defnition 3.1 (非时齐 Poisson 过程)"
+    若计数过程$\{N(t),t\geq0\}$满足：
+
+    (1) $N( 0) = 0;$
+    (2)具有独立增量；
+    (3) $P\{ N( t+ h) - N( t) = 1\} = \lambda ( t) h+ o( h)$, $\lambda ( t) , t\geq 0$为连续函数
+    (4) $P\{ N( t+ h) - N( t) \geq 2\} = o( h)$
+
+    则称为具有强度函数$\lambda(t)$的非时齐(Nonhomogeneous)Poisson过程 。
 
 与标准Poisson 过程一样，我们接下来考察$N(t)$的分布。
 
-> [!NOTE] Proposition 3.2
->  设$\{N(t),t\geq0\}$为一个非时齐Poisson过程，记
-> 
-> $$m(t)=\int_0^t\lambda(s)ds$$
-> 
-> 在区间$[t+s]$中的事件数$N(t+s)-N(t)$服从均值为$m(t+s)-m(t)=\int_t^{t+s}\lambda(y)dy$的Poisson分布，即
-> 
-> $$P(N(t+s)-N(s)=n)=\exp\{-[m(t+s)-m(s)]\}\frac{[m(t+s)-m(s)]^n}{n!}.$$
-> 
+!!! note "Proposition 3.2"
+     设$\{N(t),t\geq0\}$为一个非时齐Poisson过程，记
+
+    $$m(t)=\int_0^t\lambda(s)ds$$
+
+    在区间$[t+s]$中的事件数$N(t+s)-N(t)$服从均值为$m(t+s)-m(t)=\int_t^{t+s}\lambda(y)dy$的Poisson分布，即
+
+    $$P(N(t+s)-N(s)=n)=\exp\{-[m(t+s)-m(s)]\}\frac{[m(t+s)-m(s)]^n}{n!}.$$
+
 
 
 `Proof.`

@@ -1,20 +1,20 @@
 # Some big thorems
 
 
-> [!tldr] Outline
-> + Hahn-Banach Extension Theorem
-> + Continuous linear functionals of a TVS
-> + Seperation Theorems
-> + Uniform Boundness Principle
-> + Open Mapping Theorem and Closed Graph Theorem
+!!! tldr "Outline"
+    + Hahn-Banach Extension Theorem
+    + Continuous linear functionals of a TVS
+    + Seperation Theorems
+    + Uniform Boundness Principle
+    + Open Mapping Theorem and Closed Graph Theorem
 
 ## Hahn-Banach Extension Theorem
 
 >泛函分析中最为重要的定理，没有之一，所以必须要很好的掌握
 
 
-> [!tip] Hahn-Banach Extension Theorem
-> $M$ is a subspace of a normed space $E$, $f$ is a continuous functional on $M$. Then $f$ can be extended to a continuous linear functional $g$ on $E$ with $\lVert g \rVert=\lVert f \rVert$
+!!! tip "Hahn-Banach Extension Theorem"
+    $M$ is a subspace of a normed space $E$, $f$ is a continuous functional on $M$. Then $f$ can be extended to a continuous linear functional $g$ on $E$ with $\lVert g \rVert=\lVert f \rVert$
 
 `Proof.`
 
@@ -95,10 +95,10 @@ $$
 > 直接证明是一种比较粗暴且缺乏动机的做法，数学中常见的做法是从简单的情况出发，然后将定理条件放宽，得到更加general的形式，在此cite张恭庆老师的《泛函分析讲义》中有关线性泛函的延拓定理的部分内容供增进理解和参考
 
 
-> [!info] 实Hahn-Banach定理
-> 为了统一记号做了一些修改，$E$是实线性空间，$p$是$E$上的次线性泛函，$M$是$E$的实线性子空间，$f$是$M$的实线性泛函且$f\leqslant p,\forall x\in M$，那么在$E$上一定存在一个实线性泛函$g$使得：
-> (1)$g\leqslant p,\forall x\in E$
-> (2)$g(x)=f(x),\forall x\in M$
+!!! info "实Hahn-Banach定理"
+    为了统一记号做了一些修改，$E$是实线性空间，$p$是$E$上的次线性泛函，$M$是$E$的实线性子空间，$f$是$M$的实线性泛函且$f\leqslant p,\forall x\in M$，那么在$E$上一定存在一个实线性泛函$g$使得：
+    (1)$g\leqslant p,\forall x\in E$
+    (2)$g(x)=f(x),\forall x\in M$
 
 `Proof.`
 
@@ -165,12 +165,12 @@ $$
 
 
 
-> [!NOTE] Riesz representation theorem
-> Every bounded linear functional $F\in C[a,b]^{*}$ if given by a unique normalized function $f\in BV[a,b]$ such that
-> 
-> $$F(x)=\int_{a}^{b} x(t)df(t),\forall x\in C[a,b] $$
-> 
-> Moreover, $\lVert F \rVert=V(f)$
+!!! note "Riesz representation theorem"
+    Every bounded linear functional $F\in C[a,b]^{*}$ if given by a unique normalized function $f\in BV[a,b]$ such that
+
+    $$F(x)=\int_{a}^{b} x(t)df(t),\forall x\in C[a,b] $$
+
+    Moreover, $\lVert F \rVert=V(f)$
 
 `Proof.`
 
@@ -308,19 +308,19 @@ then $q = \rho_V$.
 
 先给出一致有界定理(有时也被称作是$Banach-Steinhaus$定理)的内容：
 
-> [!tip] Uniform Boundness Principle
-> Let $E$ be a Banach space and $F$ a normed space. Let $\left\{ T_{\lambda} \right\}_{\lambda\in\Lambda}\subseteq B(E,F)$ be a family of bounded continuous linear operators. Then the following are equivalent:
-> 
-> (1) $\left\{ T_{\lambda}:\lambda\in\Lambda \right\}$ is uniformly bounded;
-> (2) $\left\{ T_{\lambda}:\lambda\in\Lambda \right\}$ is pointwise bounded
-> 
- >  In other words, if for each $x$ in $E$, there is an $M(x)> 0$ such that
- >  
->  $$\lVert T_{\lambda}x \rVert \leqslant M(x),\forall\lambda\in\Lambda$$
->  
->  then there is a constant $0<M <+\infty$ such that 
->  
->  $$\lVert T_{\lambda} \rVert \leqslant M,\forall\lambda\in\Lambda$$
+!!! tip "Uniform Boundness Principle"
+    Let $E$ be a Banach space and $F$ a normed space. Let $\left\{ T_{\lambda} \right\}_{\lambda\in\Lambda}\subseteq B(E,F)$ be a family of bounded continuous linear operators. Then the following are equivalent:
+
+    (1) $\left\{ T_{\lambda}:\lambda\in\Lambda \right\}$ is uniformly bounded;
+    (2) $\left\{ T_{\lambda}:\lambda\in\Lambda \right\}$ is pointwise bounded
+
+     In other words, if for each $x$ in $E$, there is an $M(x)> 0$ such that
+
+     $$\lVert T_{\lambda}x \rVert \leqslant M(x),\forall\lambda\in\Lambda$$
+
+     then there is a constant $0<M <+\infty$ such that
+
+     $$\lVert T_{\lambda} \rVert \leqslant M,\forall\lambda\in\Lambda$$
 
 让我们听听`Gemini3`如何零基础讲解这个定理：
 

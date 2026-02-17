@@ -1,10 +1,10 @@
 
 # Lecture 6 - Limit Behaviour & Ergodic Theory
 
-> [!tldr] Syllabus
-> + 正常返
-> + 遍历定理
-> + 不变分布的存在性与唯一性
+!!! tldr "Syllabus"
+    + 正常返
+    + 遍历定理
+    + 不变分布的存在性与唯一性
 
 本节课接着常返性的内容，考虑$n\to\infty$ 的情形，继续研究随时间推移,Markov链转移的规律。由上一节课中Corollary 5.12，若状态$j$ 是暂留的，那么对任意状态
 
@@ -20,24 +20,24 @@ $$P_{ij}^{(n)}\to0,\quad n\to\infty $$
 假设状态$i$是常返的，那么$f_{ii}=\sum\limits_{n=1}^{\infty}f_{ii}^{(n)}=1$，把$\left\{ f_{ii}^{(n)} \right\}$看成$\mathbb{N}^{+}$上的一个分布，我们可以定义返回状态$i$的平均转移次数
 
 
-> [!NOTE] Definition 6.1(平均返回时间)
-> 对于常返状态$i$的平均返回时间定义为
-> 
-> $$\mu_{ii}\overset{\Delta}{=}\sum\limits_{n=1}^{\infty} nf_{ii}^{(n)}$$
+!!! note "Definition 6.1(平均返回时间)"
+    对于常返状态$i$的平均返回时间定义为
+
+    $$\mu_{ii}\overset{\Delta}{=}\sum\limits_{n=1}^{\infty} nf_{ii}^{(n)}$$
 
 利用平均返回时间可以进一步对常返状态分类
 
 
-> [!NOTE] Definition 6.2(正常返)
-> 假设状态$i$常返，如果它的平均返回时间是有限的，也就是$\mu_{ii}<\infty$，就称状态$i$是正常返的(Positive recurrent)，否则，$M_{ii}=\infty$，我们则称$i$为零常返(Null recurrent)
+!!! note "Definition 6.2(正常返)"
+    假设状态$i$常返，如果它的平均返回时间是有限的，也就是$\mu_{ii}<\infty$，就称状态$i$是正常返的(Positive recurrent)，否则，$M_{ii}=\infty$，我们则称$i$为零常返(Null recurrent)
 
 
 ### 弱遍历定理
 
-> [!tip] Theorem 6.3(弱遍历定理)
-> 设$\left\{ X_{n} \right\}$是不可约常返Markov链，那么对$\forall i,j$状态
-> 
-> $$\lim\limits_{ n \to \infty } \frac{1}{n}\sum\limits_{k=0}^{n-1} P_{ij}^{(k)}= \frac{1}{\mu_{jj}}$$
+!!! tip "Theorem 6.3(弱遍历定理)"
+    设$\left\{ X_{n} \right\}$是不可约常返Markov链，那么对$\forall i,j$状态
+
+    $$\lim\limits_{ n \to \infty } \frac{1}{n}\sum\limits_{k=0}^{n-1} P_{ij}^{(k)}= \frac{1}{\mu_{jj}}$$
 
 
 
@@ -46,12 +46,12 @@ $$P_{ij}^{(n)}\to0,\quad n\to\infty $$
 先给出一个引理(不加证明)
 
 
-> [!NOTE] Lemma 6.4(Hardy&Littlewood)
-> 设$\forall n ,a_{n}\geqslant 0$，记幂级数$A(z)$为$\sum\limits_{n=0}^{\infty}a_{n}z^{n},0\leqslant z<1$
-> 则有
-> 
-> $$\lim\limits_{ n \to \infty } \frac{1}{n}\sum\limits_{k=0}^{n-1} a_{k}=\lim\limits_{ z \to 1^{-} }(1-z)A(z)$$
-> 
+!!! note "Lemma 6.4(Hardy&Littlewood)"
+    设$\forall n ,a_{n}\geqslant 0$，记幂级数$A(z)$为$\sum\limits_{n=0}^{\infty}a_{n}z^{n},0\leqslant z<1$
+    则有
+
+    $$\lim\limits_{ n \to \infty } \frac{1}{n}\sum\limits_{k=0}^{n-1} a_{k}=\lim\limits_{ z \to 1^{-} }(1-z)A(z)$$
+
 
 设$P_{ij}(z)\overset{\Delta}{=}\sum\limits_{n=0}^{\infty}P_{ij}^{(n)}z^{n}$，由引理得
 
@@ -116,8 +116,8 @@ $$\begin{aligned}
 
 和常返性一样，正常返也具有类的性质，即下面命题：
 
-> [!NOTE] Proposition 6.5
->若$i$正常返,$i\to j$,那么$j$ 也正常返。
+!!! note "Proposition 6.5"
+    若$i$正常返,$i\to j$,那么$j$ 也正常返。
 
 `Proof`
 
@@ -137,8 +137,8 @@ $$\frac{1}{\mu_{jj}}\geqslant\frac{P_{ij}^{(m)}}{\mu_{ii}}>0$$
 
 进一步，如果Markov链的状态是有限的，和常返性一样，有下面结论：
 
-> [!NOTE] Proposition 6.6
->有限状态Markov链必然存在正常返态
+!!! note "Proposition 6.6"
+    有限状态Markov链必然存在正常返态
 
 `Proof`
 
@@ -177,11 +177,11 @@ $$\begin{aligned}\frac{1}{n}\sum_{j=1}^{N}\sum_{k=0}^{n-1}P_{ij}^{(k)}=1\end{ali
 
 首先回答第一个问题，即下面定理(仍然研究不可约常返的Markov链)
 
-> [!NOTE] Theorem 6.7
->设$\{X_n\}$ 是不可约常返的Markov链， $\pi$是$P$的一个不变分布，即满足不变方程$\pi=\pi P$，则对任意状态$j$，都有$\pi_j>0$，且
-> 
-> $$\pi_j=\frac{1}{\mu_{jj}}$$
-> 
+!!! note "Theorem 6.7"
+    设$\{X_n\}$ 是不可约常返的Markov链， $\pi$是$P$的一个不变分布，即满足不变方程$\pi=\pi P$，则对任意状态$j$，都有$\pi_j>0$，且
+
+    $$\pi_j=\frac{1}{\mu_{jj}}$$
+
 
 `Proof.`
 
@@ -189,14 +189,14 @@ $$\begin{aligned}\frac{1}{n}\sum_{j=1}^{N}\sum_{k=0}^{n-1}P_{ij}^{(k)}=1\end{ali
 
 ---
 
-> [!NOTE] Lemma 6.8(有界收敛定理)
->设$X_{1},X_{2},\ldots$.为随机变量序列，依概率收敛于$X$。若存在$M>$ 0，使得对任意$n\geq1$，$P(|X_n|\leq M)=1$，那么
-> 
-> $$\lim\limits_{n\to\infty}\mathbb{E}[X_n]=\mathbb{E}[\lim\limits_{n\to\infty}X_n]=\mathbb{E}[X]$$
-> 
-> 依概率收敛，记为$X_n\stackrel{\mathrm{P}}{\longrightarrow}X$，如果对于$\varepsilon>0$
-> 
-> $$\mathrm{P}(\omega:|X_n(\omega)-X(\omega)|>\varepsilon)\to0,n\to\infty.$$
+!!! note "Lemma 6.8(有界收敛定理)"
+    设$X_{1},X_{2},\ldots$.为随机变量序列，依概率收敛于$X$。若存在$M>$ 0，使得对任意$n\geq1$，$P(|X_n|\leq M)=1$，那么
+
+    $$\lim\limits_{n\to\infty}\mathbb{E}[X_n]=\mathbb{E}[\lim\limits_{n\to\infty}X_n]=\mathbb{E}[X]$$
+
+    依概率收敛，记为$X_n\stackrel{\mathrm{P}}{\longrightarrow}X$，如果对于$\varepsilon>0$
+
+    $$\mathrm{P}(\omega:|X_n(\omega)-X(\omega)|>\varepsilon)\to0,n\to\infty.$$
 
 `Proof`
 
@@ -251,8 +251,8 @@ $$\mu_{jj}=\frac{1}{\pi_{j}}<\infty $$
 
 ### 不变分布的存在性
 
-> [!NOTE] Theorem 6.9
->不可约正常返的Markov链存在平稳分布。
+!!! note "Theorem 6.9"
+    不可约正常返的Markov链存在平稳分布。
 
 `Proof`
 
@@ -300,22 +300,22 @@ $$\begin{aligned}
 我们已经知道了弱遍历极限和不变分布的关系，可以得到弱遍历定理的另一个形式
 
 
-> [!NOTE] Theorem 6.10(弱遍历定理)
->设$\{X_{n}\}$ 是不可约正常返的Markov链，$\pi$ 是不变分布，那么对任意状态$i,j$，
->
-> $$\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}=\pi_j$$
-> 
+!!! note "Theorem 6.10(弱遍历定理)"
+    设$\{X_{n}\}$ 是不可约正常返的Markov链，$\pi$ 是不变分布，那么对任意状态$i,j$，
+
+    $$\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}=\pi_j$$
+
 
 ### 平均遍历定理
 
 
 更一般地，可以得到下面的(平均)遍历定理(证明比较复杂课上略过)
 
-> [!NOTE] Theorem 6.11(遍历定理）
-> 设$\{X_n\}$ 是不可约常返的Markov链， $\pi$是不变分布， $f$是$E$上的函数，满足$\sum\limits_{i\in E}\pi_{i}|f(i)|<\infty$，则
-> 
-> $$\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}f(X_k)=\sum\limits_{i\in E}\pi_if(i)$$
-> 
+!!! note "Theorem 6.11(遍历定理）"
+    设$\{X_n\}$ 是不可约常返的Markov链， $\pi$是不变分布， $f$是$E$上的函数，满足$\sum\limits_{i\in E}\pi_{i}|f(i)|<\infty$，则
+
+    $$\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}f(X_k)=\sum\limits_{i\in E}\pi_if(i)$$
+
 
 `Proof`
 
@@ -341,12 +341,12 @@ $$
 常返性和弱遍历定理虽然给出了随Markov链转移状态的渐近规律，但是当$n\rightarrow\infty$时，转移概率$P_{ij}^{(n)}$的极限情况我们仍然不清楚。先看一个例子。
 
 
-> [!example] Example 6.12(两状态的Markov链III)
->考虑Markov链，状态空间为$\{0,1\}$ ，转移矩阵为
-> 
-> $$P=\left(\begin{array}{cc}1-\alpha&\alpha\\\beta&1-\beta\end{array}\right)$$
-> 
-> 其中$\alpha,\beta\in(0,1)$
+!!! example "Example 6.12(两状态的Markov链III)"
+    考虑Markov链，状态空间为$\{0,1\}$ ，转移矩阵为
+
+    $$P=\left(\begin{array}{cc}1-\alpha&\alpha\\\beta&1-\beta\end{array}\right)$$
+
+    其中$\alpha,\beta\in(0,1)$
 
 
 $$P^n=\frac{1}{\alpha+\beta}\left(\begin{array}{cc}\beta&\alpha\\\beta&\alpha\end{array}\right)+\frac{(1-\alpha-\beta)^n}{\alpha+\beta}\left(\begin{matrix}\alpha&-\alpha\\-\beta&\beta\end{matrix}\right)$$
@@ -377,14 +377,14 @@ $$\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(n)}=\pi_j\n
 
 这个定理的证明将使用到概率论中的耦合方法(Very Important)
 
-> [!NOTE] Theorem 6.13(强遍历定理)
->设$\{X_{n}\}$ 是不可约非周期的Markov链，若$\pi$是$P$的不变分布， 那么
-> 
-> $$\lim\limits_{n\to\infty}\sum\limits_{j\in E}\lvert P_{ij}^{(n)}-\pi_{j}\lvert=0,\quad\forall i\in E.$$
-> 
-> 那么自然有
-> 
-> $$\lim\limits_{n\to\infty}P_{ij}^{(n)}=\pi_j$$
+!!! note "Theorem 6.13(强遍历定理)"
+    设$\{X_{n}\}$ 是不可约非周期的Markov链，若$\pi$是$P$的不变分布， 那么
+
+    $$\lim\limits_{n\to\infty}\sum\limits_{j\in E}\lvert P_{ij}^{(n)}-\pi_{j}\lvert=0,\quad\forall i\in E.$$
+
+    那么自然有
+
+    $$\lim\limits_{n\to\infty}P_{ij}^{(n)}=\pi_j$$
 
 
 `Proof`
@@ -528,18 +528,18 @@ $$P\{X=x\}=\mu(x),\quad P\{Y=y\}=\nu(y).$$
 
 定理6.13讨论了正常返、非周期情形$P_{ij}^{(n)}$的极限，对于其他情况可以总结为下面定理。
 
-> [!NOTE] Theorem 6.14
-> $\{X_{n}\}$ 是不可约常返的Markou链，那么
-> 
-> (1)若j是零常返状态，则
-> 
-> $$\lim_{n\to\infty}P_{ij}^{(n)}=0;$$
-> 
-> (2)若$j$ 是正常返周期状态，周期为$d_{j}$ ，则
-> 
-> $$\begin{aligned}\lim_{n\to\infty}P_{ij}^{(nd_j)}=\frac{d_j}{\mu_{jj}}\end{aligned}$$
-> 
-> 其中$\mu_{jj}\triangleq\sum\limits_{n=1}^{\infty}nf_{ij}^{(n)}$ 为平均返回时间。
+!!! note "Theorem 6.14"
+    $\{X_{n}\}$ 是不可约常返的Markou链，那么
+
+    (1)若j是零常返状态，则
+
+    $$\lim_{n\to\infty}P_{ij}^{(n)}=0;$$
+
+    (2)若$j$ 是正常返周期状态，周期为$d_{j}$ ，则
+
+    $$\begin{aligned}\lim_{n\to\infty}P_{ij}^{(nd_j)}=\frac{d_j}{\mu_{jj}}\end{aligned}$$
+
+    其中$\mu_{jj}\triangleq\sum\limits_{n=1}^{\infty}nf_{ij}^{(n)}$ 为平均返回时间。
 
 书上的例子留作阅读学习作业。
 

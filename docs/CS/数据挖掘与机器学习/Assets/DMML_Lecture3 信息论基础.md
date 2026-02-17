@@ -1,17 +1,17 @@
  # Chapter 3 信息论基础
 
 
-> [!tldr] Outline
-> + 引言
-> + 信息熵
-> + KL散度：分布差异的度量
-> + 互信息：变量相关性的度量
+!!! tldr "Outline"
+    + 引言
+    + 信息熵
+    + KL散度：分布差异的度量
+    + 互信息：变量相关性的度量
 
 
-> [!cite] References
-> + [Stanford EE376A](https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf) 
-> + [Shannon entropy in the context of machine learning and AI](https://medium.com/swlh/shannon-entropy-in-the-context-of-machine-learning-and-ai-24aee2709e32)
-> + Lecture Slides(NKU_DMML, Lecturer: Fu)
+    [!cite] References
+    + [Stanford EE376A](https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf)
+    + [Shannon entropy in the context of machine learning and AI](https://medium.com/swlh/shannon-entropy-in-the-context-of-machine-learning-and-ai-24aee2709e32)
+    + Lecture Slides(NKU_DMML, Lecturer: Fu)
 
 关于[Stanford EE376A](https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf) 本人很推荐，写的很有趣，开篇是三个信息论在工程学中的应用，然后对于信息论的一些基本概念也都有所提及，且讲述的很详细
 
@@ -27,8 +27,8 @@
 + 有损压缩
 
 
-> [!tip] 扩展
-> 关于上述的这三个例子在Stanford的Notes的后续章节中都有一个Chapter进行了比较详细的介绍，如果对于上述例子比较感兴趣且想更加深入的了解的话，建议仔细阅读后续的章节
+!!! tip "扩展"
+    关于上述的这三个例子在Stanford的Notes的后续章节中都有一个Chapter进行了比较详细的介绍，如果对于上述例子比较感兴趣且想更加深入的了解的话，建议仔细阅读后续的章节
 
 
 ### Lossless compression
@@ -76,8 +76,8 @@ $$
 >Note that the statements of the theorems here will be informal; they will be made rigorous in later lectures.
 
 
-> [!tip] Theorem
-> $\forall$ families of encoding schemes, the average codeword length, $\overline{L}\geqslant H(U)$
+!!! tip "Theorem"
+    $\forall$ families of encoding schemes, the average codeword length, $\overline{L}\geqslant H(U)$
 
 For our example, the lower bound is thus
 
@@ -103,23 +103,23 @@ where $\oplus$ is the $XOR$ operator
 但是我们还需要考虑重复编码使用的信道空间扩大的问题，因此引入比特率(bit rate)的概念，记为$R$，在重复发送3次的例子中我们认为比特率为$\frac{1}{3}$，而不重复编码时比特率为$1$
 
 
-> [!tip] Theorem(Bit rate limitation)
-> $\exists C>0$ and $\exists$ family of schemes with $R<C$ satisfying $p_{e}\to 0$
+!!! tip "Theorem(Bit rate limitation)"
+    $\exists C>0$ and $\exists$ family of schemes with $R<C$ satisfying $p_{e}\to 0$
 
 In fact, the largest such C is known as the **channel capacity** of a channel, which represents the largest bit rate ( the largest C ) that still allows for reliable communication.
 
 
-> [!example] Two examples
-> + Binary Symmtric Channel
-> The channel capacity of a binary symmetric channel with bit-flipping probability $q$ is $1-H(X),X\sim Ber(q)$. Moreover if we let $X\sim Ber(q)$ and $Y\sim Ber(p_{e})$, we will see that a bit rate $R$ such that $R< \frac{1-H(X)}{1-H(Y)}$ is achievable
-> + Additive White Gaussian Noise (AWGN) Channel
-> Assumptions are like before, and we think $Y_{i}=X_{i}+N_{i},N_{i}\sim N(0,\sigma^{2})$. We want to develop a scheme so that we can reliably reconstruct $U_i$ from the given $Y_i$. One idea is make $X_{i}$ a large positive value if $U_{i}=1$ and $X_i$ is a large negative value if $U_{i}=0$. Usually, we suppose there is an additional constraint on the average power of the tansmitted signal, s.t. we require $\frac{1}{n}\sum\limits_{i=1}^{n}X_{i}^{2}\leq p$
+!!! example "Two examples"
+    + Binary Symmtric Channel
+    The channel capacity of a binary symmetric channel with bit-flipping probability $q$ is $1-H(X),X\sim Ber(q)$. Moreover if we let $X\sim Ber(q)$ and $Y\sim Ber(p_{e})$, we will see that a bit rate $R$ such that $R< \frac{1-H(X)}{1-H(Y)}$ is achievable
+    + Additive White Gaussian Noise (AWGN) Channel
+    Assumptions are like before, and we think $Y_{i}=X_{i}+N_{i},N_{i}\sim N(0,\sigma^{2})$. We want to develop a scheme so that we can reliably reconstruct $U_i$ from the given $Y_i$. One idea is make $X_{i}$ a large positive value if $U_{i}=1$ and $X_i$ is a large negative value if $U_{i}=0$. Usually, we suppose there is an additional constraint on the average power of the tansmitted signal, s.t. we require $\frac{1}{n}\sum\limits_{i=1}^{n}X_{i}^{2}\leq p$
 
 For a given value $p$, in fact, we will see that
 
 
-> [!tip] Theorem
-> If the rate of transmission is $< \frac{1}{2}\log_{2}\left( 1+ \frac{p}{\sigma^{2}} \right)$, then $\exists$ family of schemes that communicate reliably. And if the rate of transmission is $> \frac{1}{2}\log_{2}\left( 1+ \frac{p}{\sigma^{2}} \right)$, then there is no family of schemes which communicates reliably.
+!!! tip "Theorem"
+    If the rate of transmission is $< \frac{1}{2}\log_{2}\left( 1+ \frac{p}{\sigma^{2}} \right)$, then $\exists$ family of schemes that communicate reliably. And if the rate of transmission is $> \frac{1}{2}\log_{2}\left( 1+ \frac{p}{\sigma^{2}} \right)$, then there is no family of schemes which communicates reliably.
 
 The RATIO $\frac{p}{\sigma^{2}}$ is reffered to as SNR(signal-to-noise ratio)/信噪比
 
@@ -178,12 +178,12 @@ $$
 > 几个典型应用：特征选择、模型评估、正则化、生成模型
 
 
-> [!tip] 信息量的三大规律
->  1. 函数性： $I(x_{i})=f[p(x_{i})]$
->  2. 单调性： $p(x_{i})\downarrow \implies I(x_{i})\uparrow$
->  3. 可加性： 独立事件的信息量可加
->
->$$I(x_{1}x_{2}\dots)=\sum\limits_{i}I(x_{i})$$
+!!! tip "信息量的三大规律"
+     1. 函数性： $I(x_{i})=f[p(x_{i})]$
+     2. 单调性： $p(x_{i})\downarrow \implies I(x_{i})\uparrow$
+     3. 可加性： 独立事件的信息量可加
+
+    $$I(x_{1}x_{2}\dots)=\sum\limits_{i}I(x_{i})$$
 
 ## 熵以及相关概念
 
@@ -192,10 +192,10 @@ $$
 在详细的介绍熵之前，我们有必要先引入惊奇函数(surprise function)
 
 
-> [!NOTE] Definition(surprise function)
-> 这个函数用于衡量对于结果的“惊奇程度”，故名思义，该事件发生的概率越小，惊奇函数的值越大
-> 
-> $$s(u) \overset{\Delta}{=}\log \frac{1}{p(u)}$$
+!!! note "Definition(surprise function)"
+    这个函数用于衡量对于结果的“惊奇程度”，故名思义，该事件发生的概率越小，惊奇函数的值越大
+
+    $$s(u) \overset{\Delta}{=}\log \frac{1}{p(u)}$$
 
 以下是一个与惊奇函数完全等价的概念，自信息：我们认为发生概率越小的事件所带来的信息是越多的，因此惊奇程度也越高
 
@@ -204,12 +204,12 @@ $$
 ### 自信息(Self-Information)
 
 
-> [!NOTE] Definition(Self-information)
-> 对于离散随机变量$X$取值$x$，其自信息为：
-> 
-> $$I(x)=f(P(x))=-\log_{b}P(x)$$
-> 
-> 其中$P(x)$为事件$X=x$的概率，$b$为对数底 
+!!! note "Definition(Self-information)"
+    对于离散随机变量$X$取值$x$，其自信息为：
+
+    $$I(x)=f(P(x))=-\log_{b}P(x)$$
+
+    其中$P(x)$为事件$X=x$的概率，$b$为对数底
 
 根据定义式即可得到一些有关于自信息的性质：
 
@@ -224,16 +224,16 @@ $$
 我们从上面可以知道自信息是衡量单个事件发生的惊讶度，而香农熵$H(X)$则用于衡量整个随机变量的平均不确定性，也叫做微分熵，信息熵
 
 
-> [!NOTE] Definition(香农熵)
-> 离散随机变量的香农熵:
-> 设离散随机变量$X\sim \mathcal{X}=\left\{ x_{1},x_{2},\dots,x_{n} \right\}$，概率分布为$P(X)=\left\{ p(x_{1}),p(x_{2}),\dots,p(x_{n}) \right\}$，香农熵的定义为：
-> 
-> $$H(X)=\mathbb{E}[I(X)]=\sum\limits_{i=1}^{n} p(x_{i})I(x_{i})=-\sum\limits_{i=1}^{n} p(x_{i})\log p(x_{i})$$
-> 
-> 连续随机变量的微分熵:
-> 对于连续随机变量$X$的概率密度函数$p(x)$，微分熵的定义为
-> 
-> $$H(X)=-\int_{-\infty}^{\infty} p(x)\log p(x) \, dx $$
+!!! note "Definition(香农熵)"
+    离散随机变量的香农熵:
+    设离散随机变量$X\sim \mathcal{X}=\left\{ x_{1},x_{2},\dots,x_{n} \right\}$，概率分布为$P(X)=\left\{ p(x_{1}),p(x_{2}),\dots,p(x_{n}) \right\}$，香农熵的定义为：
+
+    $$H(X)=\mathbb{E}[I(X)]=\sum\limits_{i=1}^{n} p(x_{i})I(x_{i})=-\sum\limits_{i=1}^{n} p(x_{i})\log p(x_{i})$$
+
+    连续随机变量的微分熵:
+    对于连续随机变量$X$的概率密度函数$p(x)$，微分熵的定义为
+
+    $$H(X)=-\int_{-\infty}^{\infty} p(x)\log p(x) \, dx $$
 
 物理意义来讲$H(X)$代表编码随机变量$X$所需最小的平均比特数
 
@@ -281,10 +281,10 @@ $$
 所以不妨先写下定义(剧透)：
 
 
-> [!NOTE] Definition(Relative Entropy/KL divergence)
-> An important measure of distance between probability measures is relative entropy, or the $Kullback-Leibler$ divergence
-> 
-> $$D(p||q)\overset{\Delta}{=}\sum\limits_{u\in \mathcal{U}}p(u)\log \frac{p(u)}{q(u)}=\mathbb{E}\left[ \log \frac{p(u)}{q(u)} \right]$$
+!!! note "Definition(Relative Entropy/KL divergence)"
+    An important measure of distance between probability measures is relative entropy, or the $Kullback-Leibler$ divergence
+
+    $$D(p||q)\overset{\Delta}{=}\sum\limits_{u\in \mathcal{U}}p(u)\log \frac{p(u)}{q(u)}=\mathbb{E}\left[ \log \frac{p(u)}{q(u)} \right]$$
 
 
 
@@ -294,10 +294,10 @@ $$
 ### 联合熵(Joint Entropy)
 
 
-> [!NOTE] Definition(Joint Entropy)
-> 设$(X,Y)$是联合离散随机变量，其联合分布为$p(x,y)$
-> 
-> $$H(X,Y)=-\sum\limits_{x,y}p(x,y)\log p(x,y)$$
+!!! note "Definition(Joint Entropy)"
+    设$(X,Y)$是联合离散随机变量，其联合分布为$p(x,y)$
+
+    $$H(X,Y)=-\sum\limits_{x,y}p(x,y)\log p(x,y)$$
 
 联合熵是用于衡量同时观测$X,Y$的不确定性，若是两个随机变量相互独立，显然可以得到$H(X,Y)=H(X)+H(Y)$，推广到任意多个随机变量的联合熵(Obviously)
 
@@ -305,21 +305,21 @@ $$
 ### 条件熵(Conditional Entropy)
 
 
-> [!NOTE] Definition(Conditional Entropy)
-> 条件熵$H(Y|X)$定义为(一般使用第二个表达式)：
-> 
-> $$\begin{aligned}
-> H(Y|X)&=-\sum\limits_{x,y}p(x,y)\log p(y|x)\\
-> &=\sum\limits_{x}p(x)H(Y|X=x)
-> \end{aligned}$$
+!!! note "Definition(Conditional Entropy)"
+    条件熵$H(Y|X)$定义为(一般使用第二个表达式)：
+
+    $$\begin{aligned}
+    H(Y|X)&=-\sum\limits_{x,y}p(x,y)\log p(y|x)\\
+    &=\sum\limits_{x}p(x)H(Y|X=x)
+    \end{aligned}$$
 
 也相当显然，表示已知$X$的条件下，$Y$仍然存在的不确定性，若$X,Y$独立，则$H(Y|X)=H(Y)$，若是$Y$由$X$决定则$H(Y|X)=0$
 
 
-> [!tip] 联合熵与条件熵的关系
-> 可以将这些信息熵当作概率处理，而条件熵就对应条件概率，因此我们可以提出一套链式法则(Chain Rule for Entropy)：
-> 
-> $$H(X,Y)=H(X)+H(Y|X)=H(Y)+H(X|Y)$$
+!!! tip "联合熵与条件熵的关系"
+    可以将这些信息熵当作概率处理，而条件熵就对应条件概率，因此我们可以提出一套链式法则(Chain Rule for Entropy)：
+
+    $$H(X,Y)=H(X)+H(Y|X)=H(Y)+H(X|Y)$$
 
 也就是说联合不确定性可以分解为一个变量的不确定性+另一个变量在其条件下的不确定性，然后我们可以得出 **互信息(Mutual Information)** 的概念
 
@@ -332,15 +332,15 @@ $$
 ## $KL$散度
 
 
-> [!tip] $KL\ Divergence$(Kullback and Leibler, 1951)
-> 用于衡量真实分布$P$与近似分布$Q$之间的差异：
-> 
-> $$ \begin{aligned}
->D_{KL}(P||Q)&=\sum\limits_{x\in \mathcal{X}}P(x)\log \frac{P(x)}{Q(x)}\\
-> &=\sum\limits_{x}P(x)\log P(x) - \sum\limits_{x}P(x)\log Q(x)
-> \end{aligned}$$
-> 
-> 前一部分代表$-H(P)$，后一部分代表$-H(P;Q)$，$D_{KL}(P||Q)=H(P;Q)-H(P)$，其中$H(P;Q)$即为交叉熵
+!!! tip "$KL\ Divergence$(Kullback and Leibler, 1951)"
+    用于衡量真实分布$P$与近似分布$Q$之间的差异：
+
+    $$ \begin{aligned}
+    D_{KL}(P||Q)&=\sum\limits_{x\in \mathcal{X}}P(x)\log \frac{P(x)}{Q(x)}\\
+    &=\sum\limits_{x}P(x)\log P(x) - \sum\limits_{x}P(x)\log Q(x)
+    \end{aligned}$$
+
+    前一部分代表$-H(P)$，后一部分代表$-H(P;Q)$，$D_{KL}(P||Q)=H(P;Q)-H(P)$，其中$H(P;Q)$即为交叉熵
 
 
 

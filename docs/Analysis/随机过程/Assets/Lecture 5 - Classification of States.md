@@ -1,16 +1,16 @@
 
 # Lecture 5 - Classification of States
 
-> [!tldr] Syllabus
-> + 可约性
-> + 周期性
-> + 常返性
+!!! tldr "Syllabus"
+    + 可约性
+    + 周期性
+    + 常返性
 
 ## 可约性与周期性
 
 
-> [!NOTE] Definition 5.1(可达) 
-> 设$i,j\in E$是Markov链中的两个状态，如果$\exists n\geqslant 0$使得从$i$出发经过$n$步转移可以到达$j$($P_{ij}>0$)，则称状态$i$可达(accessible)$j$，记作$i\to j$，如果$i$不可达$j$，即$\forall n>0,P_{ij}^{n}=0$,记作$i\not\to j$
+!!! note "Definition 5.1(可达)"
+    设$i,j\in E$是Markov链中的两个状态，如果$\exists n\geqslant 0$使得从$i$出发经过$n$步转移可以到达$j$($P_{ij}>0$)，则称状态$i$可达(accessible)$j$，记作$i\to j$，如果$i$不可达$j$，即$\forall n>0,P_{ij}^{n}=0$,记作$i\not\to j$
 
 
 注：可达具有传递性，设$i,j,k\in E，n,m \geqslant 0$，使得$P_{ij}^{(n)}>0,P_{jk}^{(m)}>0$，则
@@ -22,25 +22,25 @@ $$
 即若$i\to j,j\to k$，那么$i\to k$
 
 
-> [!NOTE] Definition 5.2(互通)
-> 设$i,j\in E$是Markov链中两个状态，如果$\exists n,m \geqslant 0$使得
-> 
-> $$P_{ij}^{(n)}>0,P_{ji}^{m}>0$$
-> 
-> 就称$i$和$j$互通(communicate),记作$i \leftrightarrow j$
+!!! note "Definition 5.2(互通)"
+    设$i,j\in E$是Markov链中两个状态，如果$\exists n,m \geqslant 0$使得
+
+    $$P_{ij}^{(n)}>0,P_{ji}^{m}>0$$
+
+    就称$i$和$j$互通(communicate),记作$i \leftrightarrow j$
 
 
-> [!NOTE] 命题 5.3
-> 互通是状态空间$E$上的一个等价关系，即
-> + 自反性
-> + 对称性
-> + 传递性(Proved by CK-Equation)
+!!! note "命题 5.3"
+    互通是状态空间$E$上的一个等价关系，即
+    + 自反性
+    + 对称性
+    + 传递性(Proved by CK-Equation)
 
 因此所有互通的状态构成等价类，称这样的等价类为互通类(Communication Class)
 
 
-> [!NOTE] Definition 5.4(不可约性 irreducible)
-> 一个Markov链称为不可约的(irreducible)，如果它的互通类只有一个，即所有状态都是互通的
+!!! note "Definition 5.4(不可约性 irreducible)"
+    一个Markov链称为不可约的(irreducible)，如果它的互通类只有一个，即所有状态都是互通的
 
 注1. 矩阵的不可约性
 
@@ -55,21 +55,21 @@ $$
 
 称这个矩阵是可约的，否则称$A$不可约
 
-> [!NOTE] 推论
-> 一个Markov链不可约$\iff$它的转移矩阵不可约
+!!! note "推论"
+    一个Markov链不可约$\iff$它的转移矩阵不可约
 
 
 
-> [!NOTE] Definition 5.5(周期性)
-> 状态$i\in E$的周期(period)定义为
-> 
-> $$ d_{i} \overset{\Delta}{=} gcd\left\{  {n,P_{ii}^{(n)}>0}\right\}$$
-> 
-> 若$d_{i}=1$，则称状态$i$是非周期的
+!!! note "Definition 5.5(周期性)"
+    状态$i\in E$的周期(period)定义为
+
+    $$ d_{i} \overset{\Delta}{=} gcd\left\{  {n,P_{ii}^{(n)}>0}\right\}$$
+
+    若$d_{i}=1$，则称状态$i$是非周期的
 
 
-> [!NOTE] 命题 5.6
-> 若$i \leftrightarrow j$，则$d_{i}=d_{j}$
+!!! note "命题 5.6"
+    若$i \leftrightarrow j$，则$d_{i}=d_{j}$
 
 `Proof.`
 
@@ -106,8 +106,8 @@ $$
 那么状态集合$E=C_{0}\bigcup C_{1}\bigcup\dots \bigcup C_{d-1}$
 
 
-> [!NOTE] 命题 5.7
-> 若状态$i\in C_{p}$，且$P_{ij}>0$，那么$j\in C_{p+1}$
+!!! note "命题 5.7"
+    若状态$i\in C_{p}$，且$P_{ij}>0$，那么$j\in C_{p+1}$
 
 `Proof.`
 
@@ -134,28 +134,28 @@ A_{d-1,0} & \dots & \dots & \dots & 0
 $$
 
 
-> [!question] 思考
-> 一步转移矩阵如上，那么n步转移矩阵($P^{2},P^{3},\dots$)？
+!!! question "思考"
+    一步转移矩阵如上，那么n步转移矩阵($P^{2},P^{3},\dots$)？
 
 
 ## 常返性
 
 George Polyo
 
-> [!NOTE] Definition 5.8(首达时)
-> 设$\left\{ X_{n} \right\}$为一个状态空间为$E$的Markov链，从$n=0$出发首次达到状态$j$的时刻，我们记为
-> 
+!!! note "Definition 5.8(首达时)"
+    设$\left\{ X_{n} \right\}$为一个状态空间为$E$的Markov链，从$n=0$出发首次达到状态$j$的时刻，我们记为
+
 $$\tau_{j}\overset{\Delta}{=}\inf \left\{ n \geqslant 1: X_{n}=j \right\} $$
 >若$\left\{ n \geqslant 1,X_{n}=j \right\}=\emptyset$,则$\tau_{j}\overset{\Delta}{=}\infty$
 
 
-> [!NOTE] Definition 5.9(首达概率)
-> 设$\left\{ X_{n} \right\}$为一个状态空间为$E$的Markov链，则经过$n$步从状态$i$到$j$的首达概率为
-> 
-> $$\begin{aligned}
-> f_{ij}^{(n)}&\overset{\Delta}{=}P\left( \tau_{j}=n\mid X_{0}=i \right) \\
-> &=P\left(  X_{n}=j,X_{n-1}\neq j \dots ,X_{1}\neq j \mid X_{0}=i\right) 
-> \end{aligned}$$
+!!! note "Definition 5.9(首达概率)"
+    设$\left\{ X_{n} \right\}$为一个状态空间为$E$的Markov链，则经过$n$步从状态$i$到$j$的首达概率为
+
+    $$\begin{aligned}
+    f_{ij}^{(n)}&\overset{\Delta}{=}P\left( \tau_{j}=n\mid X_{0}=i \right) \\
+    &=P\left(  X_{n}=j,X_{n-1}\neq j \dots ,X_{1}\neq j \mid X_{0}=i\right)
+    \end{aligned}$$
 
 
 注：定义事件$A_{n}\overset{\Delta}{=}\left\{ X_{n}=j,X_{n-1}\neq j \dots ,X_{1}\neq j \mid X_{0}=i \right\}$
@@ -169,8 +169,8 @@ f_{ij}^{(n)}&\overset{\Delta}{=}P\left( \tau_{j}< \infty\mid X_{0}=i \right)\\
 \end{aligned}$$
 
 
-> [!NOTE] Definition 5.10(常返性)
-> 如果$f_{ii}=\sum\limits_{n=1}^{\infty}f_{ii}^{(n)}=1$，则称状态$i$是常返的(Recurrent)，否则称$i$为暂留的(Transient)，或者非常返的(Nonrecurrent)).
+!!! note "Definition 5.10(常返性)"
+    如果$f_{ii}=\sum\limits_{n=1}^{\infty}f_{ii}^{(n)}=1$，则称状态$i$是常返的(Recurrent)，否则称$i$为暂留的(Transient)，或者非常返的(Nonrecurrent)).
 
 
 虽然我们通过$f_{ij}$ 来定义常返性，但$f_{ij}^{(n)}$ 的计算并不容易，所以我们想要通过n步转移概率$P_{ij}^{(n)}$ 来计算，通过$P_{ij}^{(n)}$ 来获得状态是否是常返的判据，这即是下面的定理：
@@ -253,11 +253,11 @@ $$\mathbb{E}\left[\sum_{n=1}^\infty I_n|X_0=i\right]=\sum_{n=1}^\infty\mathbb{E}
 
 注2．从注1的证明过程中，我们可以看出若状态$i$是暂留的，则Markov链只会有限次处于状态$i$ ，可以具体表述为下面推论。
 
-> [!NOTE] Corollary 5.12
->如果状态$j$是暂留的，那么对任意状态$i$
-> 
-> $$P_{ij}^{(n)}\to0,\quad n\to\infty $$
-> 
+!!! note "Corollary 5.12"
+    如果状态$j$是暂留的，那么对任意状态$i$
+
+    $$P_{ij}^{(n)}\to0,\quad n\to\infty $$
+
 
 `Proof`
 
@@ -275,8 +275,8 @@ $$\begin{aligned}\sum_{n=0}^\infty P_{ij}^{(n)}=\delta_{ij}+\sum_{k=1}^\infty f_
 
 注3．常返与非常返具有类的性质
 
-> [!NOTE] Corollary 5.13
->若状态$i$是常返的，且$i\leftrightarrow j$ ，则$j$ 是常返的
+!!! note "Corollary 5.13"
+    若状态$i$是常返的，且$i\leftrightarrow j$ ，则$j$ 是常返的
 
 `Proof`
 
@@ -300,8 +300,8 @@ $$\displaystyle\sum_{s=0}^{\infty}P_{jj}^{(m+n+s)}\geq P_{ji}^{(m)}P_{ij}^{(n)}\
 
 如果Markov链的状态是**有限的**，常返性的判定会更加简化，有下面结论：
 
-> [!NOTE] Proposition 5.14
->有限状态Markov链必然存在常返态
+!!! note "Proposition 5.14"
+    有限状态Markov链必然存在常返态
 
 `Proof`
 
@@ -321,20 +321,20 @@ $$\sum_{j=1}^NP_{ij}^{(k)}=1$$
 
 注.结合推论5.13，我们知道：对于状态有限**不可约**Markov链，所有状态**都是常返态**。
 
-> [!example] Example 5.15 ( $d$ 维简单随机游走的常返性）
->设$\xi_{1},\xi_{2},\ldots$ .是取值于$E=\mathbb{Z}^{d}$独立同分布随机向量，满足
-> 
-> $$P(\xi_1=e_i)=P(\xi_1=-e_i)=\frac{1}{2d},\quad i=1,\dots,d$$
-> 
-> 其中$e_i$ 是第$i$个坐标为1，其余为0的方向向量。
-> 
-> 设$S_{0}$独立于$\xi_{1},\xi_{2},\ldots\xi _n$，令
-> 
-> $$S_n:=S_0+\xi_1+\cdots+\xi_n=S_{n-1}+\xi_n.$$
-> 
-> 则$S_{n}$ 为从$S_{0}$ 出发的d维简单随机游走。
-> 
-> 当$d=1,2$ 时，$S_{n}$是常返的，当$d\geq3$ 时，$S_{n}$是非常返的。
+!!! example "Example 5.15 ( $d$ 维简单随机游走的常返性）"
+    设$\xi_{1},\xi_{2},\ldots$ .是取值于$E=\mathbb{Z}^{d}$独立同分布随机向量，满足
+
+    $$P(\xi_1=e_i)=P(\xi_1=-e_i)=\frac{1}{2d},\quad i=1,\dots,d$$
+
+    其中$e_i$ 是第$i$个坐标为1，其余为0的方向向量。
+
+    设$S_{0}$独立于$\xi_{1},\xi_{2},\ldots\xi _n$，令
+
+    $$S_n:=S_0+\xi_1+\cdots+\xi_n=S_{n-1}+\xi_n.$$
+
+    则$S_{n}$ 为从$S_{0}$ 出发的d维简单随机游走。
+
+    当$d=1,2$ 时，$S_{n}$是常返的，当$d\geq3$ 时，$S_{n}$是非常返的。
 
 
 `Proof`

@@ -7,12 +7,12 @@
 给出赋范空间的单位闭球的概念：
 
 
-> [!NOTE] closed unit ball of $E$
-> For a normed space $E$, let
-> 
-> $$U_{E}:= \left\{ x\in E:\lVert x \rVert \leqslant 1 \right\} $$
-> 
-> be the closed unit ball of $E$
+!!! note "closed unit ball of $E$"
+    For a normed space $E$, let
+
+    $$U_{E}:= \left\{ x\in E:\lVert x \rVert \leqslant 1 \right\} $$
+
+    be the closed unit ball of $E$
 
 那么很自然的我们会使用缩放的闭球定义集合$A$在$E$中(赋范)有界，也就是说$A\subseteq kU_{E}$，换句话说$\lVert a \rVert\leqslant k<+\infty,\forall a\in A$
 
@@ -64,18 +64,18 @@ $6 \to 1$实际也是显然的
 然后是一个自然的结论：
 
 
-> [!NOTE] Lemma
-> 假设$T$是一个连续线性算子，若是有$\lVert T \rVert:=\sup \left\{ \lVert Tx \rVert:x\in E,\lVert x \rVert\leqslant 1 \right\}$，我们有：
-> 
-> $$
-> \begin{aligned}
-> \lVert T \rVert &=\sup \left\{ \frac{\lVert Tx \rVert }{\lVert x \rVert }:0\neq x\in E \right\}\\
-> &=\sup \left\{ \lVert Tx \rVert :x\in E,\lVert x \rVert =1 \right\}\\
-> &=\sup \left\{ \lVert Tx \rVert :x\in E,\lVert x \rVert < 1 \right\} <+\infty\\
-> \lVert Tx \rVert &\leqslant\lVert T \rVert \lVert x \rVert ,\forall x\in E\\
-> \lVert T \rVert &=\inf \left\{ k>0: \lVert Tx \rVert \leqslant k\lVert x \rVert ,\forall x\in E \right\} 
-> \end{aligned}
-> $$
+!!! note "Lemma"
+    假设$T$是一个连续线性算子，若是有$\lVert T \rVert:=\sup \left\{ \lVert Tx \rVert:x\in E,\lVert x \rVert\leqslant 1 \right\}$，我们有：
+
+    $$
+    \begin{aligned}
+    \lVert T \rVert &=\sup \left\{ \frac{\lVert Tx \rVert }{\lVert x \rVert }:0\neq x\in E \right\}\\
+    &=\sup \left\{ \lVert Tx \rVert :x\in E,\lVert x \rVert =1 \right\}\\
+    &=\sup \left\{ \lVert Tx \rVert :x\in E,\lVert x \rVert < 1 \right\} <+\infty\\
+    \lVert Tx \rVert &\leqslant\lVert T \rVert \lVert x \rVert ,\forall x\in E\\
+    \lVert T \rVert &=\inf \left\{ k>0: \lVert Tx \rVert \leqslant k\lVert x \rVert ,\forall x\in E \right\}
+    \end{aligned}
+    $$
 
 
 `Proof.`
@@ -97,16 +97,16 @@ $$
 下面给出有界线性算子构成的集合的记号，对于$E,F$两个赋范空间，使用$B(E,F)$来记录所有的从$E$到$F$的有界线性算子，如果是同一个空间，有$B(E)=B(E,E)$
 
 
-> [!NOTE] Lemma(有界线性算子构成赋范空间)
-> $B(E,F)$通过给予算子范数$\lVert T \rVert=\sup\limits_{\lVert x \rVert\leqslant 1}\lVert Tx \rVert$构成一个赋范空间
+!!! note "Lemma(有界线性算子构成赋范空间)"
+    $B(E,F)$通过给予算子范数$\lVert T \rVert=\sup\limits_{\lVert x \rVert\leqslant 1}\lVert Tx \rVert$构成一个赋范空间
 
 证明只需要按照赋范空间的定义验证三条性质即可，然后探索这个算子范数我们可以得到一个等价的定义：
 
 
-> [!note] Lemma(算子范数等价定义)
-> $H,K$ are Hilbert spaces and $T\in B(H,K)$. Then
-> 
-> $$\lVert T \rVert =\sup \left\{ \lvert \langle Th,k\rangle \rvert : h\in U_{H},k\in U_{K}  \right\} $$
+!!! note "Lemma(算子范数等价定义)"
+    $H,K$ are Hilbert spaces and $T\in B(H,K)$. Then
+
+    $$\lVert T \rVert =\sup \left\{ \lvert \langle Th,k\rangle \rvert : h\in U_{H},k\in U_{K}  \right\} $$
 
 `Proof.`
 
@@ -133,20 +133,20 @@ $$
 
 ## Exercise 4.1
 
-> [!question] (1)
-> Let $(\alpha_{i,j})_{i,j\in\mathbb{N}}$ be an infinite matrix with
-> 
-> $$
-> K := (\sum_{i,j=1}^{\infty} |\alpha_{i,j}|^2)^{1/2} < \infty.
-> $$
-> 
-> Define a linear operator $T$ on $\ell^2$ by $T((\xi_n)_{n\in\mathbb{N}}) = (\eta_n)_{n\in\mathbb{N}}$, where
-> 
-> $$
-> \eta_n = \sum_{j=1}^{\infty} \alpha_{n,j}\xi_j, \quad n=1, 2, \dots
-> $$
-> 
-> Show that $T$ is a bounded linear operator on $\ell^2$.
+!!! question "(1)"
+    Let $(\alpha_{i,j})_{i,j\in\mathbb{N}}$ be an infinite matrix with
+
+    $$
+    K := (\sum_{i,j=1}^{\infty} |\alpha_{i,j}|^2)^{1/2} < \infty.
+    $$
+
+    Define a linear operator $T$ on $\ell^2$ by $T((\xi_n)_{n\in\mathbb{N}}) = (\eta_n)_{n\in\mathbb{N}}$, where
+
+    $$
+    \eta_n = \sum_{j=1}^{\infty} \alpha_{n,j}\xi_j, \quad n=1, 2, \dots
+    $$
+
+    Show that $T$ is a bounded linear operator on $\ell^2$.
 
 `Proof.`
 
@@ -167,24 +167,24 @@ $$
 
 
 
-> [!question] (2)
-> Let $(\alpha_{i,j})_{i,j\in\mathbb{N}}$ be an infinite matrix such that
-> 
-> $$
-> \alpha_1 = \sup_j \sum_{i=1}^{\infty} |\alpha_{i,j}| < \infty
-> $$
-> 
-> and
-> 
-> $$
-> \alpha_\infty = \sup_i \sum_{j=1}^{\infty} |\alpha_{i,j}| < \infty.
-> $$
-> 
-> Show that there exists an operator $T$ on $\ell^2$ such that
-> 
-> $$
-> \langle Te_j, e_i \rangle = \alpha_{i,j} \quad \text{and} \quad \|T\|^2 \le \alpha_1 \alpha_\infty.
-> $$
+!!! question "(2)"
+    Let $(\alpha_{i,j})_{i,j\in\mathbb{N}}$ be an infinite matrix such that
+
+    $$
+    \alpha_1 = \sup_j \sum_{i=1}^{\infty} |\alpha_{i,j}| < \infty
+    $$
+
+    and
+
+    $$
+    \alpha_\infty = \sup_i \sum_{j=1}^{\infty} |\alpha_{i,j}| < \infty.
+    $$
+
+    Show that there exists an operator $T$ on $\ell^2$ such that
+
+    $$
+    \langle Te_j, e_i \rangle = \alpha_{i,j} \quad \text{and} \quad \|T\|^2 \le \alpha_1 \alpha_\infty.
+    $$
 
 
 ### **Proof & Explanation**
@@ -228,8 +228,8 @@ $$
 
 
 
-> [!question] (3)
-> Let $(e_n)_{n\in\mathbb{N}}$ be the usual basis of $\ell^2$ and $(\alpha_n)_{n\in\mathbb{N}}$ be a sequence of scalars. Show that there is a bounded linear operator $T$ on $\ell^2$ such that $Te_n = \alpha_n e_n$ for all $n \in \mathbb{N}$ if and only if $(\alpha_n)_{n\in\mathbb{N}}$ is bounded. This operator is called a *diagonal operator*.
+!!! question "(3)"
+    Let $(e_n)_{n\in\mathbb{N}}$ be the usual basis of $\ell^2$ and $(\alpha_n)_{n\in\mathbb{N}}$ be a sequence of scalars. Show that there is a bounded linear operator $T$ on $\ell^2$ such that $Te_n = \alpha_n e_n$ for all $n \in \mathbb{N}$ if and only if $(\alpha_n)_{n\in\mathbb{N}}$ is bounded. This operator is called a *diagonal operator*.
 
 ### **Proof & Explanation**
 
@@ -268,20 +268,20 @@ $$
 
 ### **(4) Problem Statement**
 
-> [!question] (4)
-> Let $\varphi(x,t) : [0,1] \times [0,1] \to [0,\infty)$ be a continuous function such that
-> 
-> $$
-> \frac{\partial \varphi}{\partial x} : [0,1] \times [0,1] \to [0,\infty)
-> $$
-> 
-> exists and is continuous. Prove that the operator $T : C[0,1] \to C[0,1]$ defined by
-> 
-> $$
-> Tf(x) = \int_0^1 \varphi(x,t)f(t)dt
-> $$
-> 
-> is linear and continuous, with $\|T\| = \int_0^1 \varphi(1,t)dt$.
+!!! question "(4)"
+    Let $\varphi(x,t) : [0,1] \times [0,1] \to [0,\infty)$ be a continuous function such that
+
+    $$
+    \frac{\partial \varphi}{\partial x} : [0,1] \times [0,1] \to [0,\infty)
+    $$
+
+    exists and is continuous. Prove that the operator $T : C[0,1] \to C[0,1]$ defined by
+
+    $$
+    Tf(x) = \int_0^1 \varphi(x,t)f(t)dt
+    $$
+
+    is linear and continuous, with $\|T\| = \int_0^1 \varphi(1,t)dt$.
 
 ### **Proof & Explanation**
 
@@ -347,13 +347,13 @@ $$
 
 
 
-> [!question] (5)HW6-1
-> Let $1\leqslant p <\infty$ and $T:\ell_{\infty}\to L^{p}[0,1]$ be defined by
-> 
-> $$
-> T(x_{1},x_{2},\dots)= \sum\limits_{n=1}^{\infty} x_{n}\chi_{\left[  \frac{1}{2^{n}}, \frac{1}{2^{n-1}} \right]}
-> $$
-> Prove that $T$ is a linear and continuous operator, and calculate $\lVert T \rVert$
+!!! question "(5)HW6-1"
+    Let $1\leqslant p <\infty$ and $T:\ell_{\infty}\to L^{p}[0,1]$ be defined by
+
+    $$
+    T(x_{1},x_{2},\dots)= \sum\limits_{n=1}^{\infty} x_{n}\chi_{\left[  \frac{1}{2^{n}}, \frac{1}{2^{n-1}} \right]}
+    $$
+    Prove that $T$ is a linear and continuous operator, and calculate $\lVert T \rVert$
 
 `Proof.`
 
@@ -407,16 +407,16 @@ $$ \left( 1 - \frac{1}{2^n} \right)^{\frac{1}{p}} \leqslant \|T\| \cdot 1 $$
 对上述不等式，令 $n \to \infty$，马上有$\lVert T \rVert\geqslant 1$，结合两个不等式有$\lVert T \rVert=1$
 
 
-> [!question] (6)HW6-2
-> Consider the linear operators $A_n$ and $B_n$ on $\ell^2$ defined by
-> 
-> $$
-> A_n(x) = \left(\frac{x_1}{n}, \frac{x_2}{2n}, \dots\right), \quad B_n(x) = (0, \dots, 0, x_{n+1}, x_{n+2}, \dots)
-> $$
-> 
-> for all $x = (x_1, x_2, \dots) \in \ell^2$. 
-> 
-> Prove that $\|A_n\| \to 0$ and $B_n(x) \to 0$ for all $x \in \ell^2$, but that $(B_n)_{n \in \mathbb{N}}$ does not converge to 0 in the operator norm.
+!!! question "(6)HW6-2"
+    Consider the linear operators $A_n$ and $B_n$ on $\ell^2$ defined by
+
+    $$
+    A_n(x) = \left(\frac{x_1}{n}, \frac{x_2}{2n}, \dots\right), \quad B_n(x) = (0, \dots, 0, x_{n+1}, x_{n+2}, \dots)
+    $$
+
+    for all $x = (x_1, x_2, \dots) \in \ell^2$.
+
+    Prove that $\|A_n\| \to 0$ and $B_n(x) \to 0$ for all $x \in \ell^2$, but that $(B_n)_{n \in \mathbb{N}}$ does not converge to 0 in the operator norm.
 
 `Proof.`
 
@@ -454,26 +454,26 @@ $$
 向量空间$X$上的线性泛函也就是线性映射：$f:X\to \mathbb{K}(\mathbb{R} /\mathbb{C})$
 
 
-> [!tip] 不连续线性泛函
-> 在任意的无穷维赋范空间$(E,\lVert \cdot \rVert)$都有不连续的线性泛函
+!!! tip "不连续线性泛函"
+    在任意的无穷维赋范空间$(E,\lVert \cdot \rVert)$都有不连续的线性泛函
 
 下面给出(拓扑)对偶空间 dual space(或者共轭空间 conjugate space)的定义，一个拓扑向量空间$X$上所有的连续线性泛函构成的向量空间记为$X^{*}$
 
 然后我们在赋范空间上考虑对偶空间：
 
 
-> [!NOTE] Definition(Banach dual space)
-> $E$ is a normed space, we call $E^{*}=B(X,\mathbb{K})$ the Banach dual space of $E$ when it's equipped with the dual norm
-> 
-> $$\lVert f \rVert =\sup\limits_{\lVert x \rVert \leqslant 1}\lvert f(x) \rvert ,\forall f\in X^{*}$$
+!!! note "Definition(Banach dual space)"
+    $E$ is a normed space, we call $E^{*}=B(X,\mathbb{K})$ the Banach dual space of $E$ when it's equipped with the dual norm
+
+    $$\lVert f \rVert =\sup\limits_{\lVert x \rVert \leqslant 1}\lvert f(x) \rvert ,\forall f\in X^{*}$$
 
 
 
 
 
 
-> [!tip] Banach-Alaoglu's Theorem
-> 考虑赋范空间$E$，那么对偶单位球$U_{E^{*}}$在弱拓扑下紧
+!!! tip "Banach-Alaoglu's Theorem"
+    考虑赋范空间$E$，那么对偶单位球$U_{E^{*}}$在弱拓扑下紧
 
 
 
@@ -498,8 +498,8 @@ $$
 
 ## Exercise 4.3
 
-> [!question] (1)HW7-1
->Suppose that $\Omega$ is a $\sigma-$finite measure space and $y\in L^{\infty}(\Omega)$. Let $T$ be the multiplication operator $Tx(t)=y(t)x(t)$ for all $x\in L^{2}(\Omega)$ and $t\in \Omega$. Compute $T^{*}$
+!!! question "(1)HW7-1"
+    Suppose that $\Omega$ is a $\sigma-$finite measure space and $y\in L^{\infty}(\Omega)$. Let $T$ be the multiplication operator $Tx(t)=y(t)x(t)$ for all $x\in L^{2}(\Omega)$ and $t\in \Omega$. Compute $T^{*}$
 
 `Sol.`
 
@@ -524,14 +524,14 @@ $$
 
 
 
-> [!question] (3)HW7-2
-> Let $\varphi:[0,1]\to \mathbb{R}$ be a continuous function and $T:L^{2}[a,b]\to L^{2}[0,1]$ defined by
-> 
-> $$
-> Tf(x)=\varphi(x)\int_{0}^{1} \varphi(t)f(t) \, dt ,\forall x\in[a,b]
-> $$
-> 
-> Prove that $T$ is self-adjoint and positive.
+!!! question "(3)HW7-2"
+    Let $\varphi:[0,1]\to \mathbb{R}$ be a continuous function and $T:L^{2}[a,b]\to L^{2}[0,1]$ defined by
+
+    $$
+    Tf(x)=\varphi(x)\int_{0}^{1} \varphi(t)f(t) \, dt ,\forall x\in[a,b]
+    $$
+
+    Prove that $T$ is self-adjoint and positive.
 
 `Proof.`
 

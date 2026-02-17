@@ -2,13 +2,16 @@
 
 [project]
 site_name = "Eurekaimer's Digital Garden"
-site_description = "Rust NB!"
+site_description = "My Note and Learning Repository"
 site_author = "Eurekaimer"
 site_url = "https://www.eurekaimer.xyz/Stathelper"
 repo_url = "https://github.com/Eurekaimer/Stathelper"
+
 copyright = """
 Copyright &copy; 2024-2026 Eurekaimer
 """
+
+edit_uri = "https://github.com/Eurekaimer/Stathelper/edit/main/docs/"
 
 nav = [
    { "Stathelper" = "index.md" },
@@ -21,18 +24,13 @@ nav = [
         { "Chapter 1" = "STAT260/Chapter-1.md" },
         ]},
     { "CS" = [
-        "CS/index.md",
-        { "CS61A" = [
-            "CS61A/index.md",
-            { "Week 1" = "CS61A/Week 1.md" },
-            { "Week 2" = "CS61A/Week 2.md" },
-            { "Week 3" = "CS61A/Week 3.md" },
-            { "Week 4" = "CS61A/Week 4.md" },
-            { "Week 5" = "CS61A/Week 5.md" },
-            { "Week 6" = "CS61A/Week 6.md" },
-            { "Week 7" = "CS61A/Week 7.md" },
-            { "Project 1 Hog" = "CS61A/Project 1-The Game of Hog.md" },
-            { "Project 2 Cat" = "CS61A/Project 2-CS 61A Autocorrected Typing Software.md" },
+        { "CS Learning" = "CS/index.md" },
+        { "Deep Learning" = [
+            { "Deep Learning" = "CS/DL/index.md" },
+            { "CS231n" = "CS/CS231n/CS231n.md" },
+        ]},
+        { "CS Introduction" = [
+            {"CS61A" = "CS/CS61A/index.md"},
         ]},
     ]},
     { "Analysis" = [
@@ -51,12 +49,24 @@ nav = [
     { "ACG" = [
         "ACG/Yuri.md",
         "ACG/Anime.md",
+        { "Galgame" = [
+            "Galgame/index.md",
+            { "仅你一人" = "Galgame/only-you.md"},
+            { "Flowers Spring" = "Galgame/only-you.md"},
         ]},
-    { "Web Source" = [
+        ]},
+    { "NixOS" = [
+        "NixOS/index.md",
+        "NixOS/如何使用NixOS玩明日方舟.md",
+        ]},
+    { "Tech" = [
         "WebSource/index.md",
-        { "Notes Source" = [
+        { "Source Websites" = [
             { "Computer Science" = "WebSource/计算机科学资料站.md"},
             { "Math and Statistics" = "WebSource/数学与统计资料站.md"},
+        ]},
+        { "Open Source Software" = [
+            { "Sioyek" = "WebSource/Sioyek.md"},
         ]},
         { "克林索尔的最后夏天" = "WebSource/克林索尔的最后夏天.md" },
         ]},
@@ -67,6 +77,8 @@ nav = [
 extra_css = [
     "stylesheets/extra.css",
     "stylesheets/anime-grid.css",
+    "stylesheets/key.css",
+    "stylesheets/mouse-color.css",
     "https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css",  # 霞鹜文楷
 ]
 
@@ -74,6 +86,7 @@ extra_javascript = [
     "javascripts/mathjax.js",
     "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
 ]
+
 [project.markdown_extensions.pymdownx.arithmatex]
 generic = true
 
@@ -112,7 +125,7 @@ features = [
     "content.tabs.link",
     "content.tooltips",
     "header.autohide",
-    # "navigation.expand",
+    "navigation.expand",
     "navigation.footer",
     "navigation.indexes",
     "navigation.instant",
@@ -156,6 +169,21 @@ code = "Roboto Mono"
 [project.theme.icon]
 logo = "lucide/pi"
 repo = "fontawesome/brands/github"
+
+[project.theme.icon.admonition]
+note = "fontawesome/solid/note-sticky"
+abstract = "fontawesome/solid/book"
+info = "fontawesome/solid/circle-info"
+tip = "fontawesome/solid/bullhorn"
+success = "fontawesome/solid/check"
+question = "fontawesome/solid/circle-question"
+warning = "fontawesome/solid/triangle-exclamation"
+failure = "fontawesome/solid/bomb"
+danger = "fontawesome/solid/skull"
+bug = "fontawesome/solid/robot"
+example = "fontawesome/solid/flask"
+quote = "fontawesome/solid/quote-left"
+tldr = "fontawesome/solid/cube"
 
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings. material/mdi/wechat

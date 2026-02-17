@@ -1,11 +1,11 @@
 # Chapter 9 判别分析
 
 
-> [!tldr] Outline
-> + 垂直平分分类器
-> + 判别分析准则
-> + 两总体的判别
-> + 多总体的判别
+!!! tldr "Outline"
+    + 垂直平分分类器
+    + 判别分析准则
+    + 两总体的判别
+    + 多总体的判别
 
 先给出下面关于线性分类器的基础知识，再过度到垂直平分分类器
 
@@ -138,16 +138,16 @@ $$
 
 需要注意，Fisher线性判别函数仅仅是估计的最优准则，无法保证$ECM(R_{1},R_{2})$最小，在大样本情形下，$\overline{x}^{(1)}, \overline{x}^{(2)},S$为$\mu_{1},\mu_{2},\Sigma$的强相合估计，此时判别准则渐近最优
 
-> [!tip] Fisher判别的思路和方法
-> 将一个$p$维向量$X=(X_{1},\dots,X_{p})^{T}$投影到某个方向，使得其最容易判别
-> 
-> 考虑$Y=\xi^{T}X$，使得
-> 
-> $$
-> \frac{[E_{1}(\xi^{T}X)-E_{2}(\xi^{T}X)]^{2}}{Var(\xi^{T}X)}= \frac{\xi^{T}(\mu_{1}-\mu_{2})(\mu_{1}-\mu_{2})^{T}\xi}{\xi^{T}\Sigma \xi}
-> $$
-> 
-> 达到最大
+!!! tip "Fisher判别的思路和方法"
+    将一个$p$维向量$X=(X_{1},\dots,X_{p})^{T}$投影到某个方向，使得其最容易判别
+
+    考虑$Y=\xi^{T}X$，使得
+
+    $$
+    \frac{[E_{1}(\xi^{T}X)-E_{2}(\xi^{T}X)]^{2}}{Var(\xi^{T}X)}= \frac{\xi^{T}(\mu_{1}-\mu_{2})(\mu_{1}-\mu_{2})^{T}\xi}{\xi^{T}\Sigma \xi}
+    $$
+
+    达到最大
 
 我们的目标是使得上方分式最大，使用代换$\beta=\Sigma^{1/2}\xi$，运用Cauchy-Schwarz不等式，可以知道分子最大时必须存在比例关系，$\beta=a\Sigma^{-1/2}(\mu_{1}-\mu_{2})$，由此我们可以得到$\xi=a\Sigma^{-1}(\mu_{1}-\mu_{2}):= a\theta$
 
@@ -228,12 +228,12 @@ $$
 + Fisher判别分析 多总体
 
 
-> [!tip] Fisher判别分析-多总体，最优投影方向$\hat{\xi}$：
-> 当$W$可逆时，有
-> 
-> $$\hat{\xi}=arg \sup\limits_{\lVert \xi \rVert _{2}=1} \frac{\xi^{T}B\xi}{\xi^{T}W\xi}= \hat{e}_{1}$$
-> 
-> 其中$\hat{e}_{1}$为矩阵$W^{-1}B$的最大特征值对应的单位正交特征向量，$B$为样本的类间离差矩阵，$W$为类内离差矩阵
+!!! tip "Fisher判别分析-多总体，最优投影方向$\hat{\xi}$："
+    当$W$可逆时，有
+
+    $$\hat{\xi}=arg \sup\limits_{\lVert \xi \rVert _{2}=1} \frac{\xi^{T}B\xi}{\xi^{T}W\xi}= \hat{e}_{1}$$
+
+    其中$\hat{e}_{1}$为矩阵$W^{-1}B$的最大特征值对应的单位正交特征向量，$B$为样本的类间离差矩阵，$W$为类内离差矩阵
 
 记$W^{-1}B$的所有非零特征值分别为$\hat{\lambda}_{1}\geqslant \hat{\lambda}_{2}\geqslant \dots \geqslant \hat{\lambda}_{s}> 0$，其中$s\leqslant \min(J-1,p)$，当$\hat{\xi}_{1}= \hat{e}_{1}$，把$\hat{\xi}_{1}^{T}x$称为样本第一判别函数，其判别效率为$\hat{\lambda}_{1}$，以此类推，最多有$\min(J-1,p)$个样本判别函数
 
@@ -247,24 +247,24 @@ $$
 
 给出一个例子：
 
-> [!example] 使用Fisher判别准则
-> $$
-> X^{(1)}=\begin{pmatrix}
-> -2 & 5 \\
-> 0 & 3  \\
-> -1 & 1
-> \end{pmatrix},X^{(2)}= \begin{pmatrix}
-> 0 & 6 \\
-> 2 & 4 \\
->  1 & 2
-> \end{pmatrix},X^{(3)}=\begin{pmatrix}
-> 1 & -2 \\
-> 0 & 0 \\
-> -1 & -4
-> \end{pmatrix}
-> $$
-> 
-> 试建立Fisher样本判别函数，并对新的观测样本$x_{0}=(1,3)^{T}$，用建立的判别函数分类
+!!! example "使用Fisher判别准则"
+    $$
+    X^{(1)}=\begin{pmatrix}
+    -2 & 5 \\
+    0 & 3  \\
+    -1 & 1
+    \end{pmatrix},X^{(2)}= \begin{pmatrix}
+    0 & 6 \\
+    2 & 4 \\
+     1 & 2
+    \end{pmatrix},X^{(3)}=\begin{pmatrix}
+    1 & -2 \\
+    0 & 0 \\
+    -1 & -4
+    \end{pmatrix}
+    $$
+
+    试建立Fisher样本判别函数，并对新的观测样本$x_{0}=(1,3)^{T}$，用建立的判别函数分类
 
 $$
 \overline{x}^{(1)}=\begin{pmatrix}
