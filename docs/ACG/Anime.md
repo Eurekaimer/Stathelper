@@ -3,10 +3,6 @@ tags:
   - ACG
 ---
 
-!!! tip "Hint"
-
-    你眼中的神作在别人的眼中不一定是神作甚至不一定是出色的作品，相应的别人批判的作品也有可能是你心中的神作，这一点是一切ACG排行榜的基本原则(Basic Principle)
-
 # Anime Rank
 
 - [x] 神作
@@ -14,6 +10,10 @@ tags:
 - [x] 良作
 - [x] 凡作
 - [x] 烂作
+
+!!! tip "Hint"
+
+    你眼中的神作在别人的眼中不一定是神作甚至不一定是出色的作品，相应的别人批判的作品也有可能是你心中的神作，这一点是一切ACG排行榜的基本原则(Basic Principle)  
 
 <div class="sort-container">
     <label for="sortOrder" style="margin-right: 5px; font-size: 0.9rem;">排序方式：</label>

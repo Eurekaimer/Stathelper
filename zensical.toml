@@ -2,9 +2,9 @@
 
 [project]
 site_name = "Eurekaimer's Digital Garden"
-site_description = "My Note and Learning Repository"
+site_description = "My Learning Note Repository"
 site_author = "Eurekaimer"
-site_url = "https://www.eurekaimer.xyz/Stathelper"
+site_url = "https://www.eurekaimer.icu/Stathelper"
 repo_url = "https://github.com/Eurekaimer/Stathelper"
 
 copyright = """
@@ -30,7 +30,8 @@ nav = [
             { "CS231n" = "CS/CS231n/CS231n.md" },
         ]},
         { "CS Introduction" = [
-            {"CS61A" = "CS/CS61A/index.md"},
+            {"CS61A" = "CS/DL/index.md"},
+            {"CS61A" = "CS61A/index.md"},
         ]},
     ]},
     { "Analysis" = [
@@ -44,6 +45,13 @@ nav = [
                 "Analysis/数学分析(Lecture Notes)/index.md",
                 { "多元函数的极限与连续" = "Analysis/数学分析(Lecture Notes)/预备知识(数学分析).md"},
             ]},
+        ]},
+    ]},
+    { "Probability" = [
+        "Probability/index.md",
+        { "Stochastic Process" = [
+            "Probability/Stochastic_Process/index.md",
+            { "Lecture 2" = "Probability/Stochastic_Process/Poisson_Processes.md"},
         ]},
     ]},
     { "ACG" = [

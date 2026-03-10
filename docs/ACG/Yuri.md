@@ -1,3 +1,9 @@
+---
+tags:
+  - ACG
+  - Yuri
+---
+
 # Yuri Rank
 
 <div class="sort-container">
