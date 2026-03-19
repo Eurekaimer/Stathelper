@@ -46,7 +46,7 @@ tags:
     由于版本更新的比较快，只需要对于PicGo软件自身的一些设置进行选择就可以达到比较好的使用体验，所以在此删除其他复杂的配置
 
     给出一些建议勾选的部分：
-
+    
     + 开机自启
     + 上传前重命名(如果你是一个对于命名法要求不高的“粗糙”的使用者，你可以只选择时间戳重命名)
     + 时间戳重命名
@@ -68,7 +68,7 @@ tags:
 // 详细参数
 "picgo.picBed.github": {
 	"repo": "Eurekaimer/MyIMGs", // 你的仓库
-	"token": "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", // 你的Token
+	"token": "ghp_", // 你的Token
 	"branch": "main", // 分支
 	"path": "img/", // 存放在 img 目录下
 	// 自动使用 jsDelivr CDN 加速访问，避免图片在国内裂开
