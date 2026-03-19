@@ -28,7 +28,7 @@
         <loc>https://www.eurekaimer.icu/Stathelper/CS/DL/</loc>
       </url>
       <url>
-        <loc>https://www.eurekaimer.icu/Stathelper/CS61A/</loc>
+        <loc>https://www.eurekaimer.icu/Stathelper/CS/CS61A/</loc>
       </url>
       <url>
         <loc>https://www.eurekaimer.icu/Stathelper/Analysis/</loc>
@@ -55,10 +55,13 @@
         <loc>https://www.eurekaimer.icu/Stathelper/Probability/Stochastic_Process/Poisson_Processes/</loc>
       </url>
       <url>
-        <loc>https://www.eurekaimer.icu/Stathelper/ACG/Yuri/</loc>
+        <loc>https://www.eurekaimer.icu/Stathelper/ACGN/Anime/</loc>
       </url>
       <url>
-        <loc>https://www.eurekaimer.icu/Stathelper/ACG/Anime/</loc>
+        <loc>https://www.eurekaimer.icu/Stathelper/ACGN/Yuri/</loc>
+      </url>
+      <url>
+        <loc>https://www.eurekaimer.icu/Stathelper/ACGN/%E7%99%BE%E5%90%88%E6%96%87%E7%9B%98%E7%82%B9/</loc>
       </url>
       <url>
         <loc>https://www.eurekaimer.icu/Stathelper/Galgame/</loc>
@@ -70,10 +73,37 @@
         <loc>https://www.eurekaimer.icu/Stathelper/Galgame/only-you/</loc>
       </url>
       <url>
-        <loc>https://www.eurekaimer.icu/Stathelper/NixOS/</loc>
+        <loc>https://www.eurekaimer.icu/Stathelper/Tech/</loc>
       </url>
       <url>
-        <loc>https://www.eurekaimer.icu/Stathelper/NixOS/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8NixOS%E7%8E%A9%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/</loc>
+        <loc>https://www.eurekaimer.icu/Stathelper/Tech/Wheels/%E8%BD%AE%E5%AD%90%E5%A4%A7%E5%AE%B6%E6%97%8F/</loc>
+      </url>
+      <url>
+        <loc>https://www.eurekaimer.icu/Stathelper/Tech/Wheels/LaTeX(VScode)/</loc>
+      </url>
+      <url>
+        <loc>https://www.eurekaimer.icu/Stathelper/Tech/Wheels/Sioyek/</loc>
+      </url>
+      <url>
+        <loc>https://www.eurekaimer.icu/Stathelper/Tech/Wheels/Mermaid%20Note/</loc>
+      </url>
+      <url>
+        <loc>https://www.eurekaimer.icu/Stathelper/Tech/Wheels/%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA(PicGo)/</loc>
+      </url>
+      <url>
+        <loc>https://www.eurekaimer.icu/Stathelper/Tech/Wheels/Stata18%E5%AE%89%E8%A3%85/</loc>
+      </url>
+      <url>
+        <loc>https://www.eurekaimer.icu/Stathelper/Tech/Wheels/Python%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/</loc>
+      </url>
+      <url>
+        <loc>https://www.eurekaimer.icu/Stathelper/Tech/Wheels/Python%E7%9A%84%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
+      </url>
+      <url>
+        <loc>https://www.eurekaimer.icu/Stathelper/Tech/Wheels/Rust%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</loc>
+      </url>
+      <url>
+        <loc>https://www.eurekaimer.icu/Stathelper/Tech/Wheels/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8NixOS%E7%8E%A9%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/</loc>
       </url>
       <url>
         <loc>https://www.eurekaimer.icu/Stathelper/WebSource/</loc>
@@ -83,9 +113,6 @@
       </url>
       <url>
         <loc>https://www.eurekaimer.icu/Stathelper/WebSource/%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%9F%E8%AE%A1%E8%B5%84%E6%96%99%E7%AB%99/</loc>
-      </url>
-      <url>
-        <loc>https://www.eurekaimer.icu/Stathelper/WebSource/Sioyek/</loc>
       </url>
       <url>
         <loc>https://www.eurekaimer.icu/Stathelper/WebSource/%E5%85%8B%E6%9E%97%E7%B4%A2%E5%B0%94%E7%9A%84%E6%9C%80%E5%90%8E%E5%A4%8F%E5%A4%A9/</loc>

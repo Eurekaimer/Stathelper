@@ -30,8 +30,8 @@ nav = [
             { "CS231n" = "CS/CS231n/CS231n.md" },
         ]},
         { "CS Introduction" = [
-            {"CS61A" = "CS/DL/index.md"},
-            {"CS61A" = "CS61A/index.md"},
+            {"DL" = "CS/DL/index.md"},
+            {"CS61A" = "CS/CS61A/index.md"},
         ]},
     ]},
     { "Analysis" = [
@@ -54,27 +54,36 @@ nav = [
             { "Lecture 2" = "Probability/Stochastic_Process/Poisson_Processes.md"},
         ]},
     ]},
-    { "ACG" = [
-        "ACG/Yuri.md",
-        "ACG/Anime.md",
+    { "ACGN" = [
+        { "Anime Rank" = "ACGN/Anime.md"},
+        { "Yuri Rank" = "ACGN/Yuri.md"},
+        { "Yuri Novel" = "ACGN/百合文盘点.md"},
         { "Galgame" = [
             "Galgame/index.md",
             { "仅你一人" = "Galgame/only-you.md"},
             { "Flowers Spring" = "Galgame/only-you.md"},
         ]},
         ]},
-    { "NixOS" = [
-        "NixOS/index.md",
-        "NixOS/如何使用NixOS玩明日方舟.md",
-        ]},
     { "Tech" = [
+        "Tech/index.md",
+        { "Wheels" = [
+            { "轮子大家族" = "Tech/Wheels/轮子大家族.md"},
+            { "LaTeX" = "Tech/Wheels/LaTeX(VScode).md"},
+            { "Sioyek" = "Tech/Wheels/Sioyek.md"},
+            { "Mermaid" = "Tech/Wheels/Mermaid Note.md"},
+            { "图床搭建(PicGo)" = "Tech/Wheels/图床搭建(PicGo).md"},
+            { "Stata18安装" = "Tech/Wheels/Stata18安装.md"},
+            { "Python环境安装和配置" = "Tech/Wheels/Python环境安装和配置.md"},
+            { "Python的项目管理" = "Tech/Wheels/Python的项目管理.md"},
+            { "Rust环境安装" = "Tech/Wheels/Rust环境安装.md"},
+            { "如何使用NixOS玩明日方舟" = "Tech/Wheels/如何使用NixOS玩明日方舟.md"},
+        ]},
+    ]},
+    { "WebSource" = [
         "WebSource/index.md",
         { "Source Websites" = [
             { "Computer Science" = "WebSource/计算机科学资料站.md"},
             { "Math and Statistics" = "WebSource/数学与统计资料站.md"},
-        ]},
-        { "Open Source Software" = [
-            { "Sioyek" = "WebSource/Sioyek.md"},
         ]},
         { "克林索尔的最后夏天" = "WebSource/克林索尔的最后夏天.md" },
         ]},
@@ -92,7 +101,8 @@ extra_css = [
 
 extra_javascript = [
     "javascripts/mathjax.js",
-    "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
+    "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js",
+    "javascripts/mermaid.mjs"
 ]
 
 [project.markdown_extensions.pymdownx.arithmatex]
@@ -101,7 +111,12 @@ generic = true
 # Admonitions and details
 [project.markdown_extensions.admonition]
 [project.markdown_extensions.pymdownx.details]
+
+# Mermaid
 [project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
 
 # Grids
 [project.markdown_extensions.attr_list]
@@ -115,6 +130,9 @@ custom_checkbox = true
 [project.markdown_extensions.toc]
 permalink = "⚓︎"
 toc_depth = 3
+
+# footnote
+[project.markdown_extensions.footnotes]
 
 [project.theme]
 variant = "modern"
