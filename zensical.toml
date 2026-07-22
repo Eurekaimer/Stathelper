@@ -54,6 +54,16 @@ nav = [
             { "Lecture 2" = "Probability/Stochastic_Process/Poisson_Processes.md"},
         ]},
     ]},
+    { "Boring" = [
+        { "大学物理2" = [
+            "Boring/大学物理2/index.md",
+            { "真空中的静电场" = "Boring/大学物理2/大学物理2-1-真空中的静电场.md" },
+            { "静电场中的导体和电介质" = "Boring/大学物理2/大学物理2-2-静电场中的导体和电介质.md" },
+            { "直流电和交流电" = "Boring/大学物理2/大学物理2-3-直流电和交流电.md" },
+            { "恒定磁场" = "Boring/大学物理2/大学物理2-4-恒定磁场.md" },
+            { "电磁感应" = "Boring/大学物理2/大学物理2-5-电磁感应.md" },
+        ]},
+    ]},
     { "ACGN" = [
         { "Anime Rank" = "ACGN/Anime.md"},
         { "Yuri Rank" = "ACGN/Yuri.md"},
