@@ -92,7 +92,7 @@ nav = [
     { "WebSource" = [
         "WebSource/index.md",
         { "Source Websites" = [
-            { "Computer Science" = "WebSource/计算机科学资料站.md"},
+            { "Computer Science" = "WebSource/计算机科学(CS)资源汇总.md"},
             { "Math and Statistics" = "WebSource/数学与统计资料站.md"},
         ]},
         { "克林索尔的最后夏天" = "WebSource/克林索尔的最后夏天.md" },
