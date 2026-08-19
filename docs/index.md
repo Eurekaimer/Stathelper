@@ -221,7 +221,7 @@ hide: title
 !!! info "官方文档"
     Zensical 官方文档: [https://zensical.org/docs/](https://zensical.org/docs/)
 
-目前大概是将原本[MkDocs博客](https://www.eurekaimer.xyz/)的一些板块迁移过来了
+目前大概是将原本[MkDocs博客](https://www.eurekaimer.icu/blog/)的一些板块迁移过来了
 
 ---
 
