@@ -80,6 +80,7 @@ nav = [
             { "轮子大家族" = "Tech/Wheels/轮子大家族.md"},
             { "LaTeX" = "Tech/Wheels/LaTeX(VScode).md"},
             { "Sioyek" = "Tech/Wheels/Sioyek.md"},
+            { "CachyOS-Recovery" = "Tech/Wheels/CachyOS-Recovery.md"},
             { "Mermaid" = "Tech/Wheels/Mermaid Note.md"},
             { "图床搭建(PicGo)" = "Tech/Wheels/图床搭建(PicGo).md"},
             { "Stata18安装" = "Tech/Wheels/Stata18安装.md"},
