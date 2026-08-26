@@ -88,6 +88,7 @@ nav = [
             { "Python的项目管理" = "Tech/Wheels/Python的项目管理.md"},
             { "Rust环境安装" = "Tech/Wheels/Rust环境安装.md"},
             { "如何使用NixOS玩明日方舟" = "Tech/Wheels/如何使用NixOS玩明日方舟.md"},
+            { "CachyOS-YYS" = "Tech/Wheels/CachyOS-YYS.md"},
         ]},
     ]},
     { "WebSource" = [
